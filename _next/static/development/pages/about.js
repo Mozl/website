@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/photos.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about.js"],{
 
 /***/ "./components/Link.jsx":
 /*!*****************************!*\
@@ -679,23 +679,23 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fphotos&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fphotos.js&hotRouterUpdates=true!./":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fphotos&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fphotos.js&hotRouterUpdates=true ***!
-  \*****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fabout.js&hotRouterUpdates=true!./":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fabout.js&hotRouterUpdates=true ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P = window.__NEXT_P || []).push([
-      "/photos",
+      "/about",
       function () {
-        var mod = __webpack_require__(/*! ./pages/photos.js */ "./pages/photos.js");
+        var mod = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js");
         if (true) {
-          module.hot.accept(/*! ./pages/photos.js */ "./pages/photos.js", function () {
-            if (!next.router.components["/photos"]) return;
-            var updatedPage = __webpack_require__(/*! ./pages/photos.js */ "./pages/photos.js");
-            next.router.update("/photos", updatedPage);
+          module.hot.accept(/*! ./pages/about.js */ "./pages/about.js", function () {
+            if (!next.router.components["/about"]) return;
+            var updatedPage = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js");
+            next.router.update("/about", updatedPage);
           });
         }
         return mod;
@@ -4457,10 +4457,10 @@ try {
 
 /***/ }),
 
-/***/ "./pages/photos.js":
-/*!*************************!*\
-  !*** ./pages/photos.js ***!
-  \*************************/
+/***/ "./pages/about.js":
+/*!************************!*\
+  !*** ./pages/about.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4470,13 +4470,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Link */ "./components/Link.jsx");
 var _this = undefined,
-    _jsxFileName = "/Users/mosell01/projects/website/pages/photos.js";
+    _jsxFileName = "/Users/mosell01/projects/website/pages/about.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var Photos = function Photos() {
+var About = function About() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     __self: _this,
     __source: {
@@ -4484,7 +4484,7 @@ var Photos = function Photos() {
       lineNumber: 6,
       columnNumber: 7
     }
-  }, "Photos"), __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "About"), __jsx(_components_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
     href: "/",
     __self: _this,
     __source: {
@@ -4502,18 +4502,18 @@ var Photos = function Photos() {
   }, "Home")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Photos);
+/* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
-/***/ 2:
-/*!*********************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fphotos&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fphotos.js&hotRouterUpdates=true ***!
-  \*********************************************************************************************************************************************************/
+/***/ 3:
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fabout.js&hotRouterUpdates=true ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fphotos&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fphotos.js&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fphotos&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fphotos.js&hotRouterUpdates=true!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fabout.js&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fmosell01%2Fprojects%2Fwebsite%2Fpages%2Fabout.js&hotRouterUpdates=true!./");
 
 
 /***/ }),
@@ -4529,5 +4529,5 @@ module.exports = dll_c2e10d183b950a67d9e7;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=photos.js.map
+},[[3,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=about.js.map
