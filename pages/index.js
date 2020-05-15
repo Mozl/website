@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from '../components/Link';
 
-export default Home = () => {
+const Home = () => {
   return (
     <div className="container">
       <Head>
@@ -207,3 +207,5 @@ export default Home = () => {
     </div>
   );
 };
+
+export default Home;
