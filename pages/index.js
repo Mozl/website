@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from '../components/Link';
 
-export default function Home() {
+export default Home = () => {
   return (
     <div className="container">
       <Head>
@@ -206,4 +206,4 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+};
