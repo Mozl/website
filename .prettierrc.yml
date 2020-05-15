@@ -1,0 +1,5 @@
+arrowParens: always
+endOfLine: lf
+printWidth: 120
+quoteProps: consistent
+singleQuote: true
