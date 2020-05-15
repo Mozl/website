@@ -1,0 +1,1 @@
+{"ast":null,"code":"// import Link from '../components/Link'\n// const About = () => {\n//   return (\n//     <>\n//       <div>About</div>\n//       <Link><a href='/'>Home</a></Link>\n//     </>\n//   )\n// }\n// export default About;","map":null,"metadata":{},"sourceType":"script"}

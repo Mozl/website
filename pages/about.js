@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from '../components/Link'
 
 const About = () => {
   return (
     <>
       <div>About</div>
-      <Link><a href='/'>Home</a></Link>
+      <Link href='/'><a>Home</a></Link>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Link from '../components/Link'
 
 export default function Home() {
   return (
@@ -11,12 +11,8 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Link to <Link as="/about-louis" href="/about"><a>About</a></Link>
+          Link to <Link href="/photos"><a>Photos</a></Link>
         </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
@@ -55,7 +51,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
