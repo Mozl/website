@@ -6,19 +6,12 @@ const Home = () => {
     <div className="container">
       <Head>
         <title>Website</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${process.env.assetPrefix}/favicon.ico`} />
       </Head>
 
       <main>
         <h1 className="title">
-          Wrapped link to{' '}
-          <Link href="/photos">
-            <a>Photos</a>
-          </Link>
-        </h1>
-        <h1 className="title">
-          Next link to{' '}
-          <Link href="/about" as={`${process.env.ASSET_PREFIX}/about`}>
+          <Link href="/about">
             <a>About</a>
           </Link>
         </h1>
@@ -56,7 +49,7 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           Powered by
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          <img src={`${process.env.assetPrefix}/vercel.svg`} alt="Vercel Logo" className="logo" />
         </a>
       </footer>
 

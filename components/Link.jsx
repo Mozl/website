@@ -1,10 +1,8 @@
-import React from 'react'
-import NextJsLink from 'next/link'
+import React from 'react';
+import NextJsLink from 'next/link';
 
-const assetPrefix = process.env.ASSET_PREFIX
+const assetPrefix = process.env.assetPrefix;
 
-const Link = ({ href, ...rest }) => (
-  <NextJsLink href={href} as={`${assetPrefix}${href}`} {...rest} />
-)
+const Link = ({ href, ...rest }) => <NextJsLink href={href} as={`${assetPrefix}${href}`} {...rest} />;
 
-export default Link
+export default Link;
