@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from '../components/Link';
+import Counter from '../components/Counter';
 
 const Home = () => {
   return (
@@ -15,6 +16,8 @@ const Home = () => {
             <a>About</a>
           </Link>
         </h1>
+
+        <Counter />
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
