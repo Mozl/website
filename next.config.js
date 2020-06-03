@@ -1,9 +1,8 @@
-// const isProd = (process.env.NODE_ENV || 'production') === 'production';
-
-// const assetPrefix = isProd ? '/website' : '';
-
-// module.exports = {
-//   env: {
-//     assetPrefix
-//   }
-// };
+const withSass = require('@zeit/next-sass');
+module.exports = withSass({
+  cssModules: true,
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: '[local]___[hash:base64:5]'
+  }
+});
