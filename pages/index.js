@@ -6,8 +6,21 @@ const Home = () => {
   return (
     <div className="container">
       <Head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="description" content="Website with some stuff and things" />
+        <meta name="keywords" content="Keywords" />
+        <link rel="canonical" href="https://mozl.netlify.app" />
         <title>Website</title>
-        <link rel="icon" href={`/favicon.ico`} />
+
+        <link rel="manifest" href="/manifest.json" />
+        <link href="/favicon.ico" rel="icon" />
+        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <meta name="theme-color" content="#317EFB" />
       </Head>
 
       <main>
