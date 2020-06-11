@@ -5,10 +5,15 @@ import { increment, decrement, reset } from '../redux/actions/counterActions';
 function Counter({ counter, increment, decrement, reset }) {
   return (
     <div>
-      <p>{counter}</p>
+      <p className="number">{counter}</p>
       <button onClick={increment}>INCREMENT</button>
       <button onClick={decrement}>DECREMENT</button>
       <button onClick={reset}>RESET</button>
+      <style jsx>{`
+        .number {
+          color: white;
+        }
+      `}</style>
     </div>
   );
 }

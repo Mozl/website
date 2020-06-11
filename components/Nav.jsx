@@ -4,8 +4,9 @@ const Nav = () => {
   return (
     <>
       <nav className="nav">
+        <div className="header-logo">Logo</div>
         <Link href="/about">
-          <a>About</a>
+          <a className="about">About</a>
         </Link>
         <Link href="/ml">
           <a>Machine Learning</a>
@@ -14,11 +15,21 @@ const Nav = () => {
       <style jsx>{`
         nav {
           display: grid;
-          grid-template-columns: repeat(5, 5fr);
-          grid-auto-rows: auto;
-          grid-gap: 1em;
+          padding: 2rem;
+          grid-template-columns: 10% 1fr 1fr 10%;
+          min-height: 10vh;
           align-items: center;
-          text-align: center;
+          justify-items: center;
+          color: white;
+        }
+        .header-logo {
+          grid-column: 1/2;
+          font-size: 40px;
+        }
+        a {
+          font-size: 24px;
+          color: white;
+          text-decoration: none;
         }
       `}</style>
     </>
