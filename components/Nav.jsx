@@ -31,6 +31,9 @@ const Nav = () => {
           color: white;
           text-decoration: none;
         }
+        a:hover {
+          color: red;
+        }
       `}</style>
     </>
   );
