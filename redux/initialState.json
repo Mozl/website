@@ -1,0 +1,12 @@
+{
+  "data": {
+    "counter": 0,
+    "projects": [
+      {
+        "name": "Project 1",
+        "image": "",
+        "description": "some info about the project"
+      }
+    ]
+  }
+}
