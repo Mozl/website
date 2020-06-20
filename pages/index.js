@@ -46,10 +46,10 @@ const Home = () => {
             <div className="hero">
               <svg
                 id="logo"
-                width="478"
                 height="170"
                 viewBox="0 0 478 170"
                 stroke="white"
+                fill="none"
                 strokeWidth="2"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

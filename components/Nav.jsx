@@ -4,7 +4,19 @@ const Nav = () => {
   return (
     <>
       <nav className="nav">
-        <div className="header-logo">Logo</div>
+        <div className="header-logo">
+          <Link href="/">
+            <svg width="91" height="74" viewBox="0 0 91 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="36.5806" cy="36.5806" r="36.5806" fill="#F46036" />
+              <path
+                d="M10.8387 9.48386V56.9032L36.1821 30.5048L47.6584 56.9032L66.7856 30.5048L84 56.9032"
+                stroke="white"
+                stroke-width="10"
+                stroke-linecap="square"
+              />
+            </svg>
+          </Link>
+        </div>
         <Link href="/about">
           <a className="about">About</a>
         </Link>
