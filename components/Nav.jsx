@@ -11,24 +11,59 @@ const Nav = () => {
               <path
                 d="M10.8387 9.48386V56.9032L36.1821 30.5048L47.6584 56.9032L66.7856 30.5048L84 56.9032"
                 stroke="white"
-                stroke-width="10"
-                stroke-linecap="square"
+                strokeWidth="10"
+                strokeLinecap="square"
               />
             </svg>
           </Link>
         </div>
+        <Link href="/projects">
+          <a className="Projects">About</a>
+        </Link>
+        <Link href="/CV">
+          <a>CV</a>
+        </Link>
         <Link href="/about">
-          <a className="about">About</a>
+          <a>About Me</a>
         </Link>
-        <Link href="/ml">
-          <a>Machine Learning</a>
-        </Link>
+        <svg width="47" height="42" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line
+            x1="22.4457"
+            y1="3.1129"
+            x2="3.03215"
+            y2="24.5085"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <line
+            x1="44.1896"
+            y1="17.5075"
+            x2="24.7761"
+            y2="38.903"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <line
+            x1="40.236"
+            y1="3.24801"
+            x2="7.98537"
+            y2="38.7861"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </nav>
       <style jsx>{`
         nav {
           display: grid;
-          padding: 2rem;
-          grid-template-columns: 10% 1fr 1fr 10%;
+          padding: 1rem;
+          grid-template-columns: 10% 1fr 1fr 1fr 10%;
           min-height: 10vh;
           align-items: center;
           justify-items: center;
@@ -44,7 +79,7 @@ const Nav = () => {
           text-decoration: none;
         }
         a:hover {
-          color: red;
+          color: #f46036;
         }
       `}</style>
     </>

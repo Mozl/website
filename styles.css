@@ -1,31 +1,31 @@
-#logo path:nth-child(1) {
+.hero-svg path:nth-child(1) {
   stroke-dasharray: 371;
   stroke-dashoffset: 371;
-  animation: line-anim 5s ease forwards, fill-anim 5s 0.5s ease forwards;
+  animation: line-anim 5s 1s ease forwards, fill-anim 5s 1.5s ease forwards;
 }
 
-#logo path:nth-child(2) {
+.hero-svg path:nth-child(2) {
   stroke-dasharray: 707;
   stroke-dashoffset: 707;
-  animation: line-anim 5s ease forwards, fill-anim 5s 1s ease forwards;
+  animation: line-anim 5s 1s ease forwards, fill-anim 5s 2s ease forwards;
 }
 
-#logo path:nth-child(3) {
+.hero-svg path:nth-child(3) {
   stroke-dasharray: 604;
   stroke-dashoffset: 604;
-  animation: line-anim 5s ease forwards, fill-anim 5s 1.5s ease forwards;
+  animation: line-anim 5s 1s ease forwards, fill-anim 5s 2.5s ease forwards;
 }
 
-#logo path:nth-child(4) {
+.hero-svg path:nth-child(4) {
   stroke-dasharray: 283;
   stroke-dashoffset: 283;
-  animation: line-anim 5s ease forwards, fill-anim 5s 2s ease forwards;
+  animation: line-anim 5s 1s ease forwards, fill-anim 5s 3s ease forwards;
 }
 
-#logo path:nth-child(5) {
+.hero-svg path:nth-child(5) {
   stroke-dasharray: 617;
   stroke-dashoffset: 617;
-  animation: line-anim 5s ease forwards, fill-anim 5s 2.5s ease forwards;
+  animation: line-anim 5s 1s ease forwards, fill-anim 5s 3.5s ease forwards;
 }
 
 @keyframes line-anim {
