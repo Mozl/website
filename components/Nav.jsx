@@ -18,7 +18,7 @@ const Nav = () => {
           </Link>
         </div>
         <Link href="/projects">
-          <a className="Projects">About</a>
+          <a className="Projects">Projects</a>
         </Link>
         <Link href="/CV">
           <a>CV</a>
@@ -72,6 +72,11 @@ const Nav = () => {
         .header-logo {
           grid-column: 1/2;
           font-size: 40px;
+          cursor: pointer;
+        }
+        a:active,
+        .header-logo:active {
+          transform: scale(0.95);
         }
         a {
           font-size: 24px;
