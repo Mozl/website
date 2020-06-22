@@ -84,9 +84,53 @@ const Hero: FC<Props> = () => {
             opacity: 1;
           }
         }
-
         .hero-image {
           animation: fade-in 3s ease-in;
+        }
+        .hero-svg path:nth-child(1) {
+          stroke-dasharray: 372;
+          stroke-dashoffset: 372;
+          animation: line-anim 5s 1s ease forwards, fill-anim 5s 1.5s ease forwards;
+        }
+
+        .hero-svg path:nth-child(2) {
+          stroke-dasharray: 708;
+          stroke-dashoffset: 708;
+          animation: line-anim 5s 1s ease forwards, fill-anim 5s 2s ease forwards;
+        }
+
+        .hero-svg path:nth-child(3) {
+          stroke-dasharray: 615;
+          stroke-dashoffset: 615;
+          animation: line-anim 5s 1s ease forwards, fill-anim 5s 2.5s ease forwards;
+        }
+
+        .hero-svg path:nth-child(4) {
+          stroke-dasharray: 284;
+          stroke-dashoffset: 284;
+          animation: line-anim 5s 1s ease forwards, fill-anim 5s 3s ease forwards;
+        }
+
+        .hero-svg path:nth-child(5) {
+          stroke-dasharray: 618;
+          stroke-dashoffset: 618;
+          animation: line-anim 5s 1s ease forwards, fill-anim 5s 3.5s ease forwards;
+        }
+
+        @keyframes line-anim {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+
+        @keyframes fill-anim {
+          0% {
+            fill: transparent;
+          }
+
+          100% {
+            fill: white;
+          }
         }
       `}</style>
     </>

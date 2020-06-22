@@ -10,27 +10,30 @@ const Skills: FC<Props> = () => {
   return (
     <>
       <div className="container">
-        <div className="skill-0-container">
+        <div className="skill-container-0">
           <div className="skill-0">
-            <img className="skill-0-img" src="/skill-logos/react.png"></img>
+            <img className="skill-img-0" src="/skill-logos/react.png"></img>
+            <span>React</span>
             <p>
               Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
               aksdklansd
             </p>
           </div>
         </div>
-        <div className="skill-1-container">
+        <div className="skill-container-1">
           <div className="skill-1">
-            <img className="skill-1-img" src="/skill-logos/react.png"></img>
+            <img className="skill-img-1" src="/skill-logos/react.png"></img>
+            <span>Redux</span>
             <p>
               Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
               aksdklansd
             </p>
           </div>
         </div>
-        <div className="skill-2-container">
+        <div className="skill-container-2">
           <div className="skill-2">
-            <img className="skill-2-img" src="/skill-logos/react.png"></img>
+            <img className="skill-img-2" src="/skill-logos/react.png"></img>
+            <span>Typescript</span>
             <p>
               Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
               aksdklansd
@@ -49,60 +52,50 @@ const Skills: FC<Props> = () => {
           justify-content: center;
           align-items: center;
         }
-        .skill-0-container {
+        .skill-container-0 {
           grid-column-start: 1;
           grid-column-end: 2;
           grid-row-start: 1;
           grid-row-end: 2;
           justify-self: end;
+          margin: 20px;
         }
-        .skill-1-container {
+        .skill-container-1 {
           grid-column-start: 3;
           grid-column-end: 4;
           grid-row-start: 2;
           grid-row-end: 3;
+          margin: 20px;
         }
-        .skill-2-container {
+        .skill-container-2 {
           grid-column-start: 1;
           grid-column-end: 2;
           grid-row-start: 3;
           grid-row-end: 4;
           justify-self: end;
+          margin: 20px;
         }
         .vertical-line {
           border-right: 3px solid white;
-          margin: 10px 16px;
-          height: 500px;
+          margin: 0 16px;
+          align-self: stretch;
           grid-column-start: 2;
           grid-column-end: 3;
           grid-row-start: 1;
-          grid-row-end: 4;
+          grid-row-end: 5;
         }
-        p {
+        p,
+        span {
           color: white;
         }
-        .skill-0 {
+        div[class*='skill-'] {
+          display: flex;
           width: 300px;
-          justify-self: end;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
-        .skill-1 {
-          width: 300px;
-        }
-        .skill-2 {
-          width: 300px;
-          justify-self: end;
-        }
-        .skill-0-img {
-          height: 125px;
-          width: 125px;
-          object-fit: cover;
-        }
-        .skill-1-img {
-          height: 125px;
-          width: 125px;
-          object-fit: cover;
-        }
-        .skill-2-img {
+        img[class*='skill-'] {
           height: 125px;
           width: 125px;
           object-fit: cover;
