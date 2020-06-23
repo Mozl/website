@@ -6,12 +6,6 @@ import rootReducer from '../redux/reducers/rootReducer';
 import { loadState } from './localStorage';
 import initialState from './initialState';
 
-// export default function initializeStore(initialState) {
-//   const persistedState = loadState();
-//   console.log('initialState: ', initialState);
-
-//   return createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
-// }
 let store;
 
 function initStore(preloadedState = initialState) {
