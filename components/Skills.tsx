@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { connect } from 'react-redux';
 
 interface Props {
   name: string;
@@ -6,38 +7,30 @@ interface Props {
   image?: string;
 }
 
-const Skills: FC<Props> = () => {
+const Skills: FC<Props> = (props) => {
+  const { name, description, image } = props;
   return (
     <>
       <div className="container">
         <div className="skill-container-0">
           <div className="skill-0">
-            <img className="skill-img-0" src="/skill-logos/react.png"></img>
-            <span>React</span>
-            <p>
-              Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
-              aksdklansd
-            </p>
+            <img className="skill-img-0" loading="lazy" height="125px" width="125px" src={image}></img>
+            <span>{name}</span>
+            <p>{description}</p>
           </div>
         </div>
         <div className="skill-container-1">
           <div className="skill-1">
-            <img className="skill-img-1" src="/skill-logos/react.png"></img>
-            <span>Redux</span>
-            <p>
-              Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
-              aksdklansd
-            </p>
+            <img className="skill-img-1" loading="lazy" height="125px" width="125px" src={image}></img>
+            <span>{name}</span>
+            <p>{description}</p>
           </div>
         </div>
         <div className="skill-container-2">
           <div className="skill-2">
-            <img className="skill-img-2" src="/skill-logos/react.png"></img>
-            <span>Typescript</span>
-            <p>
-              Some description text askdnklasdnsadkl asldknaskldn kasdlknasdn klasndlknsad askldnasnd klasdnlkasd
-              aksdklansd
-            </p>
+            <img className="skill-img-2" loading="lazy" height="125px" width="125px" src={image}></img>
+            <span>{name}</span>
+            <p>{description}</p>
           </div>
         </div>
         <span className="vertical-line"></span>
@@ -75,6 +68,9 @@ const Skills: FC<Props> = () => {
           justify-self: end;
           margin: 20px;
         }
+        .trans {
+          filter: opacity(1);
+        }
         .vertical-line {
           border-right: 3px solid white;
           margin: 0 16px;
@@ -96,8 +92,6 @@ const Skills: FC<Props> = () => {
           align-items: center;
         }
         img[class*='skill-'] {
-          height: 125px;
-          width: 125px;
           object-fit: cover;
         }
       `}</style>
@@ -105,4 +99,13 @@ const Skills: FC<Props> = () => {
   );
 };
 
-export default Skills;
+const mapStateToProps = (state) => {
+  const { name, description, image } = state.skills[0];
+  return {
+    name,
+    description,
+    image
+  };
+};
+
+export default connect(mapStateToProps)(Skills);

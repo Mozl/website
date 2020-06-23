@@ -1,6 +1,5 @@
 import anime from 'animejs';
 import Head from 'next/head';
-import Counter from '../components/Counter';
 import Nav from '../components/Nav';
 import Skills from '../components/Skills';
 import Hero from '../components/Hero';
@@ -38,7 +37,7 @@ const Home = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Website with some stuff and things" />
-        <meta name="keywords" content="Keywords" />
+        <meta name="keywords" content="Louis, Louis Moselhi, mozl" />
         <link rel="canonical" href="https://mozl.netlify.app" />
         <title>Website</title>
         <link href="/favicon.ico" rel="icon" />

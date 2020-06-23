@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import counterReducer from './counterReducer';
+import counter from './counterReducer';
+import skills from './skillsReducer';
 
 const rootReducer = combineReducers({
-  counterReducer
+  counter,
+  skills
 });
 
 export default rootReducer;

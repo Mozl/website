@@ -1,12 +1,10 @@
 {
-  "data": {
-    "counter": 0,
-    "projects": [
-      {
-        "name": "Project 1",
-        "image": "",
-        "description": "some info about the project"
-      }
-    ]
-  }
+  "counter": 0,
+  "skills": [
+    {
+      "name": "React",
+      "description": "some info about the project",
+      "image": "/skill-logos/react.png"
+    }
+  ]
 }
