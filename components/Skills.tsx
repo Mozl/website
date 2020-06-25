@@ -1,14 +1,20 @@
 import React, { FC } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-interface Props {
-  name: string;
-  description: string;
-  image?: string;
+interface RootState {
+  skills: Skill[];
 }
 
-const Skills: FC<Props> = (props) => {
-  const { name, description, image } = props;
+interface Skill {
+  name: string;
+  description: string;
+  image: string;
+}
+
+const Skills: FC = () => {
+  const skills = useSelector((state: RootState) => state.skills[0]);
+  const { name, description, image } = skills;
+
   return (
     <>
       <div className="container">
@@ -99,13 +105,4 @@ const Skills: FC<Props> = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const { name, description, image } = state.skills[0];
-  return {
-    name,
-    description,
-    image
-  };
-};
-
-export default connect(mapStateToProps)(Skills);
+export default Skills;

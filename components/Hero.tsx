@@ -47,6 +47,7 @@ const Hero: FC<Props> = () => {
         .headshot {
           height: 528px;
           width: 528px;
+          mix-blend-mode: luminosity;
         }
         .hero {
           display: grid;

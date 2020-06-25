@@ -59,7 +59,7 @@ const Home = () => {
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
             >
-              <path className="pathStart" d={path1} fill="#020000" />
+              <path className="pathStart" d={path1} fill="black" />
             </svg>
           </div>
         </section>
