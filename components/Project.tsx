@@ -47,25 +47,7 @@ const Project: FC<Props> = ({ name, description, id }) => {
           grid-column-start: 3;
           background: blue;
         }
-        // div[class*='overlay-'] {
-        //   position: relative;
-        //   transform: translateY(240px);
-        //   height: 80%;
-        //   padding: 20px;
-        // }
-        .overlay-0 {
-          position: relative;
-          transform: translateY(240px);
-          height: 80%;
-          padding: 20px;
-        }
-        .overlay-1 {
-          position: relative;
-          transform: translateY(240px);
-          height: 80%;
-          padding: 20px;
-        }
-        .overlay-2 {
+        .overlay-${id} {
           position: relative;
           transform: translateY(240px);
           height: 80%;
