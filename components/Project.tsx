@@ -3,22 +3,86 @@ import React, { FC } from 'react';
 interface Props {
   name: string;
   description: string;
+  id: number;
 }
 
-const Project: FC<Props> = ({ name, description }) => {
+const Project: FC<Props> = ({ name, description, id }) => {
+  console.log(name, description, id);
   return (
     <>
-      <div className="container"></div>
+      <div className={`project-${id}`}>
+        <div className={`${id}-overlay`}>
+          <h2>
+            {name} - {id}
+          </h2>
+          <p>{description}</p>
+        </div>
+      </div>
       <style jsx>{`
-        .container {
-          color: white;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-column-rows: repeat(4, 1fr)
-          grid-column-gap: 30px;
-          
-
+        div[class*='project-'] {
+          height: 300px;
+          width: 400px;
+          border-radius: 18px;
         }
-      `}</style>
+        .project-${id} {
+          grid-row: ${id + 1} / ${id + 3};
+          grid-column-start: ${id + 1};
+          display: flex;
+          align-items: flex-end;
+          overflow: hidden;
+          position: relative;
+        }
+        .project-${id}:hover > .${id}-overlay {
+          animation: slide-up 0.1s linear forwards;
+        }
+        .project-${id}:hover::before {
+          animation: blur-darken 0.1s linear forwards;
+        }
+        .project-${id + 1} {
+          grid-row: 2 / 4;
+          grid-column-start: 2;
+          background: blue;
+        }
+        .project-${id + 2} {
+          grid-row: 3 / 5;
+          grid-column-start: 3;
+          background: blue;
+        }
+        .${id}-overlay {
+          position: relative;
+          transform: translateY(240px);
+          height: 80%;
+          padding: 20px;
+        }
+        p {
+          margin-block-start: 0;
+          margin-block-end: 0;
+          background-color: transparent;
+          font-size: 20px;
+        }
+        .project-${id}::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('/sounds.png');
+          background-position: left 0px bottom -5px;
+          background-size: cover;
+          filter: brightness(100%) blur(0);
+        }
+        @keyframes slide-up {
+          to {
+            transform: translateY(0px);
+          }
+        }
+        @keyframes blur-darken {
+          to {
+            filter: brightness(70%) blur(5px);
+          }
+        }
+      }`}</style>
     </>
   );
 };
