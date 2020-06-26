@@ -7,11 +7,10 @@ interface Props {
 }
 
 const Project: FC<Props> = ({ name, description, id }) => {
-  console.log(name, description, id);
   return (
     <>
       <div className={`project-${id}`}>
-        <div className={`${id}-overlay`}>
+        <div className={`overlay-${id}`}>
           <h2>
             {name} - {id}
           </h2>
@@ -32,7 +31,7 @@ const Project: FC<Props> = ({ name, description, id }) => {
           overflow: hidden;
           position: relative;
         }
-        .project-${id}:hover > .${id}-overlay {
+        .project-${id}:hover > .overlay-${id} {
           animation: slide-up 0.1s linear forwards;
         }
         .project-${id}:hover::before {
@@ -48,7 +47,25 @@ const Project: FC<Props> = ({ name, description, id }) => {
           grid-column-start: 3;
           background: blue;
         }
-        .${id}-overlay {
+        // div[class*='overlay-'] {
+        //   position: relative;
+        //   transform: translateY(240px);
+        //   height: 80%;
+        //   padding: 20px;
+        // }
+        .overlay-0 {
+          position: relative;
+          transform: translateY(240px);
+          height: 80%;
+          padding: 20px;
+        }
+        .overlay-1 {
+          position: relative;
+          transform: translateY(240px);
+          height: 80%;
+          padding: 20px;
+        }
+        .overlay-2 {
           position: relative;
           transform: translateY(240px);
           height: 80%;
