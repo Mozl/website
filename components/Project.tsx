@@ -4,16 +4,15 @@ interface Props {
   name: string;
   description: string;
   id: number;
+  image: string;
 }
 
-const Project: FC<Props> = ({ name, description, id }) => {
+const Project: FC<Props> = ({ name, description, id, image }) => {
   return (
     <>
       <div className={`project-${id}`}>
         <div className={`overlay-${id}`}>
-          <h2>
-            {name} - {id}
-          </h2>
+          <h2>{name}</h2>
           <p>{description}</p>
         </div>
       </div>
@@ -66,7 +65,7 @@ const Project: FC<Props> = ({ name, description, id }) => {
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: url('/sounds.png');
+          background-image: url(${image});
           background-position: left 0px bottom -5px;
           background-size: cover;
           filter: brightness(100%) blur(0);

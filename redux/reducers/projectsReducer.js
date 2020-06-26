@@ -1,17 +1,20 @@
 const initialState = [
   {
     name: 'BBC Sounds',
-    description: 'some desc',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     image: '/sounds.png'
   },
   {
-    name: 'second project',
-    description: 'some other desc',
-    image: '/sounds.png'
+    name: 'Catch of the Day',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    image: '/cotd.png'
   },
   {
     name: 'third project',
-    description: 'some other desc',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     image: '/sounds.png'
   }
 ];

@@ -11,7 +11,7 @@ const Slice: FC<Props> = () => {
     <>
       <section>
         <h2>Project 1</h2>
-        <Project name="project1" description="description" />
+        <Project id={1} name="project1" description="description" image={''} />
       </section>
       <style jsx>{`
         section {
