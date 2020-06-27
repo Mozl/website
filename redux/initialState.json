@@ -1,10 +1,37 @@
 {
   "counter": 0,
+  "projects": [
+    {
+      "name": "Coming from initialState json",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/sounds.png"
+    },
+    {
+      "name": "Catch of the Day",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/cotd.png"
+    },
+    {
+      "name": "third project",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/sounds.png"
+    }
+  ],
   "skills": [
     {
       "name": "React",
-      "description": "some info about the project",
+      "description": "React desc",
       "image": "/skill-logos/react.png"
+    },
+    {
+      "name": "Redux",
+      "description": "Redux desc",
+      "image": "/skill-logos/redux.png"
+    },
+    {
+      "name": "TypeScript",
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
     }
   ]
 }

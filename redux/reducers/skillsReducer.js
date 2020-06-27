@@ -1,14 +1,4 @@
-const initialState = {
-  skills: [
-    {
-      name: 'React',
-      description: 'some desc',
-      image: '/skill-logos/react.png'
-    }
-  ]
-};
-
-export default function (state = initialState, action) {
+export default function (state = null, action) {
   switch (action.type) {
     default:
       return state;

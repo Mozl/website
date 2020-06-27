@@ -1,6 +1,6 @@
 import anime from 'animejs';
 import Nav from '../components/Nav';
-import Skills from '../components/Skills';
+import SkillsContainer from '../components/SkillsContainer';
 import Hero from '../components/Hero';
 
 const Home = () => {
@@ -50,7 +50,7 @@ const Home = () => {
             </svg>
           </div>
         </section>
-        <Skills />
+        <SkillsContainer />
       </main>
 
       <style jsx>{`

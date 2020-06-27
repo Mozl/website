@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
+import Skill from '../components/Skill';
 
 interface RootState {
   skills: Skill[];
@@ -9,36 +10,18 @@ interface Skill {
   name: string;
   description: string;
   image: string;
+  id: number;
 }
 
 const Skills: FC = () => {
-  const skills = useSelector((state: RootState) => state.skills[0]);
-  const { name, description, image } = skills;
+  const skills = useSelector((state: RootState) => state.skills);
 
   return (
     <>
       <div className="container">
-        <div className="skill-container-0">
-          <div className="skill-0">
-            <img className="skill-img-0" loading="lazy" height="125px" width="125px" src={image}></img>
-            <span>{name}</span>
-            <p>{description}</p>
-          </div>
-        </div>
-        <div className="skill-container-1">
-          <div className="skill-1">
-            <img className="skill-img-1" loading="lazy" height="125px" width="125px" src={image}></img>
-            <span>{name}</span>
-            <p>{description}</p>
-          </div>
-        </div>
-        <div className="skill-container-2">
-          <div className="skill-2">
-            <img className="skill-img-2" loading="lazy" height="125px" width="125px" src={image}></img>
-            <span>{name}</span>
-            <p>{description}</p>
-          </div>
-        </div>
+        {skills.map(({ name, description, image }, index) => (
+          <Skill name={name} description={description} image={image} id={index} />
+        ))}
         <span className="vertical-line"></span>
       </div>
       <style jsx>{`
@@ -73,9 +56,6 @@ const Skills: FC = () => {
           grid-row-end: 4;
           justify-self: end;
           margin: 20px;
-        }
-        .trans {
-          filter: opacity(1);
         }
         .vertical-line {
           border-right: 3px solid white;
