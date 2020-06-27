@@ -36,16 +36,6 @@ const Project: FC<Props> = ({ name, description, id, image }) => {
         .project-${id}:hover::before {
           animation: blur-darken 0.1s linear forwards;
         }
-        .project-${id + 1} {
-          grid-row: 2 / 4;
-          grid-column-start: 2;
-          background: blue;
-        }
-        .project-${id + 2} {
-          grid-row: 3 / 5;
-          grid-column-start: 3;
-          background: blue;
-        }
         .overlay-${id} {
           position: relative;
           transform: translateY(240px);

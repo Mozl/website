@@ -12,7 +12,7 @@ const Skill: FC<Props> = ({ name, description, id, image }) => {
     <>
       <div className={`skill-container-${id}`}>
         <div className={`skill-${id}`}>
-          <img className={`skill-img-${id}`} loading="lazy" height="125px" width="125px" src={image}></img>
+          <img className={`skill-img-${id}`} loading="lazy" height="300px" width="300px" src={image}></img>
           <span>{name}</span>
           <p>{description}</p>
         </div>
@@ -21,7 +21,7 @@ const Skill: FC<Props> = ({ name, description, id, image }) => {
        .skill-container-${id} {
         grid-column: ${id == 1 ? 3 : 1};
         grid-row: ${id + 1};
-        justify-self: end;
+        justify-self: ${id == 1 ? 'start' : 'end'};
         margin: 20px;
       }
       p,

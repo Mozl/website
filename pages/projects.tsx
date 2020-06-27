@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       </div>
       <style jsx>{`
         .container {
-          background: linear-gradient(to right, #031957 10%, #8400bf 100%);
+          background: linear-gradient(-165deg, #af9b46 40%, #031957 0%, #031957 74%, #f0edee 0%);
           color: white;
         }
         section {
@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-rows: repeat(4, 1fr);
           grid-column-gap: 5%;
-          padding: 50px 150px;
+          padding: 70px 150px;
         }
       `}</style>
     </>

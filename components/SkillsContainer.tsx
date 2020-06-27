@@ -19,9 +19,10 @@ const Skills: FC = () => {
   return (
     <>
       <div className="container">
-        {skills.map(({ name, description, image }, index) => (
-          <Skill name={name} description={description} image={image} id={index} />
-        ))}
+        {skills &&
+          skills.map(({ name, description, image }, index) => (
+            <Skill name={name} description={description} image={image} id={index} />
+          ))}
         <span className="vertical-line"></span>
       </div>
       <style jsx>{`
@@ -59,7 +60,7 @@ const Skills: FC = () => {
         }
         .vertical-line {
           border-right: 3px solid white;
-          margin: 0 16px;
+          margin: 10px 16px;
           align-self: stretch;
           grid-column-start: 2;
           grid-column-end: 3;
