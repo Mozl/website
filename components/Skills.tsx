@@ -46,7 +46,7 @@ const Skills: FC = () => {
           display: grid;
           grid-template-columns: 1fr 2% 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-          background-color: rbg(18, 18, 18);
+          background-color: rgb(18, 18, 18);
           width: 100%;
           justify-content: center;
           align-items: center;

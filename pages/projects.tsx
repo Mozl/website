@@ -7,25 +7,22 @@ interface Project {
   description: string;
   id: number;
   image: string;
-  projects?: [];
+}
+
+interface State {
+  projects: Project[];
 }
 
 const Projects: React.FC = () => {
-  const projects = useSelector((state: Project) => state.projects);
+  const projects = useSelector((state: State) => state.projects);
   return (
     <>
       <div className="container">
         <Nav />
         <section className="top">
           {projects &&
-            projects.map((project: Project, index: number) => (
-              <Project
-                key={index}
-                name={project.name}
-                description={project.description}
-                id={index}
-                image={project.image}
-              />
+            projects.map(({ name, description, image }, index: number) => (
+              <Project key={index} name={name} description={description} id={index} image={image} />
             ))}
         </section>
       </div>
