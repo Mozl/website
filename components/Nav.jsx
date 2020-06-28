@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { colours } from '../theme';
 
 const Nav = () => {
   const linkColor = () => {
@@ -13,10 +14,10 @@ const Nav = () => {
         <div className="header-logo">
           <Link href="/">
             <svg width="91" height="74" viewBox="0 0 91 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="36.5806" cy="36.5806" r="36.5806" fill="#F46036" />
+              <circle cx="36.5806" cy="36.5806" r="36.5806" fill={`${colours.orange}`} />
               <path
                 d="M10.8387 9.48386V56.9032L36.1821 30.5048L47.6584 56.9032L66.7856 30.5048L84 56.9032"
-                stroke="white"
+                stroke={`${colours.white}`}
                 strokeWidth="10"
                 strokeLinecap="square"
               />
@@ -24,13 +25,13 @@ const Nav = () => {
           </Link>
         </div>
         <Link href="/projects">
-          <a className="projects">Projects</a>
+          <a className="projects">projects</a>
         </Link>
         <Link href="/cv">
-          <a className="cv">CV</a>
+          <a className="cv">cv</a>
         </Link>
         <Link href="/about">
-          <a className="about">About Me</a>
+          <a className="about">about me</a>
         </Link>
         <div className="menu">
           <svg width="47" height="42" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +40,7 @@ const Nav = () => {
               y1="3.1129"
               x2="3.03215"
               y2="24.5085"
-              stroke="white"
+              stroke={`${colours.white}`}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -49,7 +50,7 @@ const Nav = () => {
               y1="17.5075"
               x2="24.7761"
               y2="38.903"
-              stroke="white"
+              stroke={`${colours.white}`}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -59,7 +60,7 @@ const Nav = () => {
               y1="3.24801"
               x2="7.98537"
               y2="38.7861"
-              stroke="white"
+              stroke={`${colours.white}`}
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -75,7 +76,7 @@ const Nav = () => {
           min-height: 10vh;
           align-items: center;
           justify-items: center;
-          color: white;
+          color: ${colours.white};
         }
         .header-logo {
           grid-column: 1/2;
@@ -88,11 +89,11 @@ const Nav = () => {
         }
         a {
           font-size: 24px;
-          color: white;
+          color: ${colours.white};
           text-decoration: none;
         }
         a:hover {
-          color: #f46036;
+          color: ${colours.orange};
         }
         .menu {
           visibility: hidden;
@@ -108,7 +109,7 @@ const Nav = () => {
           }
         }
         .current {
-          color: #f46036;
+          color: ${colours.orange};
         }
       `}</style>
     </>

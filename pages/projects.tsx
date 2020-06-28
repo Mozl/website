@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import { useSelector } from 'react-redux';
 import Project from '../components/Project';
+import { colours } from '../theme';
 
 interface Project {
   name: string;
@@ -28,8 +29,14 @@ const Projects: React.FC = () => {
       </div>
       <style jsx>{`
         .container {
-          background: linear-gradient(-165deg, #af9b46 40%, #031957 0%, #031957 74%, #f0edee 0%);
-          color: white;
+          background: linear-gradient(
+            -165deg,
+            ${colours.gold} 40%,
+            ${colours.darkBlue} 0%,
+            ${colours.darkBlue} 74%,
+            ${colours.pink} 0%
+          );
+          color: ${colours.white};
         }
         section {
           display: grid;

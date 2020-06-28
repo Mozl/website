@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { colours } from '../theme';
 
 interface Props {
   name: string;
@@ -26,7 +27,7 @@ const Skill: FC<Props> = ({ name, description, id, image }) => {
       }
       p,
       span {
-        color: white;
+        color: ${colours.white};
       }
       div[class*='skill-'] {
         display: flex;

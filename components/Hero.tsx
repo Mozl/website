@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { colours } from '../theme';
 
 interface Props {
   name: string;
@@ -21,7 +22,7 @@ const Hero: FC<Props> = () => {
             className="hero-svg"
             height="170"
             viewBox="0 0 478 170"
-            stroke="white"
+            stroke={`${colours.white}`}
             fill="none"
             strokeWidth="2"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +39,7 @@ const Hero: FC<Props> = () => {
       <style jsx>{`
         .louis-image {
           border-radius: 50%;
-          background: linear-gradient(159deg, #fb8f0a 10%, #d5370b 100%);
+          background: linear-gradient(159deg, ${colours.lightOrange} 3%, ${colours.orange} 100%);
           width: 528px;
           height: 528px;
           object-fit: cover;
@@ -61,7 +62,7 @@ const Hero: FC<Props> = () => {
           grid-template-rows: 1fr 1fr;
           justify-items: center;
           align-items: center;
-          color: white;
+          color: ${colours.white};
           font-size: 95px;
         }
         .hero-text span {
@@ -130,7 +131,7 @@ const Hero: FC<Props> = () => {
           }
 
           100% {
-            fill: white;
+            fill: ${colours.white};
           }
         }
       `}</style>

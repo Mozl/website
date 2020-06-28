@@ -1,4 +1,5 @@
 import Nav from '../components/Nav';
+import { colours } from '../theme';
 
 const CV: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const CV: React.FC = () => {
       <style jsx>
         {`
           .container {
-            background: linear-gradient(to bottom, #031957 20%, #8400bf 99%, black 100%);
+            background-color: ${colours.darkBlue};
           }
           .top {
             width: 100%;
@@ -42,9 +43,9 @@ const CV: React.FC = () => {
             padding: 30px;
             font-size: 30px;
             border-width: 0px;
-            color: #031957;
+            color: ${colours.darkBlue};
             cursor: pointer;
-            border: #031957 2px solid;
+            border: ${colours.darkBlue} 2px solid;
             border-radius: 6px;
             background-color: transparent;
             overflow: hidden;
@@ -58,7 +59,7 @@ const CV: React.FC = () => {
             content: 'Download CV';
             position: absolute;
             align-items: center;
-            background-color: #031957;
+            background-color: ${colours.darkBlue};
             top: 0;
             left: 0;
             width: 100%;
@@ -66,7 +67,7 @@ const CV: React.FC = () => {
             clip-path: circle(0% at 50% 50%);
           }
           button:hover::before {
-            color: white;
+            color: ${colours.white};
             animation: clip 0.5s ease-out forwards;
           }
           @keyframes clip {

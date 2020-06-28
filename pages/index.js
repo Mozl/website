@@ -2,13 +2,9 @@ import anime from 'animejs';
 import Nav from '../components/Nav';
 import SkillsContainer from '../components/SkillsContainer';
 import Hero from '../components/Hero';
+import { colours } from '../theme';
 
 const Home = () => {
-  // royal blue dark: #031957;
-  //  middle blue: #90DDF0;
-  // subtle pink: #F0EDEE;
-  // dark turquoise: #2C666E;
-  // orange: #F46036;
   const path1 =
     'M1 346V1C72.3084 195.426 243 98.4118 333 70C423 41.5882 347 120.059 477 130.882C607 141.706 579 244.529 653 233.706C727 222.882 769 70 883 186.353C997 302.706 1027 -135.647 1175 98.4118C1323 332.471 1333 87.5882 1499 130.882C1558.5 146.402 1541 -75 1623 88.9412C1660.78 164.471 1689 1 1689 1V346H1Z';
   const path2 =
@@ -46,7 +42,7 @@ const Home = () => {
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
             >
-              <path className="pathStart" d={path1} fill="#121212" />
+              <path className="pathStart" d={path1} fill={`${colours.black}`} />
             </svg>
           </div>
         </section>
@@ -64,7 +60,7 @@ const Home = () => {
           width: 100vw;
         }
         .top-section {
-          background: linear-gradient(to bottom, #031957 25%, #90ddf0 100%);
+          background: linear-gradient(to bottom, ${colours.darkBlue} 25%, ${colours.lightBlue} 100%);
           box-shadow: 0 0 0 1px #000;
         }
         .top-section__inner {

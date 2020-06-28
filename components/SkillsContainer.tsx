@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import Skill from '../components/Skill';
+import { colours } from '../theme';
 
 interface RootState {
   skills: Skill[];
@@ -30,7 +31,7 @@ const Skills: FC = () => {
           display: grid;
           grid-template-columns: 1fr 2% 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-          background-color: rgb(18, 18, 18);
+          background-color: ${colours.black};
           width: 100%;
           justify-content: center;
           align-items: center;
@@ -59,7 +60,7 @@ const Skills: FC = () => {
           margin: 20px;
         }
         .vertical-line {
-          border-right: 3px solid white;
+          border-right: 3px solid ${colours.white};
           margin: 10px 16px;
           align-self: stretch;
           grid-column-start: 2;
@@ -69,7 +70,7 @@ const Skills: FC = () => {
         }
         p,
         span {
-          color: white;
+          color: ${colours.white};
         }
         div[class*='skill-'] {
           display: flex;

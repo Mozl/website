@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Project from './Project';
+import { colours } from '../theme';
 
 interface Props {
   name: string;
@@ -20,7 +21,7 @@ const Slice: FC<Props> = () => {
           text-align: center;
         }
         h2 {
-          color: white;
+          color: ${colours.white};
           font-size: 40px;
         }
       `}</style>
