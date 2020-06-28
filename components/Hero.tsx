@@ -12,7 +12,7 @@ const Hero: FC<Props> = () => {
       <div className="hero">
         <div className="hero-image">
           <div className="louis-image">
-            <img className="headshot" src="/headshot.png" height="528px" width="528px"></img>
+            <img className="headshot" src="/louis.png" height="528px" width="528px"></img>
           </div>
         </div>
         <div className="hero-text">

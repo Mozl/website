@@ -1,6 +1,12 @@
 import Link from 'next/link';
 
 const Nav = () => {
+  const linkColor = () => {
+    if (typeof window !== 'undefined') {
+      const navlink = document.querySelector('.projects');
+      navlink?.classList.add('.current');
+    }
+  };
   return (
     <>
       <nav className="nav">
@@ -18,13 +24,13 @@ const Nav = () => {
           </Link>
         </div>
         <Link href="/projects">
-          <a className="Projects">Projects</a>
+          <a className="projects">Projects</a>
         </Link>
         <Link href="/cv">
-          <a>CV</a>
+          <a className="cv">CV</a>
         </Link>
         <Link href="/about">
-          <a>About Me</a>
+          <a className="about">About Me</a>
         </Link>
         <div className="menu">
           <svg width="47" height="42" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +101,14 @@ const Nav = () => {
           .menu {
             visibility: visible;
           }
+          .projects,
+          .cv,
+          .about {
+            visibility: hidden;
+          }
+        }
+        .current {
+          color: #f46036;
         }
       `}</style>
     </>
