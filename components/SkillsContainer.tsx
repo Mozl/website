@@ -22,7 +22,7 @@ const Skills: FC = () => {
       <div className="container">
         {skills &&
           skills.map(({ name, description, image }, index) => (
-            <Skill name={name} description={description} image={image} id={index} />
+            <Skill key={index} name={name} description={description} image={image} id={index} />
           ))}
         <span className="vertical-line"></span>
       </div>
