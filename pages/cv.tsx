@@ -10,7 +10,7 @@ const CV: React.FC = () => {
           <object data="/Louis_Moselhi_CV.pdf" type="application/pdf" width="100%" height="100%"></object>
           <div className="link-container">
             <a className="download_link" href="/Louis_Moselhi_CV.pdf" download="Louis Moselhi CV">
-              <button>
+              <button className="download-button">
                 <span>Download CV</span>
               </button>
             </a>
@@ -53,6 +53,11 @@ const CV: React.FC = () => {
           button:hover span {
             font-size; 50px
           }
+          .download_link:active {
+            transform: scale(0.95);
+          }
+          .download-button:active {
+            outline: none;
           }
           button::before {
             display: grid;
