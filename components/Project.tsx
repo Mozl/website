@@ -1,74 +1,80 @@
 import React, { FC } from 'react';
+import { colours } from '../theme';
 
 interface Props {
   name: string;
   description: string;
   id: number;
   image: string;
+  url: string;
 }
 
-const Project: FC<Props> = ({ name, description, id, image }) => {
+const Project: FC<Props> = ({ name, description, id, image, url }) => {
   return (
     <>
-      <div className={`project-${id}`}>
-        <div className={`overlay-${id}`}>
-          <h2>{name}</h2>
-          <p>{description}</p>
+      <a className="nostyle" href={url}>
+        <div className={`project-${id}`}>
+          <div className="image-container">
+            <img src={image}></img>
+          </div>
+          <div className="text-container">
+            <h3>{name}</h3>
+            <p>{description}</p>
+          </div>
         </div>
-      </div>
+      </a>
       <style jsx>{`
         div[class*='project-'] {
-          height: 300px;
-          width: 400px;
-          border-radius: 18px;
-        }
-        .project-${id} {
-          grid-row: ${id + 1} / ${id + 3};
-          grid-column-start: ${id + 1};
           display: flex;
-          align-items: flex-end;
-          overflow: hidden;
-          position: relative;
+          height: 600px;
+          width: 100%;
+          align-items: center;
         }
-        .project-${id}:hover > .overlay-${id} {
-          animation: slide-up 0.1s linear forwards;
+        h3 {
+          font-size: 50px;
+          margin: 0 0 20px 0;
         }
-        .project-${id}:hover::before {
-          animation: blur-darken 0.1s linear forwards;
+        h3:hover {
+          cursor: pointer;
+          color: ${colours.orange}
         }
-        .overlay-${id} {
-          position: relative;
-          transform: translateY(240px);
-          height: 80%;
-          padding: 20px;
+        img {
+          border-radius: 18px;
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+        }
+        a.nostyle:link {
+          text-decoration: inherit;
+          color: inherit;
+          cursor: auto;
+        }
+        a.nostyle:visited {
+          text-decoration: inherit;
+          color: inherit;
+          cursor: auto;
+        }
+        .text-container {
+          display: flex;
+          flex-direction: column;
+          padding: 0 70px;
+          justify-content: center;
+        }
+        @media only screen and (max-width: 550px) {
+          div[class*='project-'] {
+            flex-direction: column;
+          }
+          .text-container {
+            padding: 20px 0;
+          }
+          h3 {
+            font-size: 30px;
+          }
         }
         p {
-          margin-block-start: 0;
-          margin-block-end: 0;
+          margin: 0;
           background-color: transparent;
           font-size: 20px;
-        }
-        .project-${id}::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url(${image});
-          background-position: left 0px bottom -5px;
-          background-size: cover;
-          filter: brightness(100%) blur(0);
-        }
-        @keyframes slide-up {
-          to {
-            transform: translateY(0px);
-          }
-        }
-        @keyframes blur-darken {
-          to {
-            filter: brightness(70%) blur(5px);
-          }
         }
       }`}</style>
     </>

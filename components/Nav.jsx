@@ -70,16 +70,31 @@ const Nav = () => {
       </nav>
       <style jsx>{`
         nav {
-          display: grid;
-          padding: 1rem;
-          grid-template-columns: 10% 1fr 1fr 1fr 10%;
+          display: flex;
           min-height: 10vh;
           align-items: center;
-          justify-items: center;
+          justify-content: space-between;
           color: ${colours.white};
         }
+        @media only screen and (max-width: 550px) {
+          nav {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+          }
+          .header-logo {
+            justify-self: start;
+          }
+          .menu {
+            justify-self: end;
+            visibility: visible;
+          }
+          .projects,
+          .cv,
+          .about {
+            display: none;
+          }
+        }
         .header-logo {
-          grid-column: 1/2;
           font-size: 40px;
           cursor: pointer;
         }
@@ -94,19 +109,6 @@ const Nav = () => {
         }
         a:hover {
           color: ${colours.orange};
-        }
-        .menu {
-          visibility: hidden;
-        }
-        @media (max-width: 650px) {
-          .menu {
-            visibility: visible;
-          }
-          .projects,
-          .cv,
-          .about {
-            visibility: hidden;
-          }
         }
         .current {
           color: ${colours.orange};

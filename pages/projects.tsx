@@ -8,6 +8,7 @@ interface Project {
   description: string;
   id: number;
   image: string;
+  url: string;
 }
 
 interface State {
@@ -20,31 +21,39 @@ const Projects: React.FC = () => {
     <>
       <div className="container">
         <Nav />
-        <section className="top">
-          {projects &&
-            projects.map(({ name, description, image }, index: number) => (
-              <Project key={index} name={name} description={description} id={index} image={image} />
-            ))}
-        </section>
+        <h2>projects</h2>
+        {projects &&
+          projects.map(({ name, description, image, url }, index: number) => (
+            <Project key={index} name={name} description={description} id={index} image={image} url={url} />
+          ))}
       </div>
       <style jsx>{`
         .container {
+          display: grid;
+          grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+          grid-column-gap: 5%;
           background: linear-gradient(
-            -165deg,
+            -186deg,
             ${colours.gold} 40%,
             ${colours.darkBlue} 0%,
             ${colours.darkBlue} 74%,
-            ${colours.pink} 0%
+            ${colours.brown} 0%
           );
           color: ${colours.white};
+          padding: 20px 40px;
         }
-        section {
-          display: grid;
-          height: 100%;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: repeat(4, 1fr);
-          grid-column-gap: 5%;
-          padding: 70px 150px;
+        h2 {
+          font-size: 120px;
+          font-weight: 800;
+        }
+        @media only screen and (max-width: 550px) {
+          .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+          }
+          h2 {
+            font-size: 66px;
+          }
         }
       `}</style>
     </>
