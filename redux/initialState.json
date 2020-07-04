@@ -23,16 +23,24 @@
   "skills": [
     {
       "name": "React",
-      "description": "React desc",
+      "subSkills": [],
       "image": "/skill-logos/react.png"
     },
     {
       "name": "Redux",
+      "subSkills": [],
       "description": "Redux desc",
       "image": "/skill-logos/redux.png"
     },
     {
       "name": "TypeScript",
+      "subSkills": [],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "TDD",
+      "subSkills": ["Mocha", "Jest", "Sinon", "Chai"],
       "description": "TypeScript desc",
       "image": "/skill-logos/ts.png"
     }

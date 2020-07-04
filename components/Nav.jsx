@@ -2,12 +2,6 @@ import Link from 'next/link';
 import { colours } from '../theme';
 
 const Nav = () => {
-  const linkColor = () => {
-    if (typeof window !== 'undefined') {
-      const navlink = document.querySelector('.projects');
-      navlink?.classList.add('.current');
-    }
-  };
   return (
     <>
       <nav className="nav">
@@ -82,10 +76,8 @@ const Nav = () => {
             grid-template-rows: 1fr;
           }
           .header-logo {
-            justify-self: start;
           }
           .menu {
-            justify-self: end;
             visibility: visible;
           }
           .projects,

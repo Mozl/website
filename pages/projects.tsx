@@ -19,18 +19,18 @@ const Projects: React.FC = () => {
   const projects = useSelector((state: State) => state.projects);
   return (
     <>
-      <div className="container">
+      <main className="container">
         <Nav />
         <h2>projects</h2>
         {projects &&
           projects.map(({ name, description, image, url }, index: number) => (
             <Project key={index} name={name} description={description} id={index} image={image} url={url} />
           ))}
-      </div>
+      </main>
       <style jsx>{`
         .container {
           display: grid;
-          grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+          grid-template-rows: auto auto 1fr 1fr 1fr;
           grid-column-gap: 5%;
           background: linear-gradient(
             -186deg,
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
         @media only screen and (max-width: 550px) {
           .container {
             grid-template-columns: 1fr;
-            grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto 1fr 1fr 1fr;
           }
           h2 {
             font-size: 66px;

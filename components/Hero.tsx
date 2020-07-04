@@ -56,6 +56,11 @@ const Hero: FC<Props> = () => {
           justify-items: center;
           align-items: center;
         }
+        @media only screen and (max-width: 550px) {
+          .hero {
+            grid-template-columns: 1fr;
+          }
+        }
         .hero-text {
           display: grid;
           grid-template-rows: 1fr 1fr;
