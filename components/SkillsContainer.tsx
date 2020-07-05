@@ -24,19 +24,18 @@ const Skills: FC = () => {
   return (
     <>
       <div className="container">
-        {/* {skills &&
-          skills.map(({ name, description, image }, index) => (
-            <Skill key={index} name={name} description={description} image={image} id={index} />
-          ))} */}
-        {skills.map((skill, index) => (
+        {skills?.map((skill, index) => (
           <div key={index} className={`skill-${index}`}>
             <span className="skillName">{skill.name}</span>
             <div className="slider">
               <div className="subSkills">
                 {skill?.subSkills &&
-                  skill.subSkills.map((subskill) => {
-                    console.log(subskill);
-                    return <div className="subSkill">{subskill}</div>;
+                  skill.subSkills.map((subskill, index) => {
+                    return (
+                      <div key={index} className="subSkill">
+                        {subskill}
+                      </div>
+                    );
                   })}
               </div>
             </div>
@@ -52,25 +51,16 @@ const Skills: FC = () => {
           align-items: center;
           background: ${colours.black};
         }
-        p,
-        span {
-          color: ${colours.white};
-        }
         div[class*='skill-'] {
           display: flex;
           font-size: 176px;
+          font-size: clamp(1em, 11vw, 13em);
           font-weight: 800;
           align-items: center;
           color: ${colours.white};
           position: relative;
           z-index: 0;
-        }
-        div[class*='skill-']:hover > .slider {
-          animation: scale-up 0.2s ease-in forwards;
-          color: red;
-        }
-        div[class*='slider']:hover > .subSkills {
-          animation: fade-in 0.1s 0.1s ease-in forwards;
+          padding: 0 40px;
         }
         .slider {
           display: flex;
@@ -85,16 +75,30 @@ const Skills: FC = () => {
           background-color: ${colours.lightBlue};
           justify-content: center;
           align-items: center;
+          padding: 0 40px;
         }
         .subSkills {
           display: flex;
           width: 100%;
+          flex-wrap: wrap;
           justify-content: space-around;
           align-items: center;
           color: white;
           font-size: 60px;
           font-weight: 400;
           opacity: 0;
+        }
+        @media only screen and (max-width: 1024px) {
+          .slider,
+          .subskills {
+            display: none;
+          }
+        }
+        div[class*='skill-']:hover > .slider {
+          animation: scale-up 0.2s ease-in forwards;
+        }
+        div[class*='slider']:hover > .subSkills {
+          animation: fade-in 0.1s 0.1s ease-in forwards;
         }
         @keyframes scale-up {
           to {

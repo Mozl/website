@@ -14,33 +14,69 @@
       "url": "http://cotd12345.herokuapp.com/"
     },
     {
-      "name": "third project",
+      "name": "This Website",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "image": "/sounds.png",
-      "url": "https://bbc.co.uk/sounds"
+      "url": "#"
     }
   ],
   "skills": [
     {
       "name": "React",
-      "subSkills": [],
+      "subSkills": ["useState", "useEffect", "useMemo", "useContext"],
       "image": "/skill-logos/react.png"
     },
     {
       "name": "Redux",
-      "subSkills": [],
+      "subSkills": ["useSelector", "useDispatch", "Thunk"],
       "description": "Redux desc",
       "image": "/skill-logos/redux.png"
     },
     {
       "name": "TypeScript",
-      "subSkills": [],
+      "subSkills": ["Interfaces", "Picks", "Mixins", "Generics"],
       "description": "TypeScript desc",
       "image": "/skill-logos/ts.png"
     },
     {
-      "name": "TDD",
+      "name": "Testing",
       "subSkills": ["Mocha", "Jest", "Sinon", "Chai"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "Experimentation",
+      "subSkills": ["Optimizely", "A/B", "MVT"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "Node",
+      "subSkills": ["Express", "Middlewares", "SSR"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "AWS",
+      "subSkills": ["EC2", "S3", "Lambdas", "IAM", "Cloudwatch"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "Production",
+      "subSkills": ["Webpack", "Caching", "Jenkins", "Nginx"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "Performance",
+      "subSkills": ["Web Vitals", "Lazy Loading", "Code Splitting"],
+      "description": "TypeScript desc",
+      "image": "/skill-logos/ts.png"
+    },
+    {
+      "name": "Teamwork",
+      "subSkills": ["Agile", "Pairing", "Github", "Kanban"],
       "description": "TypeScript desc",
       "image": "/skill-logos/ts.png"
     }

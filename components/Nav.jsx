@@ -69,6 +69,7 @@ const Nav = () => {
           align-items: center;
           justify-content: space-between;
           color: ${colours.white};
+          padding: 20px 40px;
         }
         @media only screen and (max-width: 550px) {
           nav {
