@@ -27,8 +27,9 @@ const Border = () => {
       <div className="border">
         <svg
           id="wavy-border"
+          className="border-svg"
           width="100%"
-          height="345"
+          height="245"
           viewBox="5 0 1682 345"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
@@ -43,6 +44,11 @@ const Border = () => {
           align-content: flex-end;
           justify-content: flex-end;
           width: 100%;
+        }
+        @media only screen and (max-width: 550px) {
+          .border-svg {
+            height: 120px;
+          }
         }
       `}</style>
     </>

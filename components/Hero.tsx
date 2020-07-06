@@ -13,14 +13,13 @@ const Hero: FC<Props> = () => {
       <div className="hero">
         <div className="hero-image">
           <div className="louis-image">
-            <img className="headshot" src="/louis.png" height="528px" width="528px"></img>
+            <img className="headshot" src="/louis.png" height="535px" width="535px"></img>
           </div>
         </div>
         <div className="hero-text">
           <span>Hi I'm</span>
           <svg
             className="hero-svg"
-            height="170"
             viewBox="0 0 478 170"
             stroke={`${colours.white}`}
             fill="none"
@@ -40,14 +39,10 @@ const Hero: FC<Props> = () => {
         .louis-image {
           border-radius: 50%;
           background: linear-gradient(159deg, ${colours.lightOrange} 3%, ${colours.orange} 100%);
-          width: 528px;
-          height: 528px;
+          width: 535px;
+          height: 535px;
           object-fit: cover;
           overflow: hidden;
-        }
-        .headshot {
-          height: 528px;
-          width: 528px;
         }
         .hero {
           display: grid;
@@ -56,11 +51,6 @@ const Hero: FC<Props> = () => {
           justify-items: center;
           align-items: center;
         }
-        @media only screen and (max-width: 550px) {
-          .hero {
-            grid-template-columns: 1fr;
-          }
-        }
         .hero-text {
           display: grid;
           grid-template-rows: 1fr 1fr;
@@ -68,11 +58,25 @@ const Hero: FC<Props> = () => {
           align-items: center;
           color: ${colours.white};
           font-size: 95px;
+          width: 550px;
+        }
+        @media only screen and (max-width: 550px) {
+          .hero {
+            grid-template-columns: 1fr;
+            padding: 24px;
+          }
+          .headshot,
+          .louis-image {
+            width: 428px;
+            height: 428px;
+          }
+          .hero-text {
+            width: 450px;
+          }
         }
         .hero-text span {
           animation: move-in 1s cubic-bezier(0.74, 0.04, 0.33, 1.39);
         }
-
         @keyframes move-in {
           0% {
             transform: translate(1000px);

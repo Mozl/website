@@ -75,6 +75,7 @@ const Nav = () => {
           nav {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
+            padding: 20px 24px;
           }
           .header-logo {
           }

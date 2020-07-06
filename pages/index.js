@@ -19,7 +19,7 @@ const Home = () => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: auto auto auto 1fr;
-          background: linear-gradient(to bottom, ${colours.darkBlue} 25%, ${colours.lightBlue} 100%);
+          background: linear-gradient(to bottom, ${colours.darkBlue} 8%, ${colours.lightBlue} 32%);
         }
         .nav-container {
           padding: 20px 40px;
