@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import { colours } from '../theme';
+import MenuLogo from '../components/MenuLogo';
 
 const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
       <nav className="nav">
@@ -27,40 +30,7 @@ const Nav = () => {
         <Link href="/about">
           <a className="about">about me</a>
         </Link>
-        <div className="menu">
-          <svg width="47" height="42" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line
-              x1="22.4457"
-              y1="3.1129"
-              x2="3.03215"
-              y2="24.5085"
-              stroke={`${colours.white}`}
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <line
-              x1="44.1896"
-              y1="17.5075"
-              x2="24.7761"
-              y2="38.903"
-              stroke={`${colours.white}`}
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <line
-              x1="40.236"
-              y1="3.24801"
-              x2="7.98537"
-              y2="38.7861"
-              stroke={`${colours.white}`}
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+        <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={() => setIsMenuOpen(!isMenuOpen)} />
       </nav>
       <style jsx>{`
         nav {
@@ -70,23 +40,8 @@ const Nav = () => {
           justify-content: space-between;
           color: ${colours.white};
           padding: 20px 40px;
-        }
-        @media only screen and (max-width: 550px) {
-          nav {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            padding: 20px 24px;
-          }
-          .header-logo {
-          }
-          .menu {
-            visibility: visible;
-          }
-          .projects,
-          .cv,
-          .about {
-            display: none;
-          }
+          position: relative;
+          z-index: 2;
         }
         .header-logo {
           font-size: 40px;
@@ -106,6 +61,23 @@ const Nav = () => {
         }
         .current {
           color: ${colours.orange};
+        }
+        @media only screen and (max-width: 550px) {
+          nav {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding: 20px 24px;
+          }
+          .header-logo {
+          }
+          .menu {
+            visibility: visible;
+          }
+          .projects,
+          .cv,
+          .about {
+            display: none;
+          }
         }
       `}</style>
     </>
