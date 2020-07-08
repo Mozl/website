@@ -41,7 +41,7 @@
     },
     {
       "name": "Testing",
-      "subSkills": ["Mocha", "Jest", "Sinon", "Chai"],
+      "subSkills": ["Jest", "Mocha", "Sinon", "Chai"],
       "description": "TypeScript desc",
       "image": "/skill-logos/ts.png"
     },

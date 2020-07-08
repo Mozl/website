@@ -1,16 +1,23 @@
+import { useSelector, useDispatch } from 'react-redux';
 import Nav from '../components/Nav';
 import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
 import Hero from '../components/Hero';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
+import { toggleMenu } from '../redux/actions/menuActions';
 
 const Home = () => {
+  const isMenuOpen = useSelector((state) => state.isMenuOpen);
+  const dispatch = useDispatch();
+  const onToggleMenu = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <>
       <div className="container">
-        <Nav />
-        <Menu />
+        <Nav onToggleMenu={onToggleMenu} />
+        <Menu isMenuOpen={isMenuOpen} />
         <Hero />
         <Border />
         <SkillsContainer />

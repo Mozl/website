@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import { colours } from '../theme';
 import MenuLogo from '../components/MenuLogo';
 
-const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Nav = ({ onToggleMenu }) => {
   return (
     <>
       <nav className="nav">
@@ -30,7 +28,7 @@ const Nav = () => {
         <Link href="/about">
           <a className="about">about me</a>
         </Link>
-        <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={() => setIsMenuOpen(!isMenuOpen)} />
+        <MenuLogo onToggleMenu={onToggleMenu} />
       </nav>
       <style jsx>{`
         nav {
@@ -41,7 +39,7 @@ const Nav = () => {
           color: ${colours.white};
           padding: 20px 40px;
           position: relative;
-          z-index: 2;
+          z-index: 3;
         }
         .header-logo {
           font-size: 40px;
@@ -67,8 +65,6 @@ const Nav = () => {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             padding: 20px 24px;
-          }
-          .header-logo {
           }
           .menu {
             visibility: visible;

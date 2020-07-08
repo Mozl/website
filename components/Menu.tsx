@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { colours } from '../theme';
 
-const Menu = () => {
+const Menu = ({ isMenuOpen }) => {
   return (
     <>
       <div className="menuOpen">
@@ -21,20 +21,18 @@ const Menu = () => {
         .menuOpen {
           display: flex;
           position: fixed;
+          z-index: 1;
           width: 100%;
           height: 100vh;
           align-items: center;
           justify-content: center;
-          background: black;
+          transition: clip-path 0.5s ease-in;
+          background: ${colours.black};
           font-size: 24px;
-          clip-path: circle(0px at 92.5% 9.5%);
+          clip-path: circle(${isMenuOpen.isMenuOpen ? '1000px' : '0px'} at 92.5% 9.5%);
         }
-        .open {
-          display: flex;
-          animation: expand 0.5s ease-out forwards;
-        }
-        .closed {
-          animation: contract 0.5s ease-out forwards;
+        body {
+          position: ${isMenuOpen.isMenuOpen ? 'fixed' : 'auto'};
         }
         a {
           color: ${colours.white};
@@ -58,9 +56,6 @@ const Menu = () => {
           }
         }
         @keyframes contract {
-          from {
-            clip-path: circle(1000px at 92.5% 9.5%);
-          }
           to {
             clip-path: circle(0px at 92.5% 9.5%);
           }

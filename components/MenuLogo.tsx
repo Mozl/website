@@ -1,24 +1,9 @@
-import Link from 'next/link';
 import { colours } from '../theme';
 
-const MenuLogo = () => {
-  const handleClick = (e: MouseEvent) => {
-    // const menuOpen = document.querySelector('.menuOpen');
-    e.preventDefault();
-    // if (!menuOpen?.classList.contains('open')) {
-    //   menuOpen?.classList.add('open');
-    // } else {
-    //   menuOpen?.classList.remove('open');
-    //   menuOpen?.classList.add('closed');
-    // }
-    // if (menuOpen?.classList.contains('closed')) {
-    //   menuOpen?.classList.remove('open');
-    // }
-  };
-
+const MenuLogo = ({ onToggleMenu }) => {
   return (
     <>
-      <div className="menuLogo menuLogo-open" onClick={handleClick}>
+      <div className="menuLogo menuLogo-open" onClick={onToggleMenu}>
         <svg width="47" height="42" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="22.4457"
