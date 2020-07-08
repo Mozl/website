@@ -1,11 +1,26 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleMenu } from '../redux/actions/menuActions';
 import Nav from '../components/Nav';
 import { colours } from '../theme';
+import Menu from '../components/Menu';
+
+interface RootState {
+  isMenuOpen: {
+    isMenuOpen: boolean;
+  };
+}
 
 const CV: React.FC = () => {
+  const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
+  const dispatch = useDispatch();
+  const onToggleMenu = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <>
       <div className="container">
-        <Nav />
+        <Nav onToggleMenu={onToggleMenu} />
+        <Menu isMenuOpen={isMenuOpen} />
         <section className="top">
           <object data="/Louis_Moselhi_CV.pdf" type="application/pdf" width="100%" height="100%"></object>
           <div className="link-container">

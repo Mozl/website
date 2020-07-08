@@ -1,7 +1,9 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleMenu } from '../redux/actions/menuActions';
 import Nav from '../components/Nav';
-import { useSelector } from 'react-redux';
 import Project from '../components/Project';
 import { colours } from '../theme';
+import Menu from '../components/Menu';
 
 interface Project {
   name: string;
@@ -11,16 +13,25 @@ interface Project {
   url: string;
 }
 
-interface State {
+interface RootState {
   projects: Project[];
+  isMenuOpen: {
+    isMenuOpen: boolean;
+  };
 }
 
 const Projects: React.FC = () => {
-  const projects = useSelector((state: State) => state.projects);
+  const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
+  const projects = useSelector((state: RootState) => state.projects);
+  const dispatch = useDispatch();
+  const onToggleMenu = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <>
       <main className="main">
-        <Nav />
+        <Nav onToggleMenu={onToggleMenu} />
+        <Menu isMenuOpen={isMenuOpen} />
         <div className="container">
           <h2>projects</h2>
           {projects &&
@@ -55,6 +66,7 @@ const Projects: React.FC = () => {
           .container {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto 1fr 1fr;
+            padding: 20px 24px;
           }
           h2 {
             font-size: 66px;

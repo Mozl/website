@@ -2,10 +2,11 @@ import React, { FC } from 'react';
 import { colours } from '../theme';
 
 interface Props {
-  name: string;
-  description: string;
+  skill: {
+    subSkills: [];
+    name: string;
+  };
   id: number;
-  image: string;
 }
 
 const Skill: FC<Props> = ({ skill, id }) => {
@@ -68,6 +69,9 @@ const Skill: FC<Props> = ({ skill, id }) => {
           .slider,
           .subskills {
             display: none;
+          }
+          div[class*='skill-'] {
+            padding: 0 24px;
           }
         }
         div[class*='skill-']:hover > .slider {

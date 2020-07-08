@@ -1,6 +1,10 @@
 import { colours } from '../theme';
 
-const MenuLogo = ({ onToggleMenu }) => {
+interface Props {
+  onToggleMenu: () => void;
+}
+
+const MenuLogo = ({ onToggleMenu }: Props) => {
   return (
     <>
       <div className="menuLogo menuLogo-open" onClick={onToggleMenu}>

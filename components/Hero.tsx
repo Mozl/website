@@ -1,13 +1,7 @@
 import React, { FC } from 'react';
 import { colours } from '../theme';
 
-interface Props {
-  name: string;
-  description: string;
-  image?: string;
-}
-
-const Hero: FC<Props> = () => {
+const Hero: FC = () => {
   return (
     <>
       <div className="hero">

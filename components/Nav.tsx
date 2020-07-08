@@ -2,7 +2,11 @@ import Link from 'next/link';
 import { colours } from '../theme';
 import MenuLogo from '../components/MenuLogo';
 
-const Nav = ({ onToggleMenu }) => {
+interface Props {
+  onToggleMenu: () => void;
+}
+
+const Nav = ({ onToggleMenu }: Props) => {
   return (
     <>
       <nav className="nav">
@@ -62,8 +66,6 @@ const Nav = ({ onToggleMenu }) => {
         }
         @media only screen and (max-width: 550px) {
           nav {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
             padding: 20px 24px;
           }
           .menu {

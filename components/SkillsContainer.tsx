@@ -4,18 +4,7 @@ import Skill from '../components/Skill';
 import { colours } from '../theme';
 
 interface RootState {
-  skills: Skill[];
-}
-
-interface SubSkill {
-  skill: string;
-}
-
-interface Skill {
-  name: string;
-  image: string;
-  id: number;
-  subSkills: SubSkill[];
+  skills: [];
 }
 
 const Skills: FC = () => {
@@ -25,7 +14,7 @@ const Skills: FC = () => {
     <>
       <div className="container">
         {skills?.map((skill, index) => (
-          <Skill key={index} skill={skill} index={index} />
+          <Skill key={index} skill={skill} id={index} />
         ))}
       </div>
       <style jsx>{`

@@ -1,7 +1,13 @@
 import Link from 'next/link';
 import { colours } from '../theme';
 
-const Menu = ({ isMenuOpen }) => {
+interface Props {
+  isMenuOpen: {
+    isMenuOpen: boolean;
+  };
+}
+
+const Menu = ({ isMenuOpen }: Props) => {
   return (
     <>
       <div className="menuOpen">
@@ -21,6 +27,7 @@ const Menu = ({ isMenuOpen }) => {
         .menuOpen {
           display: flex;
           position: fixed;
+          top: 0;
           z-index: 1;
           width: 100%;
           height: 100vh;
@@ -30,9 +37,6 @@ const Menu = ({ isMenuOpen }) => {
           background: ${colours.black};
           font-size: 24px;
           clip-path: circle(${isMenuOpen.isMenuOpen ? '1000px' : '0px'} at 92.5% 9.5%);
-        }
-        body {
-          position: ${isMenuOpen.isMenuOpen ? 'fixed' : 'auto'};
         }
         a {
           color: ${colours.white};

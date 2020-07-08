@@ -1,14 +1,20 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { toggleMenu } from '../redux/actions/menuActions';
 import Nav from '../components/Nav';
 import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
 import Hero from '../components/Hero';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
-import { toggleMenu } from '../redux/actions/menuActions';
 
-const Home = () => {
-  const isMenuOpen = useSelector((state) => state.isMenuOpen);
+interface RootState {
+  isMenuOpen: {
+    isMenuOpen: boolean;
+  };
+}
+
+const Home: React.FC = () => {
+  const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
   const dispatch = useDispatch();
   const onToggleMenu = () => {
     dispatch(toggleMenu());
@@ -38,7 +44,8 @@ const Home = () => {
           padding: 0;
           margin: 0;
           font-family: 'Poppins', sans-serif;
-          overflow-x: hidden;
+          position: ${isMenuOpen.isMenuOpen ? 'fixed' : 'unset'};
+          width: 100%;
         }
 
         * {
