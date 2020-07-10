@@ -32,7 +32,7 @@ const Nav = ({ onToggleMenu }: Props) => {
         <Link href="/about">
           <a className="about">about me</a>
         </Link>
-        <MenuLogo onToggleMenu={onToggleMenu} />
+        {typeof window !== 'undefined' && window.innerWidth <= 550 && <MenuLogo onToggleMenu={onToggleMenu} />}
       </nav>
       <style jsx>{`
         nav {

@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { colours } from '../theme';
+import Router from 'next/router';
+import { useDispatch } from 'react-redux';
+import { toggleMenu, closeMenu } from '../redux/actions/menuActions';
 
 interface Props {
   isMenuOpen: {
@@ -8,6 +11,14 @@ interface Props {
 }
 
 const Menu = ({ isMenuOpen }: Props) => {
+  const dispatch = useDispatch();
+
+  const handleRouteChange = () => {
+    isMenuOpen && dispatch(closeMenu());
+  };
+
+  Router.events.on('routeChangeStart', handleRouteChange);
+
   return (
     <>
       <div className="menuOpen">
@@ -33,7 +44,7 @@ const Menu = ({ isMenuOpen }: Props) => {
           height: 100vh;
           align-items: center;
           justify-content: center;
-          transition: clip-path 0.5s ease-in;
+          transition: clip-path 0.2s ease-in;
           background: ${colours.black};
           font-size: 24px;
           clip-path: circle(${isMenuOpen.isMenuOpen ? '1000px' : '0px'} at 92.5% 9.5%);
@@ -52,16 +63,6 @@ const Menu = ({ isMenuOpen }: Props) => {
         @media only screen and (max-width: 550px) {
           .menu {
             display: flex;
-          }
-        }
-        @keyframes expand {
-          to {
-            clip-path: circle(1000px at 92.5% 9.5%);
-          }
-        }
-        @keyframes contract {
-          to {
-            clip-path: circle(0px at 92.5% 9.5%);
           }
         }
       `}</style>
