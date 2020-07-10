@@ -20,7 +20,7 @@ const About: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Nav onToggleMenu={onToggleMenu} />
+        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
         <Menu isMenuOpen={isMenuOpen} />
         <div>About</div>
         <Link href="/">

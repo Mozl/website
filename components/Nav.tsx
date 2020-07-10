@@ -4,9 +4,12 @@ import MenuLogo from '../components/MenuLogo';
 
 interface Props {
   onToggleMenu: () => void;
+  isMenuOpen: {
+    isMenuOpen: boolean;
+  };
 }
 
-const Nav = ({ onToggleMenu }: Props) => {
+const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
   return (
     <>
       <nav className="nav">
@@ -32,7 +35,9 @@ const Nav = ({ onToggleMenu }: Props) => {
         <Link href="/about">
           <a className="about">about me</a>
         </Link>
-        {typeof window !== 'undefined' && window.innerWidth <= 550 && <MenuLogo onToggleMenu={onToggleMenu} />}
+        {typeof window !== 'undefined' && window.innerWidth <= 550 && (
+          <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
+        )}
       </nav>
       <style jsx>{`
         nav {

@@ -19,7 +19,7 @@ const CV: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Nav onToggleMenu={onToggleMenu} />
+        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
         <Menu isMenuOpen={isMenuOpen} />
         <section className="top">
           <object data="/Louis_Moselhi_CV.pdf" type="application/pdf" width="100%" height="100%"></object>

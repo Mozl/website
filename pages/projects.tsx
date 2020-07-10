@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <main className="main">
-        <Nav onToggleMenu={onToggleMenu} />
+        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
         <Menu isMenuOpen={isMenuOpen} />
         <div className="container">
           <h2>projects</h2>

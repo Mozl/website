@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Nav onToggleMenu={onToggleMenu} />
+        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
         <Menu isMenuOpen={isMenuOpen} />
         <Hero />
         <Border />
