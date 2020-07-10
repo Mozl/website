@@ -61,11 +61,12 @@ const Hero: FC = () => {
           }
           .headshot,
           .louis-image {
-            width: 428px;
-            height: 428px;
+            width: 320px;
+            height: 320px;
           }
           .hero-text {
-            width: 450px;
+            width: 320px;
+            font-size: 70px;
           }
         }
         .hero-text span {
