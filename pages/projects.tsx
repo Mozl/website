@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
         .main {
           background: linear-gradient(
             -186deg,
-            ${colours.gold} 33%,
+            ${colours.gold} 40%,
             ${colours.darkBlue} 0%,
             ${colours.darkBlue} 66%,
             ${colours.brown} 0%
@@ -55,7 +55,6 @@ const Projects: React.FC = () => {
           display: grid;
           grid-template-rows: auto auto 1fr 1fr;
           grid-column-gap: 5%;
-
           padding: 20px 40px;
         }
         h2 {

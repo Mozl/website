@@ -1,8 +1,4 @@
-import { OPEN_MENU, CLOSE_MENU, TOGGLE_MENU } from './types';
-
-export function openMenu() {
-  return { type: OPEN_MENU };
-}
+import { CLOSE_MENU, TOGGLE_MENU } from './types';
 
 export function closeMenu() {
   return { type: CLOSE_MENU };

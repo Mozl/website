@@ -15,7 +15,7 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
       <a className="nostyle" href={url}>
         <div className={`project-${id}`}>
           <div className="image-container">
-            <img src={image}></img>
+            <img className="image" src={image}></img>
           </div>
           <div className="text-container">
             <h3>{name}</h3>
@@ -39,10 +39,13 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
           color: ${colours.orange}
         }
         img {
-          border-radius: 18px;
           object-fit: cover;
           width: 100%;
           height: auto;
+          transition: transform .7s;
+        }
+        img:hover {
+          transform: scale(1.3)
         }
         a.nostyle:link {
           text-decoration: inherit;
@@ -59,6 +62,10 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
           flex-direction: column;
           padding: 0 70px;
           justify-content: center;
+        }
+        .image-container {
+          overflow: hidden;
+          border-radius: 18px;
         }
         @media only screen and (max-width: 550px) {
           div[class*='project-'] {
