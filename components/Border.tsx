@@ -15,7 +15,7 @@ if (typeof window !== 'undefined') {
     targets: '.pathStart',
     loop: true,
     direction: 'alternate',
-    duration: 50000,
+    duration: 35000,
     easing: 'easeInOutSine',
     d: [{ value: path2 }, { value: path3 }, { value: path4 }]
   });

@@ -13,9 +13,10 @@ const Skills: FC = () => {
   return (
     <>
       <div className="container">
-        {skills?.map((skill, index) => (
-          <Skill key={index} skill={skill} id={index} />
-        ))}
+        {skills?.map((skill, index) => {
+          let colour = `hsl(224, 93%, ${25 + (index + 1) * 5}%)`;
+          return <Skill colour={colour} key={index} skill={skill} id={index} />;
+        })}
       </div>
       <style jsx>{`
         .container {

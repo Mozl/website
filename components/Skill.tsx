@@ -7,9 +7,11 @@ interface Props {
     name: string;
   };
   id: number;
+  colour: string;
 }
 
-const Skill: FC<Props> = ({ skill, id }) => {
+const Skill: FC<Props> = ({ skill, id, colour }) => {
+  console.log(colour);
   return (
     <>
       <div key={id} className={`skill-${id}`}>
@@ -34,7 +36,7 @@ const Skill: FC<Props> = ({ skill, id }) => {
           font-size: clamp(1em, 11vw, 13em);
           font-weight: 800;
           align-items: center;
-          color: ${colours.white};
+          color: ${colour};
           position: relative;
           z-index: 0;
           padding: 0 40px;
@@ -49,7 +51,7 @@ const Skill: FC<Props> = ({ skill, id }) => {
           transform-origin: 0 100%;
           transform: scaleY(0);
           z-index: -1;
-          background-color: ${colours.lightBlue};
+          background-color: ${colour};
           justify-content: center;
           align-items: center;
           padding: 0 40px;
