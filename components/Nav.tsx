@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { colours } from '../theme';
 import MenuLogo from '../components/MenuLogo';
+import ActiveLink from '../components/ActiveLink';
 
 interface Props {
   onToggleMenu: () => void;
@@ -26,15 +27,15 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
             </svg>
           </Link>
         </div>
-        <Link href="/projects">
+        <ActiveLink href="/projects">
           <a className="projects">projects</a>
-        </Link>
-        <Link href="/cv">
+        </ActiveLink>
+        <ActiveLink href="/cv">
           <a className="cv">cv</a>
-        </Link>
-        <Link href="/about">
+        </ActiveLink>
+        <ActiveLink href="/about">
           <a className="about">about me</a>
-        </Link>
+        </ActiveLink>
         {typeof window !== 'undefined' && window.innerWidth <= 550 && (
           <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
         )}
@@ -59,9 +60,6 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           transform: scale(0.95);
         }
         a {
-          font-size: 24px;
-          color: ${colours.white};
-          text-decoration: none;
         }
         a:hover {
           color: ${colours.orange};
