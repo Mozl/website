@@ -60,6 +60,7 @@ const Projects: React.FC = () => {
         h2 {
           font-size: 120px;
           font-weight: 800;
+          margin-bottom: 0;
         }
         @media only screen and (max-width: 550px) {
           .container {

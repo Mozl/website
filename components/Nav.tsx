@@ -50,6 +50,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           padding: 20px 40px;
           position: relative;
           z-index: 3;
+          font-size: 24px;
         }
         .header-logo {
           font-size: 40px;
@@ -58,8 +59,6 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         a:active,
         .header-logo:active {
           transform: scale(0.95);
-        }
-        a {
         }
         a:hover {
           color: ${colours.orange};

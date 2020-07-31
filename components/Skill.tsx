@@ -79,7 +79,7 @@ const Skill: FC<Props> = ({ skill, id, colour }) => {
         div[class*='skill-']:hover > .slider {
           animation: scale-up 0.2s ease-in forwards;
         }
-        div[class*='slider']:hover > .subSkills {
+        div[class*='skill-']:hover > .subSkills {
           animation: fade-in 0.07s 0.1s ease-in forwards;
         }
         @keyframes scale-up {
