@@ -1,7 +1,13 @@
 import { useRouter } from 'next/router';
 import { colours } from '../theme';
+import { MouseEvent } from 'react';
 
-function ActiveLink({ children, href }) {
+interface Props {
+  children: JSX.Element;
+  href: string;
+}
+
+function ActiveLink({ children, href }: Props) {
   const router = useRouter();
   const style = {
     color: router.pathname === href ? `${colours.orange}` : `${colours.white}`,
@@ -9,7 +15,7 @@ function ActiveLink({ children, href }) {
     textDecoration: 'none'
   };
 
-  const handleClick = (e) => {
+  const handleClick = (e: MouseEvent) => {
     e.preventDefault();
     router.push(href);
   };
