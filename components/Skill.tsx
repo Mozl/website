@@ -11,7 +11,6 @@ interface Props {
 }
 
 const Skill: FC<Props> = ({ skill, id, colour }) => {
-  console.log(colour);
   return (
     <>
       <div key={id} className={`skill-${id}`}>
@@ -79,7 +78,7 @@ const Skill: FC<Props> = ({ skill, id, colour }) => {
         div[class*='skill-']:hover > .slider {
           animation: scale-up 0.2s ease-in forwards;
         }
-        div[class*='skill-']:hover > .subSkills {
+        div[class*='slider']:hover > .subSkills {
           animation: fade-in 0.07s 0.1s ease-in forwards;
         }
         @keyframes scale-up {

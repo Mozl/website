@@ -36,7 +36,7 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
         }
         h3:hover {
           cursor: pointer;
-          color: ${colours.orange}
+          color: ${colours.orange};
         }
         img {
           object-fit: cover;
@@ -45,7 +45,8 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
           transition: transform .7s;
         }
         img:hover {
-          transform: scale(1.3)
+          transform: scale(1.3);
+          cursor: pointer;
         }
         a.nostyle:link {
           text-decoration: inherit;

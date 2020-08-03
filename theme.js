@@ -8,8 +8,3 @@ export const colours = {
   white: '#ffffff',
   black: '#121212'
 };
-
-3, 25, 87;
-144, 221, 255;
-
-141, 196, 168;
