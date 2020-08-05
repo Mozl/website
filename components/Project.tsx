@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { colours } from '../theme';
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   url: string;
 }
 
-const Project: FC<Props> = ({ name, description, id, image, url }) => {
+const Project = ({ name, description, id, image, url }: Props) => {
   return (
     <>
       <a className="nostyle" href={url}>
@@ -25,28 +25,30 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
       </a>
       <style jsx>{`
         div[class*='project-'] {
-          display: flex;
-          height: 600px;
-          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           align-items: center;
+          cursor: pointer;
+          margin: 30px 0;
         }
         h3 {
           font-size: 50px;
           margin: 0 0 20px 0;
         }
         h3:hover {
-          cursor: pointer;
           color: ${colours.orange};
         }
         img {
+          grid-column: 1;
           object-fit: cover;
+          object-position: left;
           width: 100%;
           height: auto;
+          min-height: 300px;
           transition: transform .7s;
         }
         img:hover {
           transform: scale(1.3);
-          cursor: pointer;
         }
         a.nostyle:link {
           text-decoration: inherit;
@@ -70,7 +72,8 @@ const Project: FC<Props> = ({ name, description, id, image, url }) => {
         }
         @media only screen and (max-width: 550px) {
           div[class*='project-'] {
-            flex-direction: column;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
           }
           .text-container {
             padding: 20px 0;

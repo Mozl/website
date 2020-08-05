@@ -60,7 +60,7 @@ const About: React.FC = () => {
           font-size: 120px;
           font-weight: 800;
           color: ${colours.white};
-          margin-bottom: 0;
+          margin: 50px 0 50px 0;
         }
         a {
           color: ${colours.orange};

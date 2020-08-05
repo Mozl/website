@@ -54,13 +54,12 @@ const Projects: React.FC = () => {
         .container {
           display: grid;
           grid-template-rows: auto auto 1fr 1fr;
-          grid-column-gap: 5%;
           padding: 20px 40px;
         }
         h2 {
           font-size: 120px;
           font-weight: 800;
-          margin-bottom: 0;
+          margin: 0;
         }
         @media only screen and (max-width: 550px) {
           .container {

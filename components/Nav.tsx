@@ -28,13 +28,13 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           </Link>
         </div>
         <ActiveLink href="/projects">
-          <a className="projects">projects</a>
+          <div className="projects">projects</div>
         </ActiveLink>
         <ActiveLink href="/cv">
-          <a className="cv">cv</a>
+          <div className="cv">cv</div>
         </ActiveLink>
         <ActiveLink href="/about">
-          <a className="about">about me</a>
+          <div className="about">about me</div>
         </ActiveLink>
         {typeof window !== 'undefined' && window.innerWidth <= 550 && (
           <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
