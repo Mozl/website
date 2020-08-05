@@ -42,13 +42,11 @@ const About: React.FC = () => {
       <style jsx>{`
         .container {
           background-color: ${colours.black};
-          height: 100vh;
         }
         .text-container {
           display: grid;
           grid-template-columns: 1.2fr 1fr;
           grid-template-rows: 0.2fr 1fr;
-          grid-column-gap: 5%;
           padding: 20px 40px;
         }
         .about-text {
@@ -68,6 +66,10 @@ const About: React.FC = () => {
         @media only screen and (max-width: 550px) {
           h2 {
             font-size: 66px;
+          }
+          .text-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
           }
         }
       `}</style>
