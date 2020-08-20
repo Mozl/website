@@ -60,10 +60,9 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         .header-logo:active {
           transform: scale(0.95);
         }
-        a:hover {
-          color: ${colours.orange};
-        }
-        .current {
+        .projects:hover,
+        .cv:hover,
+        .about:hover {
           color: ${colours.orange};
         }
         @media only screen and (max-width: 550px) {

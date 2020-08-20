@@ -42,6 +42,7 @@ const About: React.FC = () => {
       <style jsx>{`
         .container {
           background-color: ${colours.black};
+          min-height: 100vh;
         }
         .text-container {
           display: grid;
