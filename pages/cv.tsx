@@ -65,9 +65,6 @@ const CV: React.FC = () => {
             background-color: transparent;
             overflow: hidden;
           }
-          button:hover span {
-            font-size; 50px
-          }
           .download_link:active {
             transform: scale(0.95);
           }
@@ -84,15 +81,16 @@ const CV: React.FC = () => {
             left: 0;
             width: 100%;
             height: 100%;
+            transition: clip-path 0.2s;
             clip-path: circle(0% at 50% 50%);
           }
           button:hover::before {
             color: ${colours.white};
-            animation: clip 0.5s ease-out forwards;
+            clip-path: circle(100% at 50% 50%);
           }
-          @keyframes clip {
-            to {
-              clip-path: circle(100% at 50% 50%);
+          @media only screen and (max-width: 550px) {
+            button {
+              font-size: 15px;
             }
           }
         `}
