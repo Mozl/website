@@ -88,20 +88,20 @@ const Hero: FC = () => {
         }
         @media only screen and (max-width: 550px) {
           .sub-heading {
-            font-size: 25px;
+            font-size: 18px;
           }
           .hero {
             grid-template-columns: 1fr;
-            padding: 24px;
+            padding: 0 24px;
           }
           .headshot,
           .louis-image {
-            width: 320px;
-            height: 320px;
+            width: 220px;
+            height: 220px;
           }
           .hero-text {
-            width: 320px;
-            font-size: 70px;
+            width: 220px;
+            font-size: 50px;
           }
         }
         .hero-svg path:nth-child(1) {

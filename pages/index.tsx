@@ -23,10 +23,12 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="container">
-        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} screenSize={screenSize} />
-        <Menu isMenuOpen={isMenuOpen} />
-        <Hero />
-        <Border />
+        <section className="top">
+          <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} screenSize={screenSize} />
+          <Menu isMenuOpen={isMenuOpen} />
+          <Hero />
+          <Border />
+        </section>
         <SkillsContainer />
       </div>
 
@@ -35,7 +37,9 @@ const Home: React.FC = () => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: auto auto auto 1fr;
-          background: linear-gradient(to bottom, ${colours.darkBlue} 8%, ${colours.lightBlue} 32%);
+        }
+        .top {
+          background: linear-gradient(to bottom, ${colours.darkBlue} 0%, ${colours.lightBlue} 80%);
         }
       `}</style>
 

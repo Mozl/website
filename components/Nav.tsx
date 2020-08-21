@@ -61,7 +61,7 @@ const Nav = ({ isMenuOpen, onToggleMenu, screenSize }: Props) => {
         }
         @media only screen and (max-width: 550px) {
           nav {
-            padding: 20px 24px;
+            padding: 0px 24px;
           }
           .menu {
             visibility: visible;
