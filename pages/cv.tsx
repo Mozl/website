@@ -61,7 +61,7 @@ const CV: React.FC = () => {
             color: ${colours.darkBlue};
             cursor: pointer;
             border: ${colours.darkBlue} 2px solid;
-            border-radius: 6px;
+            border-radius: 55px;
             background-color: transparent;
             overflow: hidden;
           }

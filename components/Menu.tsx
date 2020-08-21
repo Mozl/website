@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { colours } from '../theme';
 import Router from 'next/router';
 import { useDispatch } from 'react-redux';
-import { toggleMenu, closeMenu } from '../redux/actions/menuActions';
+import { closeMenu } from '../redux/actions/menuActions';
 
 interface Props {
   isMenuOpen: {

@@ -19,10 +19,11 @@ const Home: React.FC = () => {
   const onToggleMenu = () => {
     dispatch(toggleMenu());
   };
+  let screenSize = typeof window !== 'undefined' && window.innerWidth >= 550 ? 'desktop' : 'mobile';
   return (
     <>
       <div className="container">
-        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
+        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} screenSize={screenSize} />
         <Menu isMenuOpen={isMenuOpen} />
         <Hero />
         <Border />
