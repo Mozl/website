@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import Nav from '../components/Nav';
 import Menu from '../components/Menu';

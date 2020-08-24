@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { colours } from '../theme';
 import MenuLogo from '../components/MenuLogo';
 import ActiveLink from '../components/ActiveLink';
@@ -9,17 +8,18 @@ interface Props {
   isMenuOpen: {
     isMenuOpen: boolean;
   };
-  screenSize?: string;
 }
 
-const Nav = ({ isMenuOpen, onToggleMenu, screenSize }: Props) => {
+const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
+  let isClient = typeof window !== 'undefined';
+  const screenSize = isClient && window.innerWidth > 550 ? 'desktop' : 'mobile';
   return (
     <>
       <nav className="nav">
         <div className="header-logo">
-          <Link href="/">
+          <ActiveLink href="/">
             <SiteLogo screenSize={screenSize} />
-          </Link>
+          </ActiveLink>
         </div>
         <ActiveLink href="/projects">
           <div className="projects">projects</div>
@@ -30,9 +30,7 @@ const Nav = ({ isMenuOpen, onToggleMenu, screenSize }: Props) => {
         <ActiveLink href="/about">
           <div className="about">about me</div>
         </ActiveLink>
-        {typeof window !== 'undefined' && window.innerWidth <= 550 && (
-          <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
-        )}
+        {screenSize === 'mobile' && <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />}
       </nav>
       <style jsx>{`
         nav {
