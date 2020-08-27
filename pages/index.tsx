@@ -47,7 +47,6 @@ const Home: React.FC = () => {
         body {
           padding: 0;
           margin: 0;
-          font-family: 'Poppins', sans-serif;
           position: ${isMenuOpen.isMenuOpen ? 'fixed' : 'unset'};
           width: 100%;
         }

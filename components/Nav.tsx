@@ -18,7 +18,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
       <nav className="nav">
         <div className="header-logo">
           <ActiveLink href="/">
-            <SiteLogo screenSize={screenSize} />
+            <SiteLogo />
           </ActiveLink>
         </div>
         <ActiveLink href="/projects">
@@ -35,6 +35,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
       <style jsx>{`
         nav {
           display: flex;
+          font-weight: 200;
           min-height: 10vh;
           align-items: center;
           justify-content: space-between;
