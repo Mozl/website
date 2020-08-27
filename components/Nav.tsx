@@ -40,7 +40,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           align-items: center;
           justify-content: space-between;
           color: ${colours.white};
-          padding: 20px 40px;
+          padding: 20px 142px;
           position: relative;
           z-index: 3;
           font-size: 24px;

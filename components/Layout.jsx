@@ -31,7 +31,7 @@ function Layout({ children }) {
         body {
           padding: 0;
           margin: 0;
-          font-family: 'Source Sans Pro', serif;
+          font-family: 'Source Sans Pro', sans-serif;
         }
 
         * {

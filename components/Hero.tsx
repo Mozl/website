@@ -89,6 +89,9 @@ const Hero: FC = () => {
           animation: fadeInDown 0.7s 6.4s ease-in forwards;
         }
         @media only screen and (max-width: 550px) {
+          .hero-image {
+            grid-row: 1;
+          }
           .sub-heading {
             font-size: 18px;
           }
