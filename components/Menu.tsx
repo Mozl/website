@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ActiveLink from '../components/ActiveLink';
 import { colours } from '../theme';
 import Router from 'next/router';
 import { useDispatch } from 'react-redux';
@@ -23,15 +23,15 @@ const Menu = ({ isMenuOpen }: Props) => {
     <>
       <div className="menuOpen">
         <div className="link-container">
-          <Link href="/projects">
-            <a className="projects">projects</a>
-          </Link>
-          <Link href="/cv">
-            <a className="cv">cv</a>
-          </Link>
-          <Link href="/about">
-            <a className="about">about me</a>
-          </Link>
+          <ActiveLink href="/projects">
+            <div className="projects menu-item">projects</div>
+          </ActiveLink>
+          <ActiveLink href="/cv">
+            <div className="cv menu-item">cv</div>
+          </ActiveLink>
+          <ActiveLink href="/about">
+            <div className="about menu-item">about me</div>
+          </ActiveLink>
         </div>
       </div>
       <style jsx>{`
@@ -46,19 +46,28 @@ const Menu = ({ isMenuOpen }: Props) => {
           justify-content: center;
           transition: clip-path 0.2s ease-in;
           background: ${colours.black};
-          font-size: 24px;
           clip-path: circle(${isMenuOpen.isMenuOpen ? '1000px' : '0px'} at 92.5% 9.5%);
         }
         a {
           color: ${colours.white};
           text-decoration: none;
-          margin: 40px;
+          margin: 60px 0;
+        }
+        .menu-item {
+          font-size: 34px;
         }
         .link-container {
           display: flex;
+          height: 50%;
           align-items: center;
-          justify-content: center;
+          justify-content: space-around;
           flex-direction: column;
+        }
+        @keyframes fadeInAcross {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
         @media only screen and (max-width: 550px) {
           .menu {

@@ -20,10 +20,7 @@ function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap"
           rel="stylesheet"
         ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet"></link>
       </Head>
       <div>{children}</div>
       <style jsx global>{`
@@ -31,7 +28,7 @@ function Layout({ children }) {
         body {
           padding: 0;
           margin: 0;
-          font-family: 'Source Sans Pro', sans-serif;
+          font-family: 'Raleway', sans-serif;
         }
 
         * {
