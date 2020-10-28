@@ -35,7 +35,8 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
       <style jsx>{`
         nav {
           display: flex;
-          font-weight: 200;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 400;
           min-height: 10vh;
           align-items: center;
           justify-content: space-between;

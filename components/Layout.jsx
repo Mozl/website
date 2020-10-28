@@ -20,7 +20,10 @@ function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap"
           rel="stylesheet"
         ></link>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <div>{children}</div>
       <style jsx global>{`

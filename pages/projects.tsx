@@ -36,8 +36,9 @@ const Projects: React.FC = () => {
           <h2>projects</h2>
           {projects &&
             projects.map(({ name, description, image, url }, index: number) => (
-              <Project key={index} name={name} description={description} id={index} image={image} url={url} />
+              <Project key={1} name={'name'} description={'description'} id={1} image={image} url={url} />
             ))}
+          {/* <Project key={1} name={'name'} description={''} id={1} image={'/sounds.jpg'} url={''} /> */}
         </div>
       </main>
       <style jsx>{`
