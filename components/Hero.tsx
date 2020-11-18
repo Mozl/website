@@ -39,7 +39,7 @@ const Hero: FC = () => {
         </div>
         <div className="hero-image">
           <div className="louis-image">
-            <img className="headshot" src="/louis.png" height="535px" width="535px"></img>
+            <img className="headshot" src="/louis.png" height="500px" width="500px"></img>
           </div>
         </div>
       </div>
@@ -48,8 +48,8 @@ const Hero: FC = () => {
         .louis-image {
           border-radius: 50%;
           background: linear-gradient(159deg, ${colours.lightOrange} 3%, ${colours.orange} 100%);
-          width: 535px;
-          height: 535px;
+          width: 500px;
+          height: 500px;
           object-fit: cover;
           overflow: hidden;
         }
@@ -59,6 +59,7 @@ const Hero: FC = () => {
           width: 100%;
           justify-items: center;
           align-items: center;
+          margin-top: 20px;
         }
         .hero-text {
           display: grid;
@@ -77,8 +78,8 @@ const Hero: FC = () => {
         }
         .sub-heading {
           font-weight: 300;
-          font-size: 35px;
-          text-align: center;
+          font-size: 30px;
+          text-align: left;
           transform: translateY(-10px);
           opacity: 0;
         }

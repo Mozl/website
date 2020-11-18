@@ -1,4 +1,4 @@
-export default function (state = null, action) {
+export default function menuReducer (state = null, action) {
   switch (action.type) {
     case 'CLOSE_MENU':
       return {
