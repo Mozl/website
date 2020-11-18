@@ -17,7 +17,7 @@ function Layout({ children }) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
           rel="stylesheet"
         ></link>
         <link

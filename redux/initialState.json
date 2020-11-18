@@ -23,63 +23,19 @@
   ],
   "skills": [
     {
-      "name": "React",
-      "subSkills": ["useState", "useEffect", "useMemo", "useContext"],
-      "image": "/skill-logos/react.png"
+      "title": "Technologies",
+      "image": "/",
+      "description": "I am experienced with the latest web technologies such as React, Redux and Typescript, building exciting web experiences at the scale of millions"
     },
     {
-      "name": "Redux",
-      "subSkills": ["useSelector", "useDispatch", "Thunk"],
-      "description": "Redux desc",
-      "image": "/skill-logos/redux.png"
+      "title": "Practices",
+      "image": "/",
+      "description": "Following industry-leading engineering principles, I craft performant web apps with well-tested, scalable code"
     },
     {
-      "name": "TypeScript",
-      "subSkills": ["Interfaces", "Picks", "Mixins", "Generics"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Testing",
-      "subSkills": ["Jest", "Mocha", "Sinon", "Chai"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Experimentation",
-      "subSkills": ["Optimizely", "A/B", "MVT"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Node",
-      "subSkills": ["Express", "Middlewares", "SSR"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "AWS",
-      "subSkills": ["EC2", "S3", "Lambdas", "IAM", "Cloudwatch"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Production",
-      "subSkills": ["Webpack", "Caching", "Jenkins", "Nginx"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Performance",
-      "subSkills": ["Web Vitals", "Lazy Loading", "Code Splitting"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
-    },
-    {
-      "name": "Teamwork",
-      "subSkills": ["Agile", "Pairing", "Github", "Kanban"],
-      "description": "TypeScript desc",
-      "image": "/skill-logos/ts.png"
+      "title": "Mindset",
+      "image": "/",
+      "description": "I have a curious nature, always looking to improve the codebase, product and team processes. This includes building A/B tests to see what works best with users"
     }
   ]
 }
