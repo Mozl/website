@@ -24,10 +24,16 @@ const Skill: FC<Props> = ({ skill }) => {
           color: ${colours.white};
           text-align: center;
           flex-direction: column;
+          align-items: center;
+        }
+        img {
+          width: 110px;
+          height: 110px;
         }
         .title {
           font-size: 47px;
           font-weight: 700;
+          margin: 20px 0;
         }
         .description {
           font-size: 24px;
