@@ -23,14 +23,11 @@ const Menu = ({ isMenuOpen }: Props) => {
     <>
       <div className="menuOpen">
         <div className="link-container">
-          <ActiveLink href="/projects">
-            <div className="projects menu-item">projects</div>
-          </ActiveLink>
           <ActiveLink href="/cv">
-            <div className="cv menu-item">cv</div>
+            <div className="cv menu-item">CV</div>
           </ActiveLink>
           <ActiveLink href="/about">
-            <div className="about menu-item">about me</div>
+            <div className="about menu-item">About Me</div>
           </ActiveLink>
         </div>
       </div>

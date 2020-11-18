@@ -21,14 +21,11 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
             <SiteLogo />
           </ActiveLink>
         </div>
-        <ActiveLink href="/projects">
-          <div className="projects">projects</div>
-        </ActiveLink>
         <ActiveLink href="/cv">
-          <div className="cv">cv</div>
+          <div className="cv">CV</div>
         </ActiveLink>
         <ActiveLink href="/about">
-          <div className="about">about me</div>
+          <div className="about">About Me</div>
         </ActiveLink>
         {screenSize === 'mobile' && <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />}
       </nav>
