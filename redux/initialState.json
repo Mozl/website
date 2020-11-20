@@ -37,5 +37,21 @@
       "image": "/skill-logos/experiment.svg",
       "description": "I have a curious nature, always looking to improve the codebase, product and team processes. This includes building A/B tests to see what works best with users"
     }
+  ],
+  "experiences": [
+    {
+      "title": "BBC SOUNDS",
+      "image": "/skill-logos/react.svg",
+      "description": "Building the web experience of BBC Sounds, I have developed a deep knowledge of frontend tech such as React, Redux and Typescript, alongside a variety of AWS services and testing frameworks. I have also built skills in working in a close-knit dev team, while also working directly with designers and testers in a team following Kanban.",
+      "linkText": "Visit BBC Sounds ->",
+      "linkUrl": "https://bbc.co.uk/sounds"
+    },
+    {
+      "title": "BRITISH PEARL",
+      "image": "/skill-logos/dial.svg",
+      "description": "I developed the front end of startup British Pearl’s investment platform, working in a scrum team of developers and a designer. Using React, Redux and advanced CSS3 and HTML5, I learned how to quickly deliver features for the platform, leading to growth in users and revenue for the business. Performance was also an important aspect of my code, ensuring users experienced a lightning fast product.",
+      "linkText": "Visit British Pearl ->",
+      "linkUrl": "https://britishpearl.com"
+    }
   ]
 }

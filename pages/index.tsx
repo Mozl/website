@@ -3,6 +3,7 @@ import { toggleMenu } from '../redux/actions/menuActions';
 import Nav from '../components/Nav';
 import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
+import ExperiencesContainer from '../components/ExperiencesContainer';
 import Hero from '../components/Hero';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
@@ -29,6 +30,7 @@ const Home: React.FC = () => {
           <Border />
         </section>
         <SkillsContainer />
+        <ExperiencesContainer />
       </div>
 
       <style jsx>{`
