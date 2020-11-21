@@ -13,9 +13,11 @@ const ExperiencesContainer: FC = () => {
   return (
     <>
       <div className="wrapper">
-        <h2 className='header'>EXPERIENCE</h2>
+        <h2 className="header">EXPERIENCE</h2>
         <div className="experienceContainer">
-          {experiences?.map((experience, index) => <Experience key={index} experience={experience} />)}
+          {experiences?.map((experience, index) => (
+            <Experience key={index} experience={experience} index={index} />
+          ))}
         </div>
       </div>
       <style jsx>{`
