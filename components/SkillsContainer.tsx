@@ -23,11 +23,12 @@ const Skills: FC = () => {
           display: flex;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
-          padding: 0 150px;
+          padding: 0 150px 160px 150px;
           background: ${colours.black};
           justify-content: center;
           color: ${colours.white};
           text-align: center;
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         }
         .header {
           font-size: 130px;

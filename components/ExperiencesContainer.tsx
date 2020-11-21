@@ -40,7 +40,7 @@ const ExperiencesContainer: FC = () => {
         .experienceContainer {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: auto;
           grid-gap: 50px;
           flex-direction: row;
         }
