@@ -29,6 +29,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
       <style jsx>{`
         .wrapper {
           display: flex;
+          position: relative;
           color: ${colours.white};
           text-align: center;
           flex-direction: column;
@@ -72,10 +73,14 @@ const Experience: FC<Props> = ({ experience, index }) => {
           color: ${colours.orange};
         }
         .title {
+          position: relative;
+          top: 22px;
+          left: ${index % 2 === 0 || index === 0 ? '30px' : 'auto'};
+          right: ${index % 2 === 0 || index === 0 ? 'auto' : '30px'};
           font-size: 73px;
           font-weight: 700;
           color: ${colours.orange};
-          align-self: ${index % 2 === 0 || index === 0 ? 'start' : 'end'};
+          align-self: ${index % 2 === 0 || index === 0 ? 'flex-start' : 'flex-end'};
         }
         @media only screen and (max-width: 1024px) {
         }
