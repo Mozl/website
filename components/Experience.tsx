@@ -16,9 +16,9 @@ const Experience: FC<Props> = ({ experience, index }) => {
   return (
     <>
       <div className="wrapper">
+        <div className="title">{experience.title}</div>
         <div className="content">
           <div className="text">
-            <div className="title">{experience.title}</div>
             <p className="description">{experience.description}</p>
             <a href={`${experience.linkUrl}`}>{experience.linkText}</a>
           </div>
@@ -34,6 +34,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
           flex-direction: column;
           align-items: center;
           font-family: 'Raleway', sans-serif;
+          margin: 0 9rem 3rem 9rem;
         }
         .limit {
           display: flex;
@@ -42,21 +43,26 @@ const Experience: FC<Props> = ({ experience, index }) => {
         }
         .content {
           display: flex;
-          flex-direction: ${index % 2 || 0 ? 'row-reverse' : 'row'};
+          flex-direction: ${index % 2 === 0 || index === 0 ? 'row' : 'row-reverse'};
           padding: 30px;
-          width: 70%;
-          border-radius: 8px;
+          border-radius: 30px;
           background: ${colours.darkBlue};
+          align-items: center;
+        }
+        .description {
+          margin: 0 0 60px 0;
         }
         .text {
           display: flex;
           flex-direction: column;
           text-align: left;
           font-size: 24px;
+          padding: 80px;
         }
         img {
-          width: 110px;
-          height: 110px;
+          width: 450px;
+          height: 300px;
+          border-radius: 8px;
         }
         a {
           color: inherit;
@@ -66,12 +72,10 @@ const Experience: FC<Props> = ({ experience, index }) => {
           color: ${colours.orange};
         }
         .title {
-          position: relative;
-          top: -94px;
           font-size: 73px;
           font-weight: 700;
           color: ${colours.orange};
-          text-align: ${index % 2 || 0 ? 'right' : 'left'};
+          align-self: ${index % 2 === 0 || index === 0 ? 'start' : 'end'};
         }
         @media only screen and (max-width: 1024px) {
         }

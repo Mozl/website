@@ -37,7 +37,8 @@ const ExperiencesContainer: FC = () => {
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 3px;
           -webkit-text-stroke-color: ${colours.darkBlue};
-          letter-spacing: 3.5rem;
+          letter-spacing: 3rem;
+          margin-right: 3rem;
         }
         .experienceContainer {
           display: grid;

@@ -43,7 +43,6 @@ const Border = () => {
           padding-top: 30px;
           align-content: flex-end;
           justify-content: flex-end;
-          width: 100%;
         }
         @media only screen and (max-width: 550px) {
           .border-svg {
