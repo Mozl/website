@@ -13,6 +13,7 @@ interface Props {
 }
 
 const Experience: FC<Props> = ({ experience, index }) => {
+  const first = index % 2 === 0 || index === 0;
   return (
     <>
       <div className="wrapper">
@@ -44,7 +45,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
         }
         .content {
           display: flex;
-          flex-direction: ${index % 2 === 0 || index === 0 ? 'row' : 'row-reverse'};
+          flex-direction: ${first ? 'row' : 'row-reverse'};
           padding: 30px;
           border-radius: 30px;
           background: ${colours.darkBlue};
@@ -75,12 +76,12 @@ const Experience: FC<Props> = ({ experience, index }) => {
         .title {
           position: relative;
           top: 22px;
-          left: ${index % 2 === 0 || index === 0 ? '30px' : 'auto'};
-          right: ${index % 2 === 0 || index === 0 ? 'auto' : '30px'};
+          left: ${first ? '30px' : 'auto'};
+          right: ${first ? 'auto' : '30px'};
           font-size: 73px;
           font-weight: 700;
           color: ${colours.orange};
-          align-self: ${index % 2 === 0 || index === 0 ? 'flex-start' : 'flex-end'};
+          align-self: ${first ? 'flex-start' : 'flex-end'};
         }
         @media only screen and (max-width: 1024px) {
         }
