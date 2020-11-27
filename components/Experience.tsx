@@ -46,7 +46,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
         .content {
           display: flex;
           flex-direction: ${first ? 'row' : 'row-reverse'};
-          padding: 30px;
+          padding: 50px 60px;
           border-radius: 30px;
           background: ${colours.darkBlue};
           align-items: center;
@@ -59,11 +59,10 @@ const Experience: FC<Props> = ({ experience, index }) => {
           flex-direction: column;
           text-align: left;
           font-size: 24px;
-          padding: 80px;
+          padding: 70px;
         }
         img {
-          width: 450px;
-          height: 300px;
+          max-width: 400px;
           border-radius: 8px;
         }
         a {
