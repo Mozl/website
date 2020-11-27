@@ -15,7 +15,9 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
   return (
     <>
       <div className="wrapper">
+        <span className="mark mark-left">“</span>
         <div className="quote">{testimonial.quote}</div>
+        <span className="mark mark-right">”</span>
         <div className="person-wrapper">
           <img src={`${testimonial.image}`} />
           <div className="person-text">
@@ -36,8 +38,23 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
           flex-direction: column;
           align-items: center;
           font-family: 'Raleway', sans-serif;
-          max-width: 550px;
+          max-width: 630px;
           margin: 100px;
+        }
+        .mark {
+          font-size: 98px;
+          line-height: 10px;
+        }
+        .quote {
+          padding: 0 20px;
+        }
+        .mark-left {
+          align-self: flex-start;
+          line-height: 30px;
+        }
+        .mark-right {
+          align-self: flex-end;
+          margin: 40px 0;
         }
         .person-text {
           display: flex;
@@ -50,10 +67,9 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
         .person-wrapper {
           display: flex;
           flex-direction: row;
-          margin: 30px;
         }
         .person-medium {
-          font-weight: 500;
+          font-weight: 600;
         }
         @media only screen and (max-width: 1024px) {
         }
