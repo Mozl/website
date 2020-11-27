@@ -16,6 +16,7 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
     <>
       <div className="wrapper">
         <span className="mark mark-left">“</span>
+        <img src="stripes.svg" className="stripes" />
         <div className="quote">{testimonial.quote}</div>
         <span className="mark mark-right">”</span>
         <div className="person-wrapper">
@@ -31,6 +32,7 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
       <style jsx>{`
         .wrapper {
           display: flex;
+          position: relative;
           font-size: 20px;
           font-weight: bold;
           color: ${colours.white};
@@ -41,12 +43,17 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
           max-width: 630px;
           margin: 100px;
         }
+        .stripes {
+          position: absolute;
+          z-index: 0;
+        }
         .mark {
           font-size: 98px;
           line-height: 10px;
         }
         .quote {
           padding: 0 20px;
+          z-index: 1;
         }
         .mark-left {
           align-self: flex-start;
