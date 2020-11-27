@@ -76,7 +76,7 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
           flex-direction: row;
         }
         .person-medium {
-          font-weight: 600;
+          font-weight: 500;
         }
         @media only screen and (max-width: 1024px) {
         }
