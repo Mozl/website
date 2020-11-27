@@ -53,5 +53,14 @@
       "linkText": "Visit British Pearl ->",
       "linkUrl": "https://britishpearl.com"
     }
+  ],
+  "testimonials": [
+    {
+      "name": "Tom Sturge",
+      "image": "/tom_s.png",
+      "position": "Engineering Team Lead",
+      "company": "British Pearl",
+      "quote": "Louis was a great asset to the frontend team; personable, intelligent, hard working and collaborative. He took the initiative to learn more about JavaScript and apply that to his work to improve his performance. Louis would be a welcome addition to any tech outfit"
+    }
   ]
 }

@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
 import ExperiencesContainer from '../components/ExperiencesContainer';
+import TestimonialsContainer from '../components/TestimonialsContainer';
 import Hero from '../components/Hero';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
@@ -31,6 +32,7 @@ const Home: React.FC = () => {
         </section>
         <SkillsContainer />
         <ExperiencesContainer />
+        <TestimonialsContainer />
       </div>
 
       <style jsx>{`
