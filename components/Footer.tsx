@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
 import ActiveLink from '../components/ActiveLink';
 import SiteLogo from '../components/SiteLogo';
 import Cta from '../components/Cta';
@@ -27,12 +26,8 @@ const Footer: FC<Props> = () => {
           </p>
         </div>
         <div className="footer-icon-container">
-          <div className="footer-icon">
-            <Image width={60} height={60} src="/github.svg" />
-          </div>
-          <div className="footer-icon">
-            <Image className="footer-icon" width={60} height={60} src="/linkedin.svg" />
-          </div>
+          <img className="footer-icon" width={60} height={60} src="/github.svg" />
+          <img className="footer-icon" width={60} height={60} src="/linkedin.svg" />
         </div>
       </div>
       <style jsx>{`
