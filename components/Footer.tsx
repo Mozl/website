@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import ActiveLink from '../components/ActiveLink';
 import SiteLogo from '../components/SiteLogo';
+import Cta from '../components/Cta';
 import { colours } from '../theme';
 
 interface Props {}
@@ -15,7 +16,7 @@ const Footer: FC<Props> = () => {
         </ActiveLink>
         <div className="footer-title">
           <p className="footer-margin">Want to know more?</p>
-          <button>Let's chat</button>
+          <Cta />
         </div>
         <div className="footer-link-container">
           <p className="footer-margin">

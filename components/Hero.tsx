@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { colours } from '../theme';
+import Cta from './Cta';
 
 const Hero: FC = () => {
   return (
@@ -34,8 +35,11 @@ const Hero: FC = () => {
               d="M382.128 40.6211C366.07 40.6211 351.674 49.5596 351.674 63.9561C351.674 76.7705 360.929 84.6807 370.658 93.6191C379.201 101.371 385.688 106.75 385.688 116.321C385.688 122.491 381.337 125.181 376.274 125.181C364.488 125.181 356.895 112.92 354.917 95.7549H351.674C351.674 112.129 351.516 121.146 351.041 128.107H354.284C355.075 125.022 356.578 122.491 358.793 122.491C361.245 122.491 363.539 123.44 366.94 125.181C370.342 127.316 375.958 129.294 383.631 129.294C401.587 129.294 416.3 119.09 416.3 104.298C416.3 91.8789 408.706 85.0762 398.818 76.9287C389.563 69.335 379.359 63.3232 379.359 53.5938C379.359 47.9775 383.631 44.5762 388.931 44.5762C402.22 44.5762 407.44 58.0234 408.864 69.9678H412.107C412.107 55.2549 412.266 47.1074 412.74 40.7793H409.497C408.943 44.3389 407.52 46 405.463 46C404.593 46 403.644 45.6836 402.536 45.0508C399.293 43.2314 391.541 40.6211 382.128 40.6211Z"
             />
           </svg>
-          <span className="sub-heading sub-heading__1">Software Engineer</span>
-          <span className="sub-heading sub-heading__2">BBC Tech Meetup Founder</span>
+          <div className="hero-sub-heading-container">
+            <span className="sub-heading sub-heading__1">Software Engineer</span>
+            <span className="sub-heading sub-heading__2">BBC Tech Meetup Founder</span>
+          </div>
+          <Cta />
         </div>
         <div className="hero-image">
           <div className="louis-image">
@@ -61,9 +65,13 @@ const Hero: FC = () => {
           align-items: center;
           margin-top: 20px;
         }
+        .hero-sub-heading-container {
+          display: flex;
+          flex-direction: column;
+        }
         .hero-text {
           display: grid;
-          grid-template-rows: auto 1fr 0.3fr;
+          grid-template-rows: auto 1fr 0.3fr 1fr;
           justify-items: left;
           align-items: center;
           color: ${colours.white};
