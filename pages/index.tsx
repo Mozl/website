@@ -5,6 +5,7 @@ import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
 import ExperiencesContainer from '../components/ExperiencesContainer';
 import TestimonialsContainer from '../components/TestimonialsContainer';
+import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
         <SkillsContainer />
         <ExperiencesContainer />
         <TestimonialsContainer />
+        <Footer />
       </div>
 
       <style jsx>{`
