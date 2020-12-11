@@ -28,6 +28,7 @@ const TestimonialsContainer: FC = () => {
           justify-content: center;
           align-items: center;
           text-align: center;
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
         }
         .header {
           font-size: 130px;
@@ -44,6 +45,7 @@ const TestimonialsContainer: FC = () => {
           grid-auto-rows: auto;
           grid-gap: 50px;
           flex-direction: row;
+          margin-top: 30px;
         }
       `}</style>
     </>

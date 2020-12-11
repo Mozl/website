@@ -1,6 +1,10 @@
 import anime from 'animejs';
 import { colours } from '../theme';
 
+interface Props {
+  isFooter?: boolean;
+}
+
 const path1 =
   'M1 346V1C72.3084 195.426 243 98.4118 333 70C423 41.5882 347 120.059 477 130.882C607 141.706 579 244.529 653 233.706C727 222.882 769 70 883 186.353C997 302.706 1027 -135.647 1175 98.4118C1323 332.471 1333 87.5882 1499 130.882C1558.5 146.402 1541 -75 1623 88.9412C1660.78 164.471 1689 1 1689 1V346H1Z';
 const path2 =
@@ -21,7 +25,8 @@ if (typeof window !== 'undefined') {
   });
 }
 
-const Border = () => {
+const Border = (props: Props) => {
+  const isFooter = props.isFooter;
   return (
     <>
       <div className="border">
@@ -43,6 +48,7 @@ const Border = () => {
           padding-top: 30px;
           align-content: flex-end;
           justify-content: flex-end;
+          transform: ${isFooter ? 'rotate(180deg)' : 'rotate(0deg)'};
         }
         @media only screen and (max-width: 550px) {
           .border-svg {
