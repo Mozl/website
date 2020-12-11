@@ -29,10 +29,12 @@ const Footer: FC<Props> = () => {
             </p>
           </div>
           <div className="footer-icon-container">
-            <a href="https://github.com/Mozl">
+            <a href="https://github.com/Mozl" target="_blank">
               <img className="footer-icon" width={60} height={60} src="/github.svg" />
             </a>
-            <img className="footer-icon" width={60} height={60} src="/linkedin.svg" />
+            <a href="https://www.linkedin.com/in/lmoselhi/" target="_blank">
+              <img className="footer-icon" width={60} height={60} src="/linkedin.svg" />
+            </a>
           </div>
         </div>
       </div>
