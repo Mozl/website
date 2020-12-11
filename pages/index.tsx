@@ -40,11 +40,14 @@ const Home: React.FC = () => {
       <style jsx>{`
         .container {
           display: grid;
-          grid-template-columns: 1fr;
           grid-template-rows: auto auto auto 1fr;
         }
         .top {
+          display: grid;
+          grid-template-columns: 1fr;
           background: linear-gradient(to bottom, ${colours.darkBlue} 0%, ${colours.lightBlue} 80%);
+        }
+        @media only screen and (max-width: 550px) {
         }
       `}</style>
 

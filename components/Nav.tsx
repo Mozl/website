@@ -21,13 +21,15 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
             <SiteLogo />
           </ActiveLink>
         </div>
-        <ActiveLink href="/cv">
-          <div className="cv">CV</div>
-        </ActiveLink>
-        <ActiveLink href="/about">
-          <div className="about">About Me</div>
-        </ActiveLink>
-        {screenSize === 'mobile' && <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />}
+        <div className="link-wrapper">
+          <ActiveLink href="/cv">
+            <div className="cv">CV</div>
+          </ActiveLink>
+          <ActiveLink href="/about">
+            <div className="about">About Me</div>
+          </ActiveLink>
+          <MenuLogo isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
+        </div>
       </nav>
       <style jsx>{`
         nav {
@@ -38,7 +40,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           align-items: center;
           justify-content: space-between;
           color: ${colours.white};
-          padding: 20px 142px;
+          padding: clamp(1rem, 3vmax, 1.5rem) clamp(2rem, 20vmin, 10rem);
           position: relative;
           z-index: 3;
           font-size: 24px;
@@ -55,6 +57,16 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         .cv:hover,
         .about:hover {
           color: ${colours.orange};
+        }
+        .link-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+        .projects,
+        .cv,
+        .about {
+          padding-left: 24px;
         }
         @media only screen and (max-width: 550px) {
           nav {

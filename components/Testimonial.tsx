@@ -78,8 +78,6 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
         .person-medium {
           font-weight: 500;
         }
-        @media only screen and (max-width: 1024px) {
-        }
       `}</style>
     </>
   );

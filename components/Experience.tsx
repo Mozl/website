@@ -82,8 +82,6 @@ const Experience: FC<Props> = ({ experience, index }) => {
           color: ${colours.orange};
           align-self: ${first ? 'flex-start' : 'flex-end'};
         }
-        @media only screen and (max-width: 1024px) {
-        }
       `}</style>
     </>
   );

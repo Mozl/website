@@ -13,9 +13,14 @@ const Skills: FC = () => {
   return (
     <>
       <div className="wrapper">
-        <h2 className='header'>SKILLS</h2>
+        <div className="header-container">
+          <span className="header">SKI</span>
+          <span className="header">LLS</span>
+        </div>
         <div className="skillsContainer">
-          {skills?.map((skill, index) => <Skill key={index} skill={skill} />)}
+          {skills?.map((skill, index) => (
+            <Skill key={index} skill={skill} />
+          ))}
         </div>
       </div>
       <style jsx>{`
@@ -23,26 +28,36 @@ const Skills: FC = () => {
           display: flex;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
-          padding: 0 150px 160px 150px;
+          padding: 0 clamp(50px, 5vmax, 150px) 160px clamp(50px, 5vmax, 150px);
           background: ${colours.black};
           justify-content: center;
           color: ${colours.white};
           text-align: center;
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         }
-        .header {
-          font-size: 130px;
+        .header-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          font-size: clamp(40px, 4rem, 130px);
           font-weight: 900;
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 3px;
           -webkit-text-stroke-color: ${colours.white};
-          letter-spacing: 3.5rem;
+          letter-spacing: clamp(1rem, 1.2rem, 3.5rem);
+          word-break: break-all;
+          padding: 0 clamp(20px, 5vmax, 150px) 30px clamp(20px, 5vmax, 150px);
         }
         .skillsContainer {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           grid-gap: 50px;
           flex-direction: row;
+        }
+        @media only screen and (max-width: 550px) {
+          .header-container {
+            flex-direction: column;
+          }
         }
       `}</style>
     </>

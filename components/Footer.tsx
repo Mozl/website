@@ -71,8 +71,6 @@ const Footer: FC<Props> = () => {
           flex-direction: row;
           justify-content: space-evenly;
         }
-        @media only screen and (max-width: 1024px) {
-        }
       `}</style>
     </>
   );

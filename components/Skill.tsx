@@ -12,10 +12,10 @@ interface Props {
 const Skill: FC<Props> = ({ skill }) => {
   return (
     <>
-      <div className='wrapper'>
+      <div className="wrapper">
         <img src={`${skill.image}`} />
-        <h3 className='title'>{skill.title}</h3>
-        <p className='description'>{skill.description}</p>
+        <h3 className="title">{skill.title}</h3>
+        <p className="description">{skill.description}</p>
       </div>
 
       <style jsx>{`
@@ -31,18 +31,16 @@ const Skill: FC<Props> = ({ skill }) => {
           height: 110px;
         }
         .title {
-          font-size: 47px;
+          font-size: clamp(34px, 3vmin, 48px);
           font-weight: 700;
           margin: 20px 0;
         }
         .description {
           font-size: 24px;
+          font-size: clamp(34px, 3vmin, 48px);
           font-family: 'Raleway', sans-serif;
-          
         }
-        @media only screen and (max-width: 1024px) {
-          
-      }`}</style>
+      `}</style>
     </>
   );
 };

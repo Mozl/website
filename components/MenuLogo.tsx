@@ -56,6 +56,14 @@ const MenuLogo = ({ isMenuOpen, onToggleMenu }: Props) => {
           color: white;
           font-size: 30px;
         }
+        .menuLogo {
+          display: none;
+        }
+        @media only screen and (max-width: 550px) {
+          .menuLogo {
+            display: block;
+          }
+        }
       `}</style>
     </>
   );
