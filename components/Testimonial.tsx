@@ -54,6 +54,7 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
         .quote {
           padding: 0 20px;
           z-index: 1;
+          line-height: 1.2;
         }
         .mark-left {
           align-self: flex-start;

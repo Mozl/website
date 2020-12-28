@@ -50,7 +50,10 @@ const TestimonialsContainer: FC = () => {
         @media only screen and (max-width: 550px) {
           .wrapper {
             margin-top: 60px;
-            clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+          }
+          .testimonialContainer {
+            margin-top: 70px;
           }
         }
       `}</style>
