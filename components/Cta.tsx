@@ -25,6 +25,7 @@ const Cta: FC<Props> = () => {
         @media only screen and (max-width: 550px) {
           .cta {
             font-size: 16px;
+            max-width: 155px;
           }
         }
       `}</style>

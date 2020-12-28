@@ -18,7 +18,9 @@ const Footer: FC<Props> = () => {
           </ActiveLink>
           <div className="footer-title">
             <p className="footer-margin">Want to know more?</p>
-            <Cta />
+            <div className="cta footer-margin">
+              <Cta />
+            </div>
           </div>
           <div className="footer-link-container">
             <p className="footer-margin">
@@ -46,7 +48,6 @@ const Footer: FC<Props> = () => {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
           padding: 40px 142px;
-
           font-size: 24px;
           font-weight: bold;
           color: ${colours.white};
@@ -70,6 +71,23 @@ const Footer: FC<Props> = () => {
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;
+        }
+        @media only screen and (max-width: 550px) {
+          .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 15px;
+            padding: 20px 26px;
+          }
+          .footer-link-container {
+            justify-content: unset;
+          }
+          .footer-icon-container {
+            justify-content: flex-start;
+          }
+          .footer-icon {
+            margin-right: 30px;
+          }
         }
       `}</style>
     </>
