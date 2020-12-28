@@ -58,6 +58,9 @@ const Skills: FC = () => {
           .header-container {
             flex-direction: column;
           }
+          .wrapper {
+            clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+          }
         }
       `}</style>
     </>

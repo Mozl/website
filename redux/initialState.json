@@ -23,31 +23,37 @@
   "skills": [
     {
       "title": "Technologies",
-      "image": "/skill-logos/react.svg",
+      "image": "skill-logos/react.svg",
       "description": "I am experienced with the latest web technologies such as React, Redux and Typescript, building exciting web experiences at the scale of millions"
     },
     {
       "title": "Practices",
-      "image": "/skill-logos/dial.svg",
+      "image": "skill-logos/dial.svg",
       "description": "Following industry-leading engineering principles, I craft performant web apps with well-tested, scalable code"
     },
     {
       "title": "Mindset",
-      "image": "/skill-logos/experiment.svg",
+      "image": "skill-logos/experiment.svg",
       "description": "I have a curious nature, always looking to improve the codebase, product and team processes. This includes building A/B tests to see what works best with users"
     }
   ],
   "experiences": [
     {
       "title": "BBC SOUNDS",
-      "image": "/mobs.png",
+      "images": {
+        "large": "mobs.png",
+        "small": "sounds_mobiles.png"
+      },
       "description": "Building the web experience of BBC Sounds, I have developed a deep knowledge of frontend tech such as React, Redux and Typescript, alongside a variety of AWS services and testing frameworks. I have also built skills in working in a close-knit dev team, while also working directly with designers and testers in a team following Kanban.",
       "linkText": "Visit BBC Sounds ->",
       "linkUrl": "https://bbc.co.uk/sounds"
     },
     {
       "title": "BRITISH PEARL",
-      "image": "/bp.png",
+      "images": {
+        "large": "bp.png",
+        "small": "bp_mobiles.png"
+      },
       "description": "I developed the front end of startup British Pearl’s investment platform, working in a scrum team of developers and a designer. Using React, Redux and advanced CSS3 and HTML5, I learned how to quickly deliver features for the platform, leading to growth in users and revenue for the business. Performance was also an important aspect of my code, ensuring users experienced a lightning fast product.",
       "linkText": "Visit British Pearl ->",
       "linkUrl": "https://britishpearl.com"
@@ -56,7 +62,7 @@
   "testimonials": [
     {
       "name": "Tom Sturge",
-      "image": "/tom_s.png",
+      "image": "tom_s.png",
       "position": "Engineering Team Lead",
       "company": "British Pearl",
       "quote": "Louis was a great asset to the frontend team; personable, intelligent, hard working and collaborative. He took the initiative to learn more about JavaScript and apply that to his work to improve his performance. Louis would be a welcome addition to any tech outfit"

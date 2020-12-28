@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <SkillsContainer />
         <ExperiencesContainer />
         <TestimonialsContainer />
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
       <style jsx>{`

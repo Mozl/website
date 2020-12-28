@@ -31,13 +31,12 @@ const Skill: FC<Props> = ({ skill }) => {
           height: 110px;
         }
         .title {
-          font-size: clamp(34px, 3vmin, 48px);
+          font-size: clamp(36px, 2vmin, 48px);
           font-weight: 700;
           margin: 20px 0;
         }
         .description {
-          font-size: 24px;
-          font-size: clamp(34px, 3vmin, 48px);
+          font-size: clamp(18px, 1vmin, 24px);
           font-family: 'Raleway', sans-serif;
         }
       `}</style>

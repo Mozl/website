@@ -4,7 +4,10 @@ import { colours } from '../theme';
 interface Props {
   experience: {
     title: string;
-    image: string;
+    images: {
+      small: string;
+      large: string;
+    };
     description: string;
     linkText: string;
     linkUrl: string;
@@ -23,7 +26,14 @@ const Experience: FC<Props> = ({ experience, index }) => {
             <p className="description">{experience.description}</p>
             <a href={`${experience.linkUrl}`}>{experience.linkText}</a>
           </div>
-          <img className="image" src={`${experience.image}`} />
+          <img
+            className="image"
+            srcSet={`${experience.images.small} 190w,
+            ${experience.images.large} 443w
+            `}
+            sizes="(max-width: 550px) 290px,
+            443px"
+          />
         </div>
       </div>
 
@@ -53,6 +63,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
         }
         .description {
           margin: 0 0 60px 0;
+          line-height: 1.4;
         }
         .text {
           display: flex;
@@ -81,6 +92,26 @@ const Experience: FC<Props> = ({ experience, index }) => {
           font-weight: 700;
           color: ${colours.orange};
           align-self: ${first ? 'flex-start' : 'flex-end'};
+        }
+        @media only screen and (max-width: 550px) {
+          .content {
+            flex-direction: column;
+            padding: 32px 10px;
+          }
+          .wrapper {
+            margin: 0 10px;
+          }
+          .text {
+            padding: 40px 40px;
+            font-size: 18px;
+          }
+          .title {
+            font-size: 40px;
+            top: 13px;
+          }
+          .description {
+            line-height: 1.6;
+          }
         }
       `}</style>
     </>

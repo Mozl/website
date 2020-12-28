@@ -9,11 +9,14 @@ interface RootState {
 
 const ExperiencesContainer: FC = () => {
   const experiences = useSelector((state: RootState) => state.experiences);
+  const headerLong = 'EXPERIENCE';
+  const headerShort = 'EXP';
 
   return (
     <>
       <div className="wrapper">
-        <h2 className="header">EXPERIENCE</h2>
+        <h2 className="header">{headerLong}</h2>
+        <h2 className="headerSmall">{headerShort}</h2>
         <div className="experienceContainer">
           {experiences?.map((experience, index) => (
             <Experience key={index} experience={experience} index={index} />
@@ -30,7 +33,6 @@ const ExperiencesContainer: FC = () => {
           justify-content: center;
           color: ${colours.darkBlue};
           text-align: center;
-          clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
           padding-bottom: 130px;
         }
         .header {
@@ -49,6 +51,26 @@ const ExperiencesContainer: FC = () => {
           grid-gap: 50px;
           flex-direction: row;
         }
+        .headerSmall {
+          display: none;
+        }
+        @media only screen and (max-width: 550px) {
+          .wrapper {
+            padding: 0;
+          }
+          .header {
+            display: none;
+          }
+          .headerSmall {
+            display: block;
+            font-size: 100px;
+            font-weight: 900;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: ${colours.darkBlue};
+            letter-spacing: 1rem;
+            margin-right: 0;
+          }
       `}</style>
     </>
   );

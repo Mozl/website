@@ -47,6 +47,12 @@ const TestimonialsContainer: FC = () => {
           flex-direction: row;
           margin-top: 30px;
         }
+        @media only screen and (max-width: 550px) {
+          .wrapper {
+            margin-top: 60px;
+            clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+          }
+        }
       `}</style>
     </>
   );
