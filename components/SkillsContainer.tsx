@@ -61,6 +61,9 @@ const Skills: FC = () => {
           .wrapper {
             clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
           }
+          .header {
+            font-size: 100px;
+          }
         }
       `}</style>
     </>
