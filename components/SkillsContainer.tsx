@@ -39,7 +39,6 @@ const Skills: FC = () => {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          font-size: clamp(40px, 4rem, 130px);
           font-weight: 900;
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 3px;
@@ -47,6 +46,9 @@ const Skills: FC = () => {
           letter-spacing: clamp(1rem, 1.2rem, 3.5rem);
           word-break: break-all;
           padding: 0 clamp(20px, 5vmax, 150px) 30px clamp(20px, 5vmax, 150px);
+        }
+        .header {
+          font-size: 100px;
         }
         .skillsContainer {
           display: grid;
@@ -62,7 +64,7 @@ const Skills: FC = () => {
             clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
           }
           .header {
-            font-size: 100px;
+            font-size: 80px;
           }
         }
       `}</style>
