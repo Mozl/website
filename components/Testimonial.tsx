@@ -41,7 +41,7 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
           align-items: center;
           font-family: 'Raleway', sans-serif;
           max-width: 630px;
-          margin: 100px;
+          margin: clamp(40px, 1rem + 3vw, 100px) clamp(30px, 1rem + 3vw, 100px);
         }
         .stripes {
           position: absolute;

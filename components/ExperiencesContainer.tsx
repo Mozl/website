@@ -28,7 +28,7 @@ const ExperiencesContainer: FC = () => {
           display: flex;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
-          padding: 0 150px;
+          padding: 0 clamp(50px, 1rem + 6vw, 150px);
           background: ${colours.white};
           justify-content: center;
           color: ${colours.darkBlue};
@@ -36,13 +36,12 @@ const ExperiencesContainer: FC = () => {
           padding-bottom: 130px;
         }
         .header {
-          font-size: 130px;
+          font-size: clamp(80px, 1rem + 6vw, 130px);
           font-weight: 900;
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 3px;
           -webkit-text-stroke-color: ${colours.darkBlue};
           letter-spacing: 3rem;
-          margin-right: 3rem;
         }
         .experienceContainer {
           display: grid;

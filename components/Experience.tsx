@@ -42,7 +42,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
           flex-direction: column;
           align-items: center;
           font-family: 'Raleway', sans-serif;
-          margin: 0 9rem 3rem 9rem;
+          margin: 0 clamp(50px, 1rem + 8vw, 150px) 3rem clamp(50px, 1rem + 8vw, 150px);
         }
         .limit {
           display: flex;
@@ -65,7 +65,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
           display: flex;
           flex-direction: column;
           text-align: left;
-          font-size: 24px;
+          font-size: clamp(14px, 1.5vw, 24px);
           padding: 70px;
         }
         img {

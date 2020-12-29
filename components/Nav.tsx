@@ -40,7 +40,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
           align-items: center;
           justify-content: space-between;
           color: ${colours.white};
-          padding: clamp(1rem, 3vmax, 1.5rem) clamp(2rem, 20vmin, 10rem);
+          padding: clamp(1rem, 3vmax, 1.5rem) clamp(1rem, 10vmin, 10rem);
           position: relative;
           z-index: 3;
           font-size: 24px;

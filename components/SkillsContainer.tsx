@@ -28,7 +28,7 @@ const Skills: FC = () => {
           display: flex;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
-          padding: 0 150px 160px 150px;
+          padding: 0 clamp(50px, 1rem + 6vw, 150px) 160px clamp(50px, 1rem + 6vw, 150px);
           background: ${colours.black};
           justify-content: center;
           color: ${colours.white};
