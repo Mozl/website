@@ -4,7 +4,10 @@ import { colours } from '../theme';
 interface Props {
   skill: {
     title: string;
-    image: string;
+    images: {
+      large: string;
+      small: string;
+    };
     description: string;
   };
 }
@@ -13,7 +16,7 @@ const Skill: FC<Props> = ({ skill }) => {
   return (
     <>
       <div className="wrapper">
-        <img src={`${skill.image}`} />
+        <img src={`${skill.images.large}`} />
         <h3 className="title">{skill.title}</h3>
         <p className="description">{skill.description}</p>
       </div>
@@ -31,13 +34,25 @@ const Skill: FC<Props> = ({ skill }) => {
           height: 110px;
         }
         .title {
-          font-size: clamp(36px, 2vmin, 48px);
+          font-size: 48px;
           font-weight: 700;
           margin: 20px 0;
         }
         .description {
-          font-size: clamp(18px, 1vmin, 24px);
+          font-size: 24px;
           font-family: 'Raleway', sans-serif;
+        }
+        @media only screen and (max-width: 550px) {
+          .title {
+            font-size: 36px;
+          }
+          .description {
+            font-size: 18px;
+          }
+          img {
+            width: 80px;
+            height: 80px;
+          }
         }
       `}</style>
     </>

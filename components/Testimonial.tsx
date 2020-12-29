@@ -82,10 +82,14 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
         @media only screen and (max-width: 550px) {
           .wrapper {
             margin: 40px 30px;
-            font-size: 16px;
+            font-size: 14px;
           }
           .person-text {
-            font-size: 16px;
+            font-size: 14px;
+            margin-left: 14px;
+          }
+          .quote {
+            padding: 0 0;
           }
         }
       `}</style>

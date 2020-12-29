@@ -103,6 +103,7 @@ const Hero: FC = () => {
           }
           .sub-heading {
             font-size: 18px;
+            margin: 5px 0;
           }
           .hero {
             grid-template-columns: 1fr;

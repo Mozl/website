@@ -63,7 +63,7 @@ const ExperiencesContainer: FC = () => {
           }
           .headerSmall {
             display: block;
-            font-size: 100px;
+            font-size: 80px;
             font-weight: 900;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke-width: 3px;

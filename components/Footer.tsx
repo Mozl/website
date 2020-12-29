@@ -17,18 +17,18 @@ const Footer: FC<Props> = () => {
             <SiteLogo />
           </ActiveLink>
           <div className="footer-title">
-            <p className="footer-margin">Want to know more?</p>
+            <p className="footer-margin footer-font">Want to know more?</p>
             <div className="cta footer-margin">
               <Cta />
             </div>
           </div>
           <div className="footer-link-container">
-            <p className="footer-margin">
-              <ActiveLink href="/cv">CV</ActiveLink>
-            </p>
-            <p className="footer-margin">
-              <ActiveLink href="/about">About Me</ActiveLink>
-            </p>
+            <a className="footer-font footer-margin" href="/cv">
+              CV
+            </a>
+            <a className="footer-font footer-margin" href="/about">
+              About Me
+            </a>
           </div>
           <div className="footer-icon-container">
             <a href="https://github.com/Mozl" target="_blank">
@@ -42,7 +42,7 @@ const Footer: FC<Props> = () => {
       </div>
       <style jsx>{`
         .footer {
-          background: linear-gradient(to bottom, ${colours.darkBlue} 0%, ${colours.lightBlue} 80%);
+          background: linear-gradient(to bottom, ${colours.lightBlue} 0%, ${colours.darkBlue} 80%);
         }
         .wrapper {
           display: grid;
@@ -87,6 +87,13 @@ const Footer: FC<Props> = () => {
           }
           .footer-icon {
             margin-right: 30px;
+            width: 40px;
+            height: 40px;
+          }
+          .footer-font {
+            font-size: 20px;
+            color: ${colours.white};
+            text-decoration: none;
           }
         }
       `}</style>

@@ -26,14 +26,10 @@ const Experience: FC<Props> = ({ experience, index }) => {
             <p className="description">{experience.description}</p>
             <a href={`${experience.linkUrl}`}>{experience.linkText}</a>
           </div>
-          <img
-            className="image"
-            srcSet={`${experience.images.small} 190w,
-            ${experience.images.large} 443w
-            `}
-            sizes="(max-width: 550px) 290px,
-            443px"
-          />
+          <picture>
+            <source srcSet={experience.images.large} media="(min-width: 550px)" />
+            <img src={experience.images.small} />
+          </picture>
         </div>
       </div>
 
@@ -103,11 +99,11 @@ const Experience: FC<Props> = ({ experience, index }) => {
           }
           .text {
             padding: 40px 40px;
-            font-size: 18px;
+            font-size: 14px;
           }
           .title {
-            font-size: 40px;
-            top: 13px;
+            font-size: 2rem;
+            top: 10px;
           }
           .description {
             line-height: 1.6;

@@ -28,7 +28,7 @@ const Skills: FC = () => {
           display: flex;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
-          padding: 0 clamp(50px, 5vmax, 150px) 160px clamp(50px, 5vmax, 150px);
+          padding: 0 150px 160px 150px;
           background: ${colours.black};
           justify-content: center;
           color: ${colours.white};
@@ -43,9 +43,9 @@ const Skills: FC = () => {
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: 3px;
           -webkit-text-stroke-color: ${colours.white};
-          letter-spacing: clamp(1rem, 1.2rem, 3.5rem);
+          letter-spacing: 3.5rem;
           word-break: break-all;
-          padding: 0 clamp(20px, 5vmax, 150px) 30px clamp(20px, 5vmax, 150px);
+          padding: 0 150px 30px 150px;
         }
         .header {
           font-size: 100px;
@@ -59,9 +59,12 @@ const Skills: FC = () => {
         @media only screen and (max-width: 550px) {
           .header-container {
             flex-direction: column;
+            padding: 0 0 30px 0;
+            letter-spacing: 1rem;
           }
           .wrapper {
             clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+            padding: 0 10px 70px 10px;
           }
           .header {
             font-size: 80px;

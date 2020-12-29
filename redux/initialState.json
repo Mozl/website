@@ -23,17 +23,26 @@
   "skills": [
     {
       "title": "Technologies",
-      "image": "skill-logos/react.svg",
+      "images": {
+        "large": "skill-logos/react.svg",
+        "small": "skill-logos/react-small.svg"
+      },
       "description": "I am experienced with the latest web technologies such as React, Redux and Typescript, building exciting web experiences at the scale of millions"
     },
     {
       "title": "Practices",
-      "image": "skill-logos/dial.svg",
+      "images": {
+        "large": "skill-logos/dial.svg",
+        "small": "skill-logos/dial-small.svg"
+      },
       "description": "Following industry-leading engineering principles, I craft performant web apps with well-tested, scalable code"
     },
     {
       "title": "Mindset",
-      "image": "skill-logos/experiment.svg",
+      "images": {
+        "large": "skill-logos/experiment.svg",
+        "small": "skill-logos/experiment-small.svg"
+      },
       "description": "I have a curious nature, always looking to improve the codebase, product and team processes. This includes building A/B tests to see what works best with users"
     }
   ],
