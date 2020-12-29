@@ -16,11 +16,11 @@ const Testimonial: FC<Props> = ({ testimonial }) => {
     <>
       <div className="wrapper">
         <span className="mark mark-left">“</span>
-        <img src="stripes.svg" className="stripes" />
+        <img src="stripes.svg" className="stripes" alt="orange diagonal stripes" />
         <div className="quote">{testimonial.quote}</div>
         <span className="mark mark-right">”</span>
         <div className="person-wrapper">
-          <img src={`${testimonial.image}`} />
+          <img src={`${testimonial.image}`} alt="Headshot of testimonial giver" />
           <div className="person-text">
             <span>{testimonial.name}</span>
             <span className="person-medium">{testimonial.position}</span>

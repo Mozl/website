@@ -28,7 +28,7 @@ const Experience: FC<Props> = ({ experience, index }) => {
           </div>
           <picture>
             <source srcSet={experience.images.large} media="(min-width: 550px)" />
-            <img src={experience.images.small} />
+            <img alt={`${experience.title} page shot`} src={experience.images.small} />
           </picture>
         </div>
       </div>

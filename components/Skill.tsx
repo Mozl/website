@@ -16,7 +16,7 @@ const Skill: FC<Props> = ({ skill }) => {
   return (
     <>
       <div className="wrapper">
-        <img src={`${skill.images.large}`} />
+        <img src={`${skill.images.large}`} alt={`${skill.title} icon`} />
         <h3 className="title">{skill.title}</h3>
         <p className="description">{skill.description}</p>
       </div>

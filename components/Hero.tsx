@@ -43,7 +43,7 @@ const Hero: FC = () => {
         </div>
         <div className="hero-image">
           <div className="louis-image">
-            <img className="headshot" src="/louis.png" height="500px" width="500px"></img>
+            <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot"></img>
           </div>
         </div>
       </div>
