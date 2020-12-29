@@ -48,7 +48,7 @@ const Skills: FC = () => {
           padding: 0 150px 30px 150px;
         }
         .header {
-          font-size: 100px;
+          font-size: 130px;
         }
         .skillsContainer {
           display: grid;

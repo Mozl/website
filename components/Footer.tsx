@@ -58,6 +58,10 @@ const Footer: FC<Props> = () => {
           flex-direction: column;
           font-family: 'Playfair Display', serif;
         }
+        .footer-font {
+          color: ${colours.white};
+          text-decoration: none;
+        }
         .footer-link-container {
           display: grid;
           grid-template-rows: 1fr 1fr;
@@ -92,8 +96,6 @@ const Footer: FC<Props> = () => {
           }
           .footer-font {
             font-size: 20px;
-            color: ${colours.white};
-            text-decoration: none;
           }
         }
       `}</style>
