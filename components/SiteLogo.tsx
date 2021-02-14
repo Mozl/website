@@ -3,12 +3,10 @@ import { colours } from '../theme';
 const SiteLogo = () => {
   return (
     <>
-      <svg width="60" height="60" viewBox="0 0 90 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
-          d="M10.8387 9.48386V56.9032L36.1821 30.5048L47.6584 56.9032L66.7856 30.5048L84 56.9032"
-          stroke={`${colours.white}`}
-          strokeWidth="10"
-          strokeLinecap="square"
+          d="M6.4 0H0v46l17.4-20.6 9.1 18.2 12-18.2 10 17.4 5.5-4-15.6-26.1-11 17.4-8.2-17.4L6.4 28.6V0z"
+          fill={colours.white}
         />
       </svg>
     </>
