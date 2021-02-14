@@ -35,7 +35,7 @@ const Skill: FC<Props> = ({ skill }) => {
         }
         .title {
           font-size: 48px;
-          font-weight: 700;
+          font-weight: 900;
           margin: 20px 0;
         }
         .description {
