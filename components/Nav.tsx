@@ -11,8 +11,6 @@ interface Props {
 }
 
 const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
-  let isClient = typeof window !== 'undefined';
-  const screenSize = isClient && window.innerWidth > 550 ? 'desktop' : 'mobile';
   return (
     <>
       <nav className="nav">
@@ -35,7 +33,7 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         nav {
           display: flex;
           font-family: 'Raleway', sans-serif;
-          font-weight: 400;
+          font-weight: 500;
           min-height: 10vh;
           align-items: center;
           justify-content: space-between;
