@@ -66,7 +66,7 @@ const Footer: FC<Props> = () => {
           display: grid;
           grid-template-rows: 1fr 1fr;
           justify-content: center;
-          font-weight: 400;
+          font-weight: 500;
         }
         .footer-margin {
           margin: 0 0 40px 0;
