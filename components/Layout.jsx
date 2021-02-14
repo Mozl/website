@@ -13,17 +13,11 @@ function Layout({ children }) {
         <meta name="keywords" content="Louis, Louis Moselhi, mozl" />
         <link rel="canonical" href="https://mozl.netlify.app" />
         <title>Website</title>
-        <link href="/favicon.ico" rel="icon" />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link href="/website_logo.svg" rel="icon" />
+        <link rel="mask-icon" href="/website_logo.svg" color="#fff" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link href="/fonts/styles.css" rel="stylesheet" />
         <meta name="theme-color" content="#317EFB" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <div>{children}</div>
       <style jsx global>{`
