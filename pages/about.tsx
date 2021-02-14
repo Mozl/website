@@ -26,12 +26,12 @@ const About: React.FC = () => {
           <p className="about-text">
             I am a software engineer with a passion for creating exciting, performant web experiences using cutting-edge
             tech. Some technologies I enjoy using are React, Typescript, Redux and Machine Learning. Working on the{' '}
-            <a target="_blank" href="https://www.bbc.co.uk/sounds">
+            <a target="_blank" rel="noreferrer" href="https://www.bbc.co.uk/sounds">
               BBC Sounds
             </a>{' '}
             website has given me extensive experience in delivering an elegant, feature-rich web app at national scale.
             My interest in growing the tech community and sharing ideas led me to start the{' '}
-            <a target="_blank" href="http://bit.ly/bbc-tech-meetup">
+            <a target="_blank" rel="noreferrer" href="http://bit.ly/bbc-tech-meetup">
               BBC Tech Meetup
             </a>
             , a meeting of minds bringing together tech talks by superstars of tech from the BBC and the public.
@@ -56,6 +56,7 @@ const About: React.FC = () => {
         }
         h2 {
           font-size: 120px;
+          font-family: 'Playfair Display', serif;
           font-weight: 800;
           color: ${colours.white};
           margin: 50px 0 50px 0;
