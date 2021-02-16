@@ -5,6 +5,7 @@ import Menu from '../components/Menu';
 import Model from '../components/Model';
 import ModelViewer from '../components/ModelViewer';
 import { toggleMenu } from '../redux/actions/menuActions';
+import { Controls } from 'react-three-gui';
 
 interface RootState {
   isMenuOpen: {
@@ -24,9 +25,14 @@ const Sandbox: React.FC = () => {
       {/* <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
       <Menu isMenuOpen={isMenuOpen} /> */}
       <div className="three">
-        <ModelViewer>
-          <Model modelPath="/pink-logo-3d-2.glb" />
-        </ModelViewer>
+        {typeof window !== 'undefined' && (
+          <Controls.Provider>
+            <ModelViewer>
+              <Model modelPath="/pink-logo-3d-5.glb" />
+            </ModelViewer>
+            <Controls />
+          </Controls.Provider>
+        )}
       </div>
       <style jsx>{`
         .three {

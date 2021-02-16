@@ -2,6 +2,8 @@ import { colours } from '../theme';
 import MenuLogo from '../components/MenuLogo';
 import ActiveLink from '../components/ActiveLink';
 import SiteLogo from '../components/SiteLogo';
+import ModelViewer from './ModelViewer';
+import Model from './Model';
 
 interface Props {
   onToggleMenu: () => void;
@@ -16,8 +18,15 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
       <nav className="nav">
         <div className="header-logo">
           <ActiveLink href="/">
-            <SiteLogo />
+            <div className="modelWrapper">
+              <ModelViewer>
+                <Model modelPath="/pink-logo-3d-5.glb" />
+              </ModelViewer>
+            </div>
           </ActiveLink>
+          {/* <ActiveLink href="/">
+            <SiteLogo />
+          </ActiveLink> */}
         </div>
         <div className="link-wrapper">
           <ActiveLink href="/cv">
@@ -65,6 +74,11 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         .cv,
         .about {
           padding-left: 24px;
+        }
+        .modelWrapper {
+          position: relative;
+          height: 100px;
+          width: 100px;
         }
         @media only screen and (max-width: 550px) {
           nav {
