@@ -27,7 +27,7 @@ const Sandbox: React.FC = () => {
       <div className="three">
         {typeof window !== 'undefined' && (
           <Controls.Provider>
-            <ModelViewer>
+            <ModelViewer includeGui={true}>
               <Model modelPath="/pink-logo-3d-5.glb" />
             </ModelViewer>
             <Controls />
