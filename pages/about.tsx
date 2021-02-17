@@ -1,8 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import Menu from '../components/Menu';
 import { colours } from '../theme';
-import { toggleMenu } from '../redux/actions/menuActions';
 
 interface RootState {
   isMenuOpen: {
@@ -12,14 +11,10 @@ interface RootState {
 
 const About: React.FC = () => {
   const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
-  const dispatch = useDispatch();
-  const onToggleMenu = () => {
-    dispatch(toggleMenu());
-  };
   return (
     <>
       <div className="container">
-        <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
+        <Nav />
         <Menu isMenuOpen={isMenuOpen} />
         <div className="text-container">
           <h2>about me</h2>

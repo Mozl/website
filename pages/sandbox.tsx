@@ -6,6 +6,7 @@ import Model from '../components/Model';
 import ModelViewer from '../components/ModelViewer';
 import { toggleMenu } from '../redux/actions/menuActions';
 import { Controls } from 'react-three-gui';
+import Circle from '../components/Circle';
 
 interface RootState {
   isMenuOpen: {
@@ -27,8 +28,9 @@ const Sandbox: React.FC = () => {
       <div className="three">
         {typeof window !== 'undefined' && (
           <Controls.Provider>
-            <ModelViewer includeGui={true}>
-              <Model modelPath="/pink-logo-3d-5.glb" />
+            <ModelViewer includeGui={false}>
+              {/* <Model modelPath="/pink-logo-3d-5.glb" /> */}
+              <Circle />
             </ModelViewer>
             <Controls />
           </Controls.Provider>
