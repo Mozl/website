@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import { colours } from '../theme';
 import Menu from '../components/Menu';
