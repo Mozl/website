@@ -16,11 +16,6 @@ interface RootState {
 
 const Sandbox: React.FC = () => {
   const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
-  const dispatch = useDispatch();
-  const onToggleMenu = () => {
-    dispatch(toggleMenu());
-  };
-
   return (
     <>
       {/* <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
