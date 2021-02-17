@@ -24,11 +24,6 @@ const Nav = () => {
         <div className="header-logo">
           <ActiveLink href="/">
             <SiteLogo />
-            {/* <div className="modelWrapper">
-              <ModelViewer>
-                <Model modelPath="/pink-logo-3d-5.glb" />
-              </ModelViewer>
-            </div> */}
           </ActiveLink>
         </div>
         <div className="link-wrapper">

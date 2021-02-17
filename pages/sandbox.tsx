@@ -18,7 +18,6 @@ const Sandbox: React.FC = () => {
           <Controls.Provider>
             <ModelViewer includeGui={true}>
               <Model modelPath="/pink-logo-3d-5.glb" />
-              {/* <Circle /> */}
             </ModelViewer>
             <Controls />
           </Controls.Provider>

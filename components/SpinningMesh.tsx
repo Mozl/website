@@ -1,13 +1,15 @@
 import React, { FC, useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
+import { Vector3 } from 'three';
 
 interface Props {
-  position: number[];
-  args?: number[];
+  position: Vector3;
+  args?: any;
 }
 
 const SpinningMesh: FC<Props> = ({ position, args }) => {
   const mesh = useRef<THREE.Mesh>();
+  // @ts-ignore
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
   return (
     <>
