@@ -32,8 +32,8 @@ const ModelViewer = ({ children, includeGui }: { children?: JSX.Element; include
           <Suspense fallback={null}>{children}</Suspense>
         </YourCanvas>
       ) : (
-        <Canvas shadowMap colorManagement camera={{ position: [-5, 2, 10], fov: 60 }}>
-          <ambientLight intensity={1} />
+        <Canvas camera={{ position: [-5, 2, 10], fov: 60 }}>
+          <ambientLight intensity={0.3} />
           <directionalLight
             castShadow
             position={[0, 10, 0]}
@@ -46,8 +46,8 @@ const ModelViewer = ({ children, includeGui }: { children?: JSX.Element; include
             shadow-camera-top={10}
             shadow-camera-bottom={-10}
           />
-          <pointLight position={[0, 0, 20]} intensity={1} />
-          <pointLight position={[0, -10, 0]} intensity={1} />
+          <pointLight intensity={5} />
+          <pointLight position={[0, -10, 2]} intensity={5} />
           <group>
             <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
               <planeBufferGeometry attach="geometry" args={[100, 100]} />

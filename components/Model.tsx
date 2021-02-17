@@ -1,21 +1,8 @@
 import * as THREE from 'three';
 import React, { useRef } from 'react';
+import RGBToHex from '../helpers/RGBToHex';
 import { useFrame, useLoader } from 'react-three-fiber';
 import { useControl } from 'react-three-gui';
-
-function RGBToHex(r: number | string, g: number | string, b: number | string) {
-  if (r && g && b) {
-    r = r.toString(16);
-    g = g.toString(16);
-    b = b.toString(16);
-
-    if (r.length == 1) r = '0' + r;
-    if (g.length == 1) g = '0' + g;
-    if (b.length == 1) b = '0' + b;
-
-    return '#' + r + g + b;
-  }
-}
 
 let GLTFLoader;
 const Model = ({ modelPath }: { modelPath: string }) => {
