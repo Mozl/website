@@ -12,11 +12,13 @@ const Model = ({ modelPath }: { modelPath: string }) => {
   const color = useControl('Color', { type: 'color' });
   const convertedColor = RGBToHex(color.r, color.g, color.b);
   var model = gltf.scene;
+  // @ts-ignore
   var newMaterial = new THREE.MeshStandardMaterial({ color: convertedColor });
-  model.traverse((o) => {
+  model.traverse((o: any) => {
     if (o.isMesh) o.material = newMaterial;
   });
   const rotationX = useControl('Rotation X', { type: 'number' });
+  // @ts-ignore
   useFrame(() => (mesh.current.rotation.y += 0.01));
   return (
     <mesh castShadow ref={mesh} scale={[4, 4, 4]} rotation-x={rotationX}>

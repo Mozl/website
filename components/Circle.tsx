@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import { useFrame, useThree } from 'react-three-fiber';
+import { PointLight } from 'three';
 
 const Circle = () => {
-  const light = useRef();
+  const light = useRef<PointLight>();
   const { viewport, mouse } = useThree();
   useFrame(() => {
-    light.current.position.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 2);
+    light?.current?.position.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 2);
   });
   return (
     <>
