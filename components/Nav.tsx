@@ -1,32 +1,35 @@
+import React from 'react';
 import { colours } from '../theme';
+import { useSelector, useDispatch } from 'react-redux';
 import MenuLogo from '../components/MenuLogo';
 import ActiveLink from '../components/ActiveLink';
+import { toggleMenu } from '../redux/actions/menuActions';
 import SiteLogo from '../components/SiteLogo';
 import ModelViewer from './ModelViewer';
 import Model from './Model';
 
-interface Props {
-  onToggleMenu: () => void;
+interface RootState {
   isMenuOpen: {
     isMenuOpen: boolean;
   };
 }
 
-const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
+const Nav = () => {
+  const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
+  const dispatch = useDispatch();
+  const onToggleMenu = () => dispatch(toggleMenu());
   return (
     <>
       <nav className="nav">
         <div className="header-logo">
           <ActiveLink href="/">
-            <div className="modelWrapper">
+            <SiteLogo />
+            {/* <div className="modelWrapper">
               <ModelViewer>
                 <Model modelPath="/pink-logo-3d-5.glb" />
               </ModelViewer>
-            </div>
+            </div> */}
           </ActiveLink>
-          {/* <ActiveLink href="/">
-            <SiteLogo />
-          </ActiveLink> */}
         </div>
         <div className="link-wrapper">
           <ActiveLink href="/cv">
@@ -74,11 +77,6 @@ const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
         .cv,
         .about {
           padding-left: 24px;
-        }
-        .modelWrapper {
-          position: relative;
-          height: 100px;
-          width: 100px;
         }
         @media only screen and (max-width: 550px) {
           nav {
