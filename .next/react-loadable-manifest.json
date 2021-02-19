@@ -1,1 +1,10 @@
-{}
+{
+  "./Controls": [
+    {
+      "id": "wGQq",
+      "name": "./components/Controls.tsx",
+      "file": "static/chunks/16.975a896595ee80705ca0.js",
+      "publicPath": "static/chunks/16.975a896595ee80705ca0.js"
+    }
+  ]
+}

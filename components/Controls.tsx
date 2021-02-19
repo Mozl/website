@@ -10,7 +10,9 @@ const CameraControls = () => {
     gl: { domElement }
   } = useThree();
   const controls = useRef();
+  // @ts-ignore
   useFrame((state) => controls.current.update());
+  // @ts-ignore
   return <orbitControls ref={controls} args={[camera, domElement]} />;
 };
 
