@@ -18,10 +18,15 @@ const Model = ({ modelPath }: { modelPath: string }) => {
     if (o.isMesh) o.material = newMaterial;
   });
   const rotationX = useControl('Rotation X', { type: 'number' });
+  const material = new THREE.MeshPhongMaterial({
+    color: 0x996633,
+    specular: 0x050505,
+    shininess: 100
+  });
   // @ts-ignore
   useFrame(() => (mesh.current.rotation.y += 0.01));
   return (
-    <mesh castShadow ref={mesh} scale={[4, 4, 4]} rotation-x={rotationX}>
+    <mesh material={material} castShadow ref={mesh} scale={[4, 4, 4]} rotation-x={rotationX}>
       <primitive object={gltf.scene} dispose={null} />
     </mesh>
   );

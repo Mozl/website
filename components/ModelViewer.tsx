@@ -6,11 +6,11 @@ const YourCanvas = withControls(Canvas);
 
 const CameraControls = dynamic(() => import('./Controls'), { ssr: false });
 
-const ModelViewer = ({ children, includeGui }: { children?: JSX.Element; includeGui?: boolean }) => {
+const ModelViewer = ({ children, includeGui }: { children?: React.ReactNode; includeGui?: boolean }) => {
   return (
     <>
       {includeGui ? (
-        <YourCanvas shadowMap colorManagement camera={{ position: [-5, 2, 20], fov: 20 }}>
+        <YourCanvas shadowMap colorManagement camera={{ position: [-5, 2, 20], fov: 60 }}>
           <CameraControls />
           <ambientLight intensity={1} />
           <directionalLight
