@@ -1,13 +1,17 @@
 import React, { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
+import dynamic from 'next/dynamic';
 import { withControls } from 'react-three-gui';
 const YourCanvas = withControls(Canvas);
+
+const CameraControls = dynamic(() => import('./Controls'), { ssr: false });
 
 const ModelViewer = ({ children, includeGui }: { children?: JSX.Element; includeGui?: boolean }) => {
   return (
     <>
       {includeGui ? (
-        <YourCanvas shadowMap colorManagement camera={{ position: [-5, 2, 10], fov: 60 }}>
+        <YourCanvas shadowMap colorManagement camera={{ position: [-5, 2, 20], fov: 20 }}>
+          <CameraControls />
           <ambientLight intensity={1} />
           <directionalLight
             castShadow
