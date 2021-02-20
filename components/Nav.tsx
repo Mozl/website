@@ -1,16 +1,23 @@
+import React from 'react';
 import { colours } from '../theme';
+import { useSelector, useDispatch } from 'react-redux';
 import MenuLogo from '../components/MenuLogo';
 import ActiveLink from '../components/ActiveLink';
+import { toggleMenu } from '../redux/actions/menuActions';
 import SiteLogo from '../components/SiteLogo';
+import ModelViewer from './ModelViewer';
+import Model from './Model';
 
-interface Props {
-  onToggleMenu: () => void;
+interface RootState {
   isMenuOpen: {
     isMenuOpen: boolean;
   };
 }
 
-const Nav = ({ isMenuOpen, onToggleMenu }: Props) => {
+const Nav = () => {
+  const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
+  const dispatch = useDispatch();
+  const onToggleMenu = () => dispatch(toggleMenu());
   return (
     <>
       <nav className="nav">

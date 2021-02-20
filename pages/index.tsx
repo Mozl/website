@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleMenu } from '../redux/actions/menuActions';
+import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import Border from '../components/Border';
 import SkillsContainer from '../components/SkillsContainer';
@@ -18,15 +17,11 @@ interface RootState {
 
 const Home: React.FC = () => {
   const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
-  const dispatch = useDispatch();
-  const onToggleMenu = () => {
-    dispatch(toggleMenu());
-  };
   return (
     <>
       <div className="container">
         <section className="top">
-          <Nav isMenuOpen={isMenuOpen} onToggleMenu={onToggleMenu} />
+          <Nav />
           <Menu isMenuOpen={isMenuOpen} />
           <Hero />
           <Border />

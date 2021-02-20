@@ -1,4 +1,79 @@
 {
+<<<<<<< HEAD
+  "devFiles": [],
+  "lowPriorityFiles": [
+    "static/ubgMOwc_6W4DMRNheN3X0/_buildManifest.js",
+    "static/ubgMOwc_6W4DMRNheN3X0/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/404": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills-69f7f7cb17a579a62ed3.js"
+    ],
+    "/about": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/cv": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/projects": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/dea2dd7f0f95e12d4f2fd57615057f2c7d00f0f5.b73c15022ff57d986a0a.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/chunks/1523b84601759f75d18d4631ac5d89a606b6740d.43dd7b329e41c226fcfb.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+    ],
+    "/sandbox": [
+      "static/runtime/webpack-4581eaabbd458b2295fb.js",
+      "static/chunks/framework.3790e25b2877d825ce62.js",
+      "static/chunks/fb7d5399.46e25db3983de59fc51f.js",
+      "static/chunks/b6fa5e5d302c1f49c13081dc45d084b04d95628e.c48aef279cfbd2a5ff11.js",
+      "static/runtime/main-43c7f8f52894d39a8bce.js"
+=======
   "polyfillFiles": [
     "static/chunks/polyfills-ff94e68042added27a93.js"
   ],
@@ -60,7 +135,7 @@
       "static/chunks/59b1111ac9fca7a8d014efb72264ebf96aabb7ac.0ec74ac7b43883a29cd0.js",
       "static/chunks/1d4ccd46824b4f698fae43238add63cb99913ebb.ab7407e277d21a42475c.js",
       "static/chunks/pages/projects-0a939943fbe659ac0121.js"
+>>>>>>> origin
     ]
-  },
-  "ampFirstPages": []
+  }
 }
