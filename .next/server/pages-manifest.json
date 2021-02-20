@@ -1,15 +1,1 @@
-<<<<<<< HEAD
-{"/404":"static/ubgMOwc_6W4DMRNheN3X0/pages/404.html","/_app":"static/ubgMOwc_6W4DMRNheN3X0/pages/_app.js","/_document":"static/ubgMOwc_6W4DMRNheN3X0/pages/_document.js","/_error":"static/ubgMOwc_6W4DMRNheN3X0/pages/_error.js","/about":"static/ubgMOwc_6W4DMRNheN3X0/pages/about.html","/api/pages/hello":"static/ubgMOwc_6W4DMRNheN3X0/pages/api/pages/hello.js","/cv":"static/ubgMOwc_6W4DMRNheN3X0/pages/cv.html","/index":"static/ubgMOwc_6W4DMRNheN3X0/pages/index.html","/projects":"static/ubgMOwc_6W4DMRNheN3X0/pages/projects.html","/sandbox":"static/ubgMOwc_6W4DMRNheN3X0/pages/sandbox.html","/":"static/ubgMOwc_6W4DMRNheN3X0/pages/index.html"}
-=======
-{
-  "/404": "pages/404.html",
-  "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/api/pages/hello": "pages/api/pages/hello.js",
-  "/cv": "pages/cv.html",
-  "/": "pages/index.html",
-  "/projects": "pages/projects.html",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
-}
->>>>>>> origin
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/sandbox":"static/development/pages/sandbox.js"}
