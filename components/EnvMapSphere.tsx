@@ -24,7 +24,7 @@ const EnvMapSphere = () => {
   return (
     <>
       <mesh position={[0, 0, 0]}>
-        <sphereGeometry attach="geometry" args={[2, 64, 64]} />
+        <torusKnotGeometry attach="geometry" args={[8, 0.6, 300, 20, 11, 20]} />
         <meshBasicMaterial attach="material" envMap={cubeCamera.renderTarget.texture} color="white" />
       </mesh>
     </>

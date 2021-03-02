@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import { colours } from '../theme';
 import Cta from './Cta';
+import ModelViewer from './ModelViewer';
+import dynamic from 'next/dynamic';
+const PortraitCoin = dynamic(() => import('./PortraitCoin'), { ssr: false });
 
 const Hero: FC = () => {
   return (
@@ -41,11 +44,14 @@ const Hero: FC = () => {
           </div>
           <Cta />
         </div>
-        <div className="hero-image">
-          <div className="louis-image">
+        {/* <div className="hero-image"> */}
+        <ModelViewer>
+          <PortraitCoin />
+        </ModelViewer>
+        {/* <div className="louis-image">
             <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot"></img>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
 
       <style jsx>{`
