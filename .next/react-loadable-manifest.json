@@ -2,27 +2,27 @@
   "../components/PortraitCoin": [
     {
       "id": "./components/PortraitCoin.tsx",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/@react-three/drei/core/useGLTF.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/libs/meshopt_decoder.module.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/loaders/DRACOLoader.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/loaders/GLTFLoader.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     }
   ],
   "./Controls": [
@@ -38,27 +38,27 @@
   "./PortraitCoin": [
     {
       "id": "./components/PortraitCoin.tsx",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/@react-three/drei/core/useGLTF.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/libs/meshopt_decoder.module.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/loaders/DRACOLoader.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     },
     {
       "id": "./node_modules/three/examples/jsm/loaders/GLTFLoader.js",
-      "file": "static/chunks/3.js"
+      "file": "static/chunks/1.js"
     }
   ],
   "./dev/noop": [

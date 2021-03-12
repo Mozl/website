@@ -45,7 +45,7 @@ const TestimonialsContainer: FC = () => {
           grid-auto-rows: auto;
           grid-gap: 50px;
           flex-direction: row;
-          margin-top: 30px;
+          margin-top: 80px;
         }
         @media only screen and (max-width: 550px) {
           .wrapper {

@@ -13,7 +13,7 @@ const CameraControls = () => {
   // @ts-ignore
   useFrame((state) => controls.current.update());
   // @ts-ignore
-  return <orbitControls ref={controls} args={[camera, domElement]} />;
+  return <orbitControls enableZoom={false} ref={controls} args={[camera, domElement]} />;
 };
 
 export default CameraControls;
