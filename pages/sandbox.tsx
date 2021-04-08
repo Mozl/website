@@ -31,7 +31,7 @@ const Sandbox: React.FC = () => {
             {/* <Model modelPath="/3d-assets/out.glb" /> */}
             {/* <Sphere /> */}
             {/* <EnvMapSphere /> */}
-            <Skybox urls={urls} />
+            {/* <Skybox urls={urls} /> */}
           </ModelViewer>
         </>
       </div>

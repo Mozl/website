@@ -6,6 +6,14 @@ import dynamic from 'next/dynamic';
 const PortraitCoin = dynamic(() => import('./PortraitCoin'), { ssr: false });
 
 const Hero: FC = () => {
+  const renderPortraitCoin = () => {
+    return (
+      <ModelViewer>
+        <PortraitCoin />
+      </ModelViewer>
+    );
+  };
+
   return (
     <>
       <div className="hero">
@@ -44,14 +52,12 @@ const Hero: FC = () => {
           </div>
           <Cta />
         </div>
-        {/* <div className="hero-image"> */}
-        <ModelViewer>
-          <PortraitCoin />
-        </ModelViewer>
-        {/* <div className="louis-image">
+        <div className="hero-image">
+          <div className="louis-image">
             <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot"></img>
-          </div> */}
-        {/* </div> */}
+          </div>
+        </div>
+        <div className="portraitCoin">{renderPortraitCoin()}</div>
       </div>
 
       <style jsx>{`
@@ -62,6 +68,14 @@ const Hero: FC = () => {
           height: 500px;
           object-fit: cover;
           overflow: hidden;
+        }
+        .portraitCoin {
+          display: flex;
+          width: 500px;
+          height: 500px;
+        }
+        .hero-image {
+          display: none;
         }
         .hero {
           display: grid;
@@ -104,8 +118,12 @@ const Hero: FC = () => {
           animation: fadeInDown 0.7s 6.4s ease-in forwards;
         }
         @media only screen and (max-width: 550px) {
+          .portraitCoin {
+            display: none;
+          }
           .hero-image {
             grid-row: 1;
+            display: flex;
           }
           .sub-heading {
             font-size: 18px;
