@@ -1,4 +1,4 @@
-import { useThree } from 'react-three-fiber';
+import { useThree } from '@react-three/fiber';
 
 let CubeTextureLoader;
 const Skybox = ({ urls }: { urls: string[] }) => {

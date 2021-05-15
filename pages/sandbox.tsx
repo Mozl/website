@@ -20,10 +20,10 @@ const Sandbox: React.FC = () => {
         {typeof window !== 'undefined' && (
           <>
             <ModelViewer>
-              {/* <Model modelPath="/react-logo-3d-3.glb" /> */}
+              <Model modelPath="/3DLouisText.gltf" />
               {/* <Sphere /> */}
-              <EnvMapSphere />
-              <Skybox urls={urls} />
+              {/* <EnvMapSphere />
+              <Skybox urls={urls} /> */}
             </ModelViewer>
           </>
         )}
