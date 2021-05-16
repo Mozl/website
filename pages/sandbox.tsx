@@ -6,24 +6,14 @@ import Skybox from '../components/Skybox';
 import EnvMapSphere from '../components/EnvMapSphere';
 
 const Sandbox: React.FC = () => {
-  const urls = [
-    'cubemap/posx.jpg',
-    'cubemap/negx.jpg',
-    'cubemap/posy.jpg',
-    'cubemap/negy.jpg',
-    'cubemap/posz.jpg',
-    'cubemap/negz.jpg'
-  ];
   return (
     <>
       <div className="three">
         {typeof window !== 'undefined' && (
           <>
             <ModelViewer>
-              <Model modelPath="/3DLouisText.gltf" />
-              {/* <Sphere /> */}
-              {/* <EnvMapSphere />
-              <Skybox urls={urls} /> */}
+              <EnvMapSphere />
+              <Skybox />
             </ModelViewer>
           </>
         )}
