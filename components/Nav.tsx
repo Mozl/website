@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { colours } from '../theme';
 import { useSelector, useDispatch } from 'react-redux';
 import MenuLogo from '../components/MenuLogo';
@@ -16,14 +16,21 @@ interface RootState {
 
 const Nav = () => {
   const isMenuOpen = useSelector((state: RootState) => state.isMenuOpen);
+  const [ishovered, setIsHovered] = useState(false);
   const dispatch = useDispatch();
   const onToggleMenu = () => dispatch(toggleMenu());
   return (
     <>
       <nav className="nav">
-        <div className="header-logo">
+        <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="header-logo">
           <ActiveLink href="/">
-            <SiteLogo />
+            {ishovered ? (
+              <ModelViewer>
+                <Model scale={[8, 8, 8]} shouldRotate modelPath="pink-logo-3d-5.glb" />
+              </ModelViewer>
+            ) : (
+              <SiteLogo />
+            )}
           </ActiveLink>
         </div>
         <div className="link-wrapper">
@@ -53,6 +60,8 @@ const Nav = () => {
         .header-logo {
           font-size: 40px;
           cursor: pointer;
+          height: 60px;
+          width: 100px;
         }
         a:active,
         .header-logo:active {

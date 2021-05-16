@@ -1,8 +1,13 @@
-import React, { FC } from 'react';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import React, { FC, Suspense, useState } from 'react';
 import { colours } from '../theme';
 import Cta from './Cta';
+import Model from './Model';
 
 const Hero: FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <div className="hero">
@@ -41,21 +46,39 @@ const Hero: FC = () => {
           </div>
           <Cta />
         </div>
-        <div className="hero-image">
-          <div className="louis-image">
-            <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot"></img>
-          </div>
+        <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="hero-image">
+          {isHovered ? (
+            <div className="hero-image-3d">
+              <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
+                <ambientLight intensity={0.9} />
+                <Suspense fallback={null}>
+                  <Model shouldRotate scale={[2, 2, 2]} modelPath="/PortraitCoin2.gltf" />
+                </Suspense>
+              </Canvas>
+            </div>
+          ) : (
+            <div className="louis-image">
+              <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot" />
+            </div>
+          )}
         </div>
       </div>
 
       <style jsx>{`
         .louis-image {
-          border-radius: 50%;
           background: linear-gradient(159deg, ${colours.lightOrange} 3%, ${colours.orange} 100%);
-          width: 500px;
-          height: 500px;
           object-fit: cover;
           overflow: hidden;
+        }
+        .hero-image {
+          overflow: hidden;
+          width: 500px;
+          height: 500px;
+          border-radius: 50%;
+        }
+        .hero-image-3d {
+          height: 500px;
+          width: 500px;
         }
         .hero {
           display: grid;
