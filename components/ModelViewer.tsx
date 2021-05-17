@@ -1,11 +1,12 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import dynamic from 'next/dynamic';
 import { Html, OrbitControls } from '@react-three/drei';
 
 const ModelViewer = ({ children }: { children?: React.ReactNode }) => {
   return (
     <Canvas camera={{ position: [-5, 2, 10], fov: 60 }}>
+      {/* 
+      // @ts-ignore */}
       <OrbitControls />
       <ambientLight intensity={0.3} />
       <directionalLight

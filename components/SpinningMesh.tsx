@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SpinningMesh: FC<Props> = ({ position, args }) => {
-  const mesh = useRef<THREE.Mesh>();
+  const mesh = useRef();
   // @ts-ignore
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
   return (
