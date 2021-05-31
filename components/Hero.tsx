@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import React, { FC, Suspense, useState } from 'react';
 import { colours } from '../theme';
 import Cta from './Cta';
-import Model from './Model';
+import Model from './three/Model';
 
 const Hero: FC = () => {
   const [isHovered, setIsHovered] = useState(false);

@@ -5,8 +5,8 @@ import MenuLogo from '../components/MenuLogo';
 import ActiveLink from '../components/ActiveLink';
 import { toggleMenu } from '../redux/actions/menuActions';
 import SiteLogo from '../components/SiteLogo';
-import ModelViewer from './ModelViewer';
-import Model from './Model';
+import ModelViewer from './three/ModelViewer';
+import Model from './three/Model';
 
 interface RootState {
   isMenuOpen: {

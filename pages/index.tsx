@@ -49,14 +49,7 @@ const Home: React.FC = () => {
       <style jsx global>{`
         html,
         body {
-          padding: 0;
-          margin: 0;
           position: ${isMenuOpen.isMenuOpen ? 'fixed' : 'unset'};
-          width: 100%;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </>

@@ -19,7 +19,7 @@ function Layout({ children }) {
         <link href="/fonts/styles.css" rel="stylesheet" />
         <meta name="theme-color" content="#317EFB" />
       </Head>
-      <div>{children}</div>
+      <div className="layout">{children}</div>
       <style jsx global>{`
         html,
         body {
