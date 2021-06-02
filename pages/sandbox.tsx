@@ -1,6 +1,5 @@
 import React, { Suspense, useRef } from 'react';
-import AnimationModel from '../components/three/AnimationModel';
-import GuitarAnimation from '../components/three/GuitarAnimation';
+import GuitarAnimationWithCameraSpin2 from '../components/three/GuitarAnimationWithCameraSpin2';
 import Overlay from '../components/three/Overlay';
 import { Canvas } from '@react-three/fiber';
 
@@ -18,12 +17,11 @@ const Sandbox: React.FC = () => {
         >
           <ambientLight intensity={1} />
           <Suspense fallback={null}>
-            {/* <AnimationModel scroll={scroll} /> */}
-            <GuitarAnimation scroll={scroll} />
+            <GuitarAnimationWithCameraSpin2 scroll={scroll} />
           </Suspense>
         </Canvas>
         {/* 
-      // @ts-ignore */}
+        // @ts-ignore */}
         <Overlay ref={overlay} caption={caption} scroll={scroll} />
       </div>
       <style jsx>{`
