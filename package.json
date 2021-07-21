@@ -11,10 +11,15 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "@babel/core": "^7.14.8",
     "@react-three/drei": "^4.3.3",
     "@react-three/fiber": "^6.1.2",
     "@types/react-redux": "^7.1.11",
     "animejs": "^3.2.1",
+    "babel-plugin-glsl": "^1.0.0",
+    "babel-plugin-macros": "^2.8.0",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
     "next": "^10.2.0",
     "next-redux-wrapper": "^6.0.2",
     "react": "^17.0.2",
