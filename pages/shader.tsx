@@ -10,12 +10,22 @@ const WaveShaderMaterial = shaderMaterial(
 
   // Vertex shader
   glsl`
+    precision mediump float;
+    uniform float uTime;
     varying vec2 vUv;
+
+    #pragma glslify: snoise3 = require(glsl-noise/simplex/3d);
 
     void main() {
       vUv = uv;
 
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      vec3 pos = position;
+      float noiseFreq = 1.5;
+      float noiseAmp = 0.25;
+      vec3 noisePos = vec3(pos.x * noiseFreq + uTime, pos.y, pos.z);
+      pos.z += snoise3(noisePos) * noiseAmp;
+
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
     }
   `,
 
@@ -42,7 +52,7 @@ const Wave = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[3, 5]} />
+      <planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
       {/* 
         // @ts-ignore */}
       <waveShaderMaterial uColor="hotpink" ref={ref} />
@@ -50,11 +60,12 @@ const Wave = () => {
   );
 };
 
-const Shader = () => {
+const Shader: React.FC = () => {
   return (
     <>
       <div className="three">
         <Canvas
+          camera={{ fov: 10 }}
           shadows
           raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
         >
