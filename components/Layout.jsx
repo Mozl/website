@@ -15,7 +15,6 @@ function Layout({ children }) {
         <title>Website</title>
         <link href="/website_logo.svg" rel="icon" />
         <link rel="mask-icon" href="/website_logo.svg" color="#fff" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link href="/fonts/styles.css" rel="stylesheet" />
         <meta name="theme-color" content="#317EFB" />
       </Head>
