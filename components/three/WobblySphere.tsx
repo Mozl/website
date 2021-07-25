@@ -14,7 +14,7 @@ const WobblySphere = () => {
       <icosahedronBufferGeometry args={[1, 64]} />
       {/* 
         // @ts-ignore */}
-      <vertexDisplacementShaderMaterial ref={ref} wireframe />
+      <vertexDisplacementShaderMaterial ref={ref} />
     </mesh>
   );
 };
