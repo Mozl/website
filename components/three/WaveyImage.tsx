@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import React, { useRef } from 'react';
 import { extend, useFrame, useLoader } from '@react-three/fiber';
-import WaveShaderMaterial from './WaveShaderMaterial';
+import WaveShaderMaterial from './materials/WaveShaderMaterial';
 
 extend({ WaveShaderMaterial });
 
