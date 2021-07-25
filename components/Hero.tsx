@@ -47,24 +47,16 @@ const Hero: FC = () => {
           <Cta />
         </div>
         <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="hero-image">
-          {isHovered ? (
-            <div className="hero-image-3d">
-              <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
-                <ambientLight intensity={0.9} />
-                <Suspense fallback={null}>
-                  <Model shouldRotate scale={[2, 2, 2]} modelPath="/PortraitCoin2.gltf" />
-                </Suspense>
-              </Canvas>
-            </div>
-          ) : (
-            <div className="louis-image">
-              <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot" />
-            </div>
-          )}
+          <div className="louis-image">
+            <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot" />
+          </div>
         </div>
       </div>
 
       <style jsx>{`
+        .headshot {
+          transform: translateY(4px);
+        }
         .louis-image {
           background: linear-gradient(159deg, ${colours.lightOrange} 3%, ${colours.orange} 100%);
           object-fit: cover;
@@ -72,13 +64,9 @@ const Hero: FC = () => {
         }
         .hero-image {
           overflow: hidden;
-          width: 500px;
-          height: 500px;
           border-radius: 50%;
         }
         .hero-image-3d {
-          height: 500px;
-          width: 500px;
         }
         .hero {
           display: grid;
