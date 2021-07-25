@@ -13,7 +13,6 @@ let GLTFLoader;
 const SandboxModel = ({ modelPath, shouldRotate, scale }: Props) => {
   GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
   const gltf: any = useLoader(GLTFLoader, modelPath);
-  const { nodes, materials } = useGLTF(modelPath);
   const mesh = useRef<THREE.Mesh>();
 
   if (shouldRotate) {
