@@ -1,13 +1,7 @@
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import React, { FC, Suspense, useState } from 'react';
 import { colours } from '../theme';
 import Cta from './Cta';
-import Model from './three/Model';
 
-const Hero: FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
+const Hero: React.FC = () => {
   return (
     <>
       <div className="hero">
@@ -46,7 +40,7 @@ const Hero: FC = () => {
           </div>
           <Cta />
         </div>
-        <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="hero-image">
+        <div className="hero-image">
           <div className="louis-image">
             <img className="headshot" src="/louis.png" height="500px" width="500px" alt="Louis headshot" />
           </div>
@@ -65,8 +59,6 @@ const Hero: FC = () => {
         .hero-image {
           overflow: hidden;
           border-radius: 50%;
-        }
-        .hero-image-3d {
         }
         .hero {
           display: grid;
