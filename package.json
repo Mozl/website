@@ -28,7 +28,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "three": "0.128.0"
+    "three": "0.137.0"
   },
   "devDependencies": {
     "@babel/helpers": "^7.12.5",
