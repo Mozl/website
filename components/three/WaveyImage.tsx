@@ -42,6 +42,7 @@ const WaveyImage = ({ imagePath }) => {
 
 const Plane = ({ imagePath, hovered, setHovered }) => {
   const ref = useRef<THREE.Texture>();
+  // @ts-ignore
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
 
   const [image] = useLoader(THREE.TextureLoader, [imagePath]);

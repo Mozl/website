@@ -1,17 +1,16 @@
 import * as THREE from 'three';
 import React, { useRef } from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, Vector3 } from '@react-three/fiber';
+import { useGLTF } from '@react-three/drei';
 
 interface Props {
   modelPath: string;
   shouldRotate?: boolean;
-  scale: number[];
+  scale: Vector3;
 }
 
-let GLTFLoader;
 const Model = ({ modelPath, shouldRotate, scale }: Props) => {
-  GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
-  const gltf: any = useLoader(GLTFLoader, modelPath);
+  const gltf: any = useGLTF(modelPath);
   const mesh = useRef<THREE.Mesh>();
 
   if (shouldRotate) {

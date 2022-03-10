@@ -39,6 +39,7 @@ const WobblySphere = () => (
 
 const Icosahedron = () => {
   const ref = useRef<THREE.Texture>();
+  // @ts-ignore
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
 
   return (
