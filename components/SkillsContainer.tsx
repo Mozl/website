@@ -1,7 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useRef, Suspense, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Skill from '../components/Skill';
+import Overlay from '../components/three/Overlay';
 import { colours } from '../theme';
+import { Canvas } from '@react-three/fiber';
+import { Loader, Environment } from '@react-three/drei';
+import WebsitePushedDown2 from '../components/three/WebsitePushedDown2';
 
 interface RootState {
   skills: [];
@@ -9,27 +13,63 @@ interface RootState {
 
 const Skills: FC = () => {
   const skills = useSelector((state: RootState) => state.skills);
+  const scroll = useRef(0);
+  const overlay = useRef();
+  const caption = useRef();
 
   return (
     <>
-      <div className="wrapper">
-        <div className="header-container">
-          <span className="header">SKI</span>
-          <span className="header">LLS</span>
+      <div className="outer">
+        <div className="wrapper">
+          <div className="header-container">
+            <span className="header">SKI</span>
+            <span className="header">LLS</span>
+          </div>
+          <div className="skillsContainer">
+            {skills?.map((skill, index) => (
+              <Skill key={index} skill={skill} />
+            ))}
+          </div>
         </div>
-        <div className="skillsContainer">
-          {skills?.map((skill, index) => (
-            <Skill key={index} skill={skill} />
-          ))}
+        <div className="three">
+          <Canvas
+            shadows
+            raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
+          >
+            <ambientLight intensity={1} />
+            <Suspense fallback={null}>
+              <WebsitePushedDown2 scroll={scroll} />
+              <Environment preset="city" />
+            </Suspense>
+          </Canvas>
+          {/* 
+          // @ts-ignore */}
+          <Overlay ref={overlay} caption={caption} scroll={scroll} />
+          <Loader />
         </div>
       </div>
       <style jsx>{`
+        .outer {
+          position: relative;
+        }
+        .three {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: ${colours.black};
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
         .wrapper {
           display: flex;
+          z-index: 4;
+          position: relative;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
           padding: 0 clamp(50px, 1rem + 6vw, 150px) 160px clamp(50px, 1rem + 6vw, 150px);
-          background: ${colours.black};
+          background: transparent;
           justify-content: center;
           color: ${colours.white};
           text-align: center;

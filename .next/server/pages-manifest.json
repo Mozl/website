@@ -1,15 +1,5 @@
 {
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/api/pages/hello": "pages/api/pages/hello.js",
-  "/bubbles": "pages/bubbles.html",
-  "/cv": "pages/cv.html",
-  "/": "pages/index.html",
-  "/projects": "pages/projects.html",
-  "/sandbox": "pages/sandbox.html",
-  "/shader": "pages/shader.html",
-  "/web": "pages/web.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js"
 }

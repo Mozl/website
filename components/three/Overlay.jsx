@@ -7,7 +7,6 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => {
         ref={ref}
         onScroll={(e) => {
           scroll.current = e.target.scrollTop / (e.target.scrollHeight - window.innerHeight);
-          // caption.current.innerText = scroll.current.toFixed(2);
         }}
         className="scroll overlay"
       >

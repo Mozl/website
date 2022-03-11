@@ -9,7 +9,6 @@ export default function Model({ scroll, ...props }) {
   const t = useRef(0);
   const { nodes, materials, animations } = useGLTF('/WebsiteBakedAnimations.gltf');
   const { actions, mixer } = useAnimations(animations, group);
-  console.log('actions: ', actions);
   useEffect(() => {
     actions['Action'].play();
     actions['Action.001'].play();
