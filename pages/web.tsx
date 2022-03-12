@@ -1,31 +1,24 @@
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import Overlay from '../components/three/Overlay';
-import { Loader, Environment } from '@react-three/drei';
+import { Loader, Environment, ScrollControls } from '@react-three/drei';
 import WebsitePushedDown2 from '../components/three/WebsitePushedDown2';
 
 const Web: React.FC = () => {
-  const scroll = useRef(0);
-  const overlay = useRef();
-  const caption = useRef();
-
   return (
     <>
       <div className="three">
         <Canvas
           shadows
           raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
-          color="lightblue"
         >
           <ambientLight intensity={1} />
           <Suspense fallback={null}>
-            <WebsitePushedDown2 scroll={scroll} />
+            <ScrollControls pages={20}>
+              <WebsitePushedDown2 />
+            </ScrollControls>
             <Environment preset="city" />
           </Suspense>
         </Canvas>
-        {/* 
-        // @ts-ignore */}
-        <Overlay ref={overlay} caption={caption} scroll={scroll} />
         <Loader />
       </div>
       <style jsx>{`

@@ -1,10 +1,9 @@
 import React, { FC, useRef, Suspense, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Skill from '../components/Skill';
-import Overlay from '../components/three/Overlay';
 import { colours } from '../theme';
 import { Canvas } from '@react-three/fiber';
-import { Loader, Environment } from '@react-three/drei';
+import { Loader, Environment, ScrollControls } from '@react-three/drei';
 import WebsitePushedDown2 from '../components/three/WebsitePushedDown2';
 
 interface RootState {
@@ -13,9 +12,6 @@ interface RootState {
 
 const Skills: FC = () => {
   const skills = useSelector((state: RootState) => state.skills);
-  const scroll = useRef(0);
-  const overlay = useRef();
-  const caption = useRef();
 
   return (
     <>
@@ -38,13 +34,12 @@ const Skills: FC = () => {
           >
             <ambientLight intensity={1} />
             <Suspense fallback={null}>
-              <WebsitePushedDown2 scroll={scroll} />
+              <ScrollControls pages={3}>
+                <WebsitePushedDown2 />
+              </ScrollControls>
               <Environment preset="city" />
             </Suspense>
           </Canvas>
-          {/* 
-          // @ts-ignore */}
-          <Overlay ref={overlay} caption={caption} scroll={scroll} />
           <Loader />
         </div>
       </div>

@@ -1,11 +1,12 @@
 import * as THREE from 'three';
 import React, { useRef, useEffect } from 'react';
-import { useGLTF, PerspectiveCamera, useAnimations } from '@react-three/drei';
+import { useGLTF, PerspectiveCamera, useAnimations, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 export default function Model({ scroll, ...props }) {
   const t = useRef(0);
   const group = useRef();
+  const scrollPosition = useScroll();
   const { nodes, materials, animations } = useGLTF('/GuitarAnimationWithCameraSpin2.gltf');
   const { actions, mixer } = useAnimations(animations, group);
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function Model({ scroll, ...props }) {
   }, []);
   useFrame(() => {
     mixer.setTime(
-      (t.current = THREE.MathUtils.lerp(t.current, actions['Action.002']._clip.duration * scroll.current, 0.05))
+      THREE.MathUtils.lerp(t.current, actions['Action.002'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
     );
   });
   return (

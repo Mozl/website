@@ -1,14 +1,15 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
+import { useGLTF, PerspectiveCamera, useAnimations, useScroll } from '@react-three/drei';
 
-import { useGLTF, PerspectiveCamera, useAnimations } from '@react-three/drei';
-
-export default function Model({ scroll, ...props }) {
+export default function Model({ ...props }) {
   const group = useRef();
+  const scrollPosition = useScroll();
   const t = useRef(0);
   const { nodes, materials, animations } = useGLTF('/WebsiteBakedAnimations.gltf');
   const { actions, mixer } = useAnimations(animations, group);
+
   useEffect(() => {
     actions['Action'].play();
     actions['Action.001'].play();
@@ -20,11 +21,13 @@ export default function Model({ scroll, ...props }) {
     actions['Action.007'].play();
     actions['Action.008'].play();
   }, []);
+
   useFrame(() => {
     mixer.setTime(
-      (t.current = THREE.MathUtils.lerp(t.current, actions['Action']._clip.duration * scroll.current, 0.05))
+      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
     );
   });
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Camera" rotation={[1.13, 0.06, 3.02]}>
@@ -94,4 +97,4 @@ export default function Model({ scroll, ...props }) {
   );
 }
 
-useGLTF.preload('/Website-pusheddown2.gltf');
+useGLTF.preload('/WebsiteBakedAnimations.gltf');
