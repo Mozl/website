@@ -41,11 +41,20 @@ const Skills: FC = () => {
               <Skill key={index} skill={skill} />
             ))}
           </div>
+          <div className="gradient" />
         </div>
       </div>
       <style jsx>{`
         .outer {
           position: relative;
+        }
+        .gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60px;
+          background-color: linear-gradient('black', transparent);
         }
         .three {
           position: absolute;

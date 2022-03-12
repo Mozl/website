@@ -28,8 +28,9 @@ export default function Model() {
   }, []);
 
   useFrame(() => {
-    const scroll = scrollPosition.offset;
-    mixer.setTime(THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scroll, 0.05) * 19.9);
+    mixer.setTime(
+      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
+    );
     react.current.material.color.lerp(
       color.set(hovered ? '#00b7ff' : '#507d8f').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
