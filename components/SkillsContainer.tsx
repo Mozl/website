@@ -16,17 +16,6 @@ const Skills: FC = () => {
   return (
     <>
       <div className="outer">
-        <div className="wrapper">
-          <div className="header-container">
-            <span className="header">SKI</span>
-            <span className="header">LLS</span>
-          </div>
-          <div className="skillsContainer">
-            {skills?.map((skill, index) => (
-              <Skill key={index} skill={skill} />
-            ))}
-          </div>
-        </div>
         <div className="three">
           <Canvas
             shadows
@@ -42,6 +31,17 @@ const Skills: FC = () => {
           </Canvas>
           <Loader />
         </div>
+        <div className="wrapper">
+          <div className="header-container">
+            <span className="header">SKI</span>
+            <span className="header">LLS</span>
+          </div>
+          <div className="skillsContainer">
+            {skills?.map((skill, index) => (
+              <Skill key={index} skill={skill} />
+            ))}
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .outer {
@@ -53,13 +53,11 @@ const Skills: FC = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          z-index: 1;
           background-color: ${colours.black};
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         }
         .wrapper {
           display: flex;
-          z-index: 4;
           position: relative;
           font-family: 'Playfair Display', serif;
           flex-direction: column;
@@ -69,6 +67,7 @@ const Skills: FC = () => {
           color: ${colours.white};
           text-align: center;
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+          pointer-events: none;
         }
         .header-container {
           display: flex;
