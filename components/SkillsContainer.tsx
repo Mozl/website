@@ -54,7 +54,7 @@ const Skills: FC = () => {
           left: 0;
           width: 100%;
           height: 60px;
-          background-color: linear-gradient('black', transparent);
+          background: linear-gradient(#121212, transparent);
         }
         .three {
           position: absolute;
