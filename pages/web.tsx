@@ -24,7 +24,6 @@ const Web: React.FC = () => {
       <style jsx>{`
         .three {
           height: 100vh;
-          background-color: #4fafcc;
         }
       `}</style>
     </>
