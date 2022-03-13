@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { useGLTF, PerspectiveCamera, useAnimations, useScroll } from '@react-three/drei';
 
 const color = new THREE.Color();
 
 export default function Model() {
   const group = useRef();
+  const front = useRef();
   const react = useRef();
   const redux = useRef();
   const ts = useRef();
@@ -20,6 +21,13 @@ export default function Model() {
   const { nodes, materials, animations } = useGLTF('/WebsiteBakedAnimations.gltf');
   const { actions, mixer } = useAnimations(animations, group);
   const [hovered, setHovered] = useState();
+  const { viewport } = useThree();
+
+  useEffect(() => {
+    if (viewport.width < 3.5) {
+      setHovered(true);
+    }
+  });
 
   useEffect(() => {
     for (const [key, value] of Object.entries(actions)) {
@@ -27,10 +35,12 @@ export default function Model() {
     }
   }, []);
 
-  useFrame(() => {
+  useFrame(({ mouse }) => {
     mixer.setTime(
       THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
     );
+    // front.current.position.x = THREE.MathUtils.lerp(front.current.position.x, mouse.x * 12, 0.4);
+    // front.current.position.y = THREE.MathUtils.lerp(front.current.position.y, 7 + mouse.y * 4, 0.4);
     react.current.material.color.lerp(
       color.set(hovered ? '#00b7ff' : '#507d8f').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
@@ -139,6 +149,17 @@ export default function Model() {
           scale={67.16}
           ref={w}
         />
+        {/* <spotLight
+          castShadow
+          ref={front}
+          penumbra={1}
+          angle={Math.PI / 3}
+          position={[0, 0, 8]}
+          distance={11}
+          intensity={8}
+          shadow-mapSize-width={2048}
+          shadow-mapSize-height={2048}
+        /> */}
       </group>
     </>
   );

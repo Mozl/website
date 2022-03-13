@@ -11,6 +11,7 @@ const Web: React.FC = () => {
           shadows
           raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
         >
+          {/* <fog attach="fog" args={['red', 5, 2000000]} /> */}
           <ambientLight intensity={1} />
           <Suspense fallback={null}>
             <ScrollControls pages={20}>

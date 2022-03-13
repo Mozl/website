@@ -1,4 +1,4 @@
-import React, { FC, useRef, Suspense, useEffect, useState } from 'react';
+import React, { FC, Suspense } from 'react';
 import { useSelector } from 'react-redux';
 import Skill from '../components/Skill';
 import { colours } from '../theme';
@@ -104,6 +104,9 @@ const Skills: FC = () => {
             flex-direction: column;
             padding: 0 0 30px 0;
             letter-spacing: 1rem;
+          }
+          .three {
+            clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
           }
           .wrapper {
             clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
