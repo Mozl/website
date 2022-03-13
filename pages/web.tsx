@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Loader, Environment, ScrollControls } from '@react-three/drei';
 import WebsitePushedDown2 from '../components/three/WebsitePushedDown2';
 import Effects from '../components/three/Effects';
+import Particles from '../components/three/Particles';
 
 const Web: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Web: React.FC = () => {
             <Environment preset="city" />
           </Suspense>
           <Effects />
+          <Particles count={10000} />
         </Canvas>
         <Loader />
       </div>

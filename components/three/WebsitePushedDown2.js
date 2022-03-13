@@ -21,6 +21,7 @@ export default function Model() {
   const { actions, mixer } = useAnimations(animations, group);
   const [hovered, setHovered] = useState();
   const { viewport } = useThree();
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
     if (viewport.width < 3.5) {
@@ -36,7 +37,7 @@ export default function Model() {
 
   useFrame(() => {
     mixer.setTime(
-      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
+      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.99
     );
     react.current.material.color.lerp(
       color.set(hovered ? '#00a1e0' : '#507d8f').convertSRGBToLinear(),
@@ -76,7 +77,13 @@ export default function Model() {
     <>
       <group ref={group} dispose={null} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <group name="Camera" rotation={[1.13, 0.06, 3.02]}>
-          <PerspectiveCamera makeDefault far={1000} near={0.1} fov={28.41} rotation={[-Math.PI / 2, 0, 0]} />
+          <PerspectiveCamera
+            makeDefault
+            far={1000}
+            near={0.1}
+            fov={isMobile ? 90 : 28.41}
+            rotation={[-Math.PI / 2, 0, 0]}
+          />
         </group>
         <mesh
           name="React"

@@ -1,11 +1,12 @@
 import React, { FC, Suspense } from 'react';
 import { useSelector } from 'react-redux';
-import Skill from '../components/Skill';
+import Skill from './Skill';
 import { colours } from '../theme';
 import { Canvas } from '@react-three/fiber';
 import { Loader, Environment, ScrollControls } from '@react-three/drei';
-import WebsitePushedDown2 from '../components/three/WebsitePushedDown2';
-import Effects from '../components/three/Effects';
+import WebsitePushedDown2 from './three/WebsitePushedDown2';
+import Effects from './three/Effects';
+import Particles from './three/Particles';
 
 interface RootState {
   skills: [];
@@ -30,6 +31,7 @@ const Skills: FC = () => {
               <Environment preset="city" />
             </Suspense>
             <Effects />
+            <Particles count={5000} />
           </Canvas>
           <Loader />
         </div>

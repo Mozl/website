@@ -21,7 +21,7 @@ export default function Model() {
   useFrame(() => {
     // replace 'Action' with the name of your camera animation once its been baked in Blender
     mixer.setTime(
-      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
+      THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.99
     );
   });
 
