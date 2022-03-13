@@ -7,7 +7,6 @@ const color = new THREE.Color();
 
 export default function Model() {
   const group = useRef();
-  const front = useRef();
   const react = useRef();
   const redux = useRef();
   const ts = useRef();
@@ -35,14 +34,12 @@ export default function Model() {
     }
   }, []);
 
-  useFrame(({ mouse }) => {
+  useFrame(() => {
     mixer.setTime(
       THREE.MathUtils.lerp(t.current, actions['Action'].getClip().duration * scrollPosition.offset, 0.05) * 19.9
     );
-    // front.current.position.x = THREE.MathUtils.lerp(front.current.position.x, mouse.x * 12, 0.4);
-    // front.current.position.y = THREE.MathUtils.lerp(front.current.position.y, 7 + mouse.y * 4, 0.4);
     react.current.material.color.lerp(
-      color.set(hovered ? '#00b7ff' : '#507d8f').convertSRGBToLinear(),
+      color.set(hovered ? '#00a1e0' : '#507d8f').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
     );
     ts.current.material.color.lerp(
@@ -62,22 +59,21 @@ export default function Model() {
       hovered ? 0.1 : 0.05
     );
     a.current.material.color.lerp(
-      color.set(hovered ? '#000000' : '#737373').convertSRGBToLinear(),
+      color.set(hovered ? '#383838' : '#737373').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
     );
     w.current.material.color.lerp(
-      color.set(hovered ? '#000000' : '#737373').convertSRGBToLinear(),
+      color.set(hovered ? '#383838' : '#737373').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
     );
     s.current.material.color.lerp(
-      color.set(hovered ? '#000000' : '#737373').convertSRGBToLinear(),
+      color.set(hovered ? '#383838' : '#737373').convertSRGBToLinear(),
       hovered ? 0.1 : 0.05
     );
   });
 
   return (
     <>
-      <color attach="background" args={['#121212']} />
       <group ref={group} dispose={null} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)}>
         <group name="Camera" rotation={[1.13, 0.06, 3.02]}>
           <PerspectiveCamera makeDefault far={1000} near={0.1} fov={28.41} rotation={[-Math.PI / 2, 0, 0]} />
@@ -102,7 +98,9 @@ export default function Model() {
         />
         <group name="Typescript" position={[0.11, 6.1, -3.22]} rotation={[-1.07, 0.42, 2.21]} scale={2.74}>
           <mesh ref={ts} geometry={nodes.Typescript_1.geometry} material={materials['Material.003']} />
-          <mesh geometry={nodes.Typescript_2.geometry} material={materials['Material.001']} />
+          <mesh geometry={nodes.Typescript_2.geometry}>
+            <meshStandardMaterial color="#4f4f4e" />
+          </mesh>
         </group>
         <mesh
           name="NodeJS"
@@ -149,17 +147,6 @@ export default function Model() {
           scale={67.16}
           ref={w}
         />
-        {/* <spotLight
-          castShadow
-          ref={front}
-          penumbra={1}
-          angle={Math.PI / 3}
-          position={[0, 0, 8]}
-          distance={11}
-          intensity={8}
-          shadow-mapSize-width={2048}
-          shadow-mapSize-height={2048}
-        /> */}
       </group>
     </>
   );
