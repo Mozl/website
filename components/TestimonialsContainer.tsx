@@ -29,6 +29,7 @@ const TestimonialsContainer: FC = () => {
           align-items: center;
           text-align: center;
           clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+          margin-bottom: -1px;
         }
         .header {
           font-size: 130px;
